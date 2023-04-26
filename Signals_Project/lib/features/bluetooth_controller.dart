@@ -20,7 +20,8 @@ class BluetoothController {
 
   String macAddress_tablet = "0C:2F:B0:FE:ED:23";
   String macAddress_camera = "F4:63:1F:D0:03:4E";
-  String macAddress_arduino = "00:21:09:00:4F:8C";
+  String macAddress_arduino_camera = "00:21:09:00:4F:8C";
+  String macAddress_arduino_screen = "00:21:09:00:4D:35";
 
   late BluetoothConnection connection;
 
@@ -30,9 +31,8 @@ class BluetoothController {
       // get all bonded devices on tablet .
       var bondedDevices =
           await FlutterBluetoothSerial.instance.getBondedDevices();
-
       for (int i = 0; i < bondedDevices.length; i++) {
-        if (bondedDevices[i].address == macAddress_arduino) {
+        if (bondedDevices[i].address == macAddress_arduino_camera) {
           arduniDevice = bondedDevices[i];
           break;
         }
@@ -51,7 +51,7 @@ class BluetoothController {
       /**
        * to connect with bluetooth module .
        */
-      connection = await BluetoothConnection.toAddress(macAddress_arduino);
+      connection = await BluetoothConnection.toAddress(macAddress_arduino_camera);
     } catch (e) {
       ConsoleMessage.printError(
           'error while connecting to Aurdino', e.toString());

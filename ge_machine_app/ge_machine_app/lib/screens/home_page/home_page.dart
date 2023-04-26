@@ -15,20 +15,24 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    BluetoothController.instance.initiateConnection();
+    
     /**
      * this line is used to hide upper status bar .
      */
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky,
         overlays: [
           SystemUiOverlay.bottom,
-        ]); // to hide only bottom bar
+        ]); // to hide only bottom bar,
+
     return Scaffold(
         body: Container(
       height: DeviceDimensions.height,
       width: DeviceDimensions.width,
       child: Stack(
         children: [
-          HomePageBackground(image: AssetImage('assets/main_page_background.jpg')),
+          HomePageBackground(
+              image: AssetImage('assets/main_page_background.jpg')),
           StartButton()
         ],
       ),
