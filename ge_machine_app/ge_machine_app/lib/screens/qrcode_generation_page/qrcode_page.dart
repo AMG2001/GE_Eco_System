@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ge_machine_app/controllers/items_controller.dart';
 import 'package:ge_machine_app/dimensions.dart';
+import 'package:ge_machine_app/features/bluetooth_controller.dart';
 import 'package:ge_machine_app/screens/qrcode_generation_page/qrcode_generation_page_components/column_under_qr_code.dart';
 import 'package:ge_machine_app/screens/qrcode_generation_page/qrcode_generation_page_components/details_above_qrcode.dart';
 import 'package:ge_machine_app/screens/qrcode_generation_page/qrcode_generation_page_components/page_background_image.dart';
@@ -29,7 +29,7 @@ class QrcodePage extends StatelessWidget {
                   const SizedBox(
                     height: 24,
                   ),
-                  GetBuilder<ItemsController>(builder: (itemsController) {
+                  GetBuilder<BluetoothController>(builder: (blueController) {
                     return Container(
                       padding: EdgeInsets.all(32),
                       width: DeviceDimensions.width * .25,
@@ -63,7 +63,7 @@ class QrcodePage extends StatelessWidget {
                                  * time of process with secons,
                                  */
                                 value:
-                                    'GE-A1,${itemsController.plasticItems},${itemsController.cansItems},${itemsController.points},${DateFormat('yyyy-MM-dd').format(DateTime.now())},${DateFormat.Hms().format(DateTime.now())}',
+                                    'GE-A1,${blueController.plastic_items},${blueController.cans_items},${DateFormat('yyyy-MM-dd').format(DateTime.now())},${DateFormat.Hms().format(DateTime.now())}',
                                 symbology: QRCode(),
                               ),
                             ),
@@ -71,7 +71,7 @@ class QrcodePage extends StatelessWidget {
                               height: 12,
                             ),
                             Text(
-                              "Plastic : ${itemsController.plasticItems} , Can : ${itemsController.cansItems}, Points : ${itemsController.points}",
+                              "Plastic : ${blueController.plastic_items} , Can : ${blueController.cans_items}, Points : ${blueController.points}",
                               style: TextStyle(
                                   fontSize: 10, fontWeight: FontWeight.w500),
                             )

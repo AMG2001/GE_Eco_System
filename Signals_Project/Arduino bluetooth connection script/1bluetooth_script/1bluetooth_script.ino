@@ -39,8 +39,10 @@ void setup() {
   /**
   begin my software serial
   */
-  // Serial3.begin(9600);
+  // Camera bluetooth on Serial 3 .
   Serial3.begin(9600);
+  // Screen Bluetooth on Serial 2.
+  Serial2.begin(9600);
   ////////// Servo init ///////////
   initServo();
   Serial3.println(F("Arduino here, command me!"));
@@ -129,6 +131,7 @@ void loop() {
    char data = (char) Serial3.read();
    message +=data;
    if(data=='\n'){
+     Serial2.println(message);
      for(int i =1;i<message.length()-1;i++){
        // to remove first double quotes from the message "1,0,1";
        message_in_char_array[i-1]=message.charAt(i);

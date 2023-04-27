@@ -1,17 +1,66 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
+import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:ge_machine_app/features/console_messages.dart';
 import 'package:ge_machine_app/features/custom_toast.dart';
+import 'package:ge_machine_app/screens/home_page/home_page.dart';
+import 'package:ge_machine_app/screens/items_page/items_page.dart';
+import 'package:get/get.dart';
 
-class BluetoothController {
-  BluetoothController._privateConstructor();
+class BluetoothController extends GetxController {
+  late int _pageIndex;
+  late int plastic_items;
+  late int cans_items;
+  late int points;
+  BluetoothController() {
+    _pageIndex = 0;
+    resetItems();
+    ConsoleMessage.printMessage("Platic value in init : $plastic_items");
+    ConsoleMessage.printMessage("Page index = $_pageIndex");
+    initiateConnection();
+  }
 
-  static final BluetoothController _instance =
-      BluetoothController._privateConstructor();
+  void increamentPlastic() {
+    plastic_items++;
+    ConsoleMessage.printMessage("Platic value in increament : $plastic_items");
+    update();
+  }
 
-  static BluetoothController get instance => _instance;
+  void increamentCans() {
+    cans_items++;
+    update();
+  }
+
+  void resetItems() {
+    plastic_items = 0;
+    cans_items = 0;
+    points = 0;
+    update();
+  }
+
+  void navigateToItemsPage() {
+    Get.to(() => ItemsPage(),
+        transition: Transition.downToUp,
+        curve: Curves.easeInOutCubic,
+        duration: Duration(milliseconds: 500));
+
+    _pageIndex++;
+    ConsoleMessage.printMessage("Page index = $_pageIndex");
+    update();
+  }
+
+  void navigateToHomePage() {
+    _pageIndex = 0;
+    resetItems();
+    Get.offAll(() => HomePage(),
+        transition: Transition.leftToRight,
+        curve: Curves.easeInCubic,
+        duration: Duration(milliseconds: 500));
+    ConsoleMessage.printMessage("Page index = $_pageIndex");
+    update();
+  }
 
   late BluetoothDevice arduniDevice;
 
@@ -25,6 +74,7 @@ class BluetoothController {
   late BluetoothConnection connection;
 
   void initiateConnection() async {
+    ConsoleMessage.printMessage('bluetooth connection intialized');
     bool? isEnabled = await FlutterBluetoothSerial.instance.isEnabled;
     if (isEnabled!) {
       // get all bonded devices on tablet .
@@ -74,8 +124,22 @@ class BluetoothController {
     try {
       ConsoleMessage.printMessage('start listening to Aurdino');
       connection.input!.listen((Uint8List data) {
-        String comingMessage = utf8.decode(data);
-        CustomToast.showBlackToast(message: comingMessage);
+        _pageIndex == 0 ? navigateToItemsPage() : null;
+        try {
+          String comingMessage = utf8.decode(data);
+
+          if (int.parse(comingMessage[3]) == 1 &&
+              int.parse(comingMessage[5]) == 1) {
+            increamentPlastic();
+            increamentCans();
+          } else if (int.parse(comingMessage[3]) == 1) {
+            increamentPlastic();
+          } else if (int.parse(comingMessage[3]) == 1) {
+            increamentCans();
+          }
+        } catch (e) {
+          ConsoleMessage.printError(e, 'decoded data is empty');
+        }
         /**
          * Coming message must end with '.'
          * to print coming message only 1 time .
