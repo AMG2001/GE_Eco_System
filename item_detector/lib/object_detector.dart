@@ -1,4 +1,5 @@
 import 'dart:io' as io;
+
 import 'dart:typed_data';
 
 import 'package:camera/camera.dart';
@@ -12,10 +13,10 @@ import 'package:path_provider/path_provider.dart';
 
 class ObjectDetectorView extends StatefulWidget {
   @override
-  State<ObjectDetectorView> createState() => _ObjectDetectorViewState();
+  State<ObjectDetectorView> createState() => _ObjectDetectorView();
 }
 
-class _ObjectDetectorViewState extends State<ObjectDetectorView> {
+class _ObjectDetectorView extends State<ObjectDetectorView> {
   late ObjectDetector _objectDetector;
   bool _canProcess = false;
   bool _isBusy = false;
@@ -64,6 +65,7 @@ class _ObjectDetectorViewState extends State<ObjectDetectorView> {
 
   void _initializeDetector(DetectionMode mode) async {
     print('Set detector in mode: $mode');
+
     // uncomment next lines if you want to use the default model
     // final options = ObjectDetectorOptions(
     //     mode: mode,
@@ -73,14 +75,13 @@ class _ObjectDetectorViewState extends State<ObjectDetectorView> {
 
     // uncomment next lines if you want to use a local model
     // make sure to add tflite model to assets/ml
-    final path = 'assets/ml/lite-model_object_detection_mobile_object_labeler_v1_1.tflite';
+    final path = 'assets/ml/mlkit_model.tflite';
     final modelPath = await _getModel(path);
     final options = LocalObjectDetectorOptions(
       mode: mode,
       modelPath: modelPath,
       classifyObjects: true,
       multipleObjects: true,
-
     );
     _objectDetector = ObjectDetector(options: options);
 
@@ -108,12 +109,7 @@ class _ObjectDetectorViewState extends State<ObjectDetectorView> {
     setState(() {
       _text = '';
     });
-
-    // Normalize the image
-    final normalizedImage = inputImage.inputImageData!.normalize();
-
-    final objects = await _objectDetector.processImage(normalizedImage);
-
+    final objects = await _objectDetector.processImage(inputImage);
     if (inputImage.inputImageData?.size != null &&
         inputImage.inputImageData?.imageRotation != null) {
       final painter = ObjectDetectorPainter(
@@ -150,28 +146,5 @@ class _ObjectDetectorViewState extends State<ObjectDetectorView> {
           .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
     }
     return file.path;
-  }
-}
-
-extension InputImageDataExtension on InputImageData {
-  InputImageData normalize() {
-    final Float32List data = data!.buffer.asFloat32List();
-    final Float32List normalizedData = Float32List(data.length);
-    final double maxValue = 255;
-    for (int i = 0; i < data.length; i++) {
-      normalizedData[i] = data[i] / maxValue;
-    }
-    return InputImageData(
-      size: Size(this.width.toDouble(), this.height.toDouble()),
-      imageRotation: InputImageRotation.Rotation_0deg,
-      inputType: InputType.custom,
-      inputImageData: CustomInputImageData(
-        imageHeight: this.height,
-        imageWidth: this.width,
-        mean: [0],
-        std: [1],
-        data: normalizedData.buffer.asUint8List(),
-      ),
-    );
   }
 }
