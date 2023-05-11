@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
-import 'package:green_egypt/screens/home_page/transactions_page/transactions_page_components/transaction_info_model.dart';
+import 'package:green_egypt/screens/home_page/transactions_page/components/transaction_info_model.dart';
 
 class BottomContainer extends StatelessWidget {
   const BottomContainer({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/friendly_tips_item.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/home_page_animations_controller.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/widgets/friendly_tips_item.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_animations_controller.dart';
 
 class ListOfFriendlyTips extends StatelessWidget {
   ListOfFriendlyTips({super.key});

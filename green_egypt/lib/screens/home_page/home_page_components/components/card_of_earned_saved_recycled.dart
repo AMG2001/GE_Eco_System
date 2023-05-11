@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/home_page_animations_controller.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/user_detail_column.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_animations_controller.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/components/user_detail_column.dart';
 import 'package:green_egypt/services/boxes/user_data_db.dart';
 
 class CardOfEarnedSavedRecycled extends StatelessWidget {

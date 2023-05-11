@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/friendly_tips_item.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/widgets/friendly_tips_item.dart';
 
 class EcoFriendlyFullTips extends StatelessWidget {
   EcoFriendlyFullTips({super.key});

@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/localization/language_box.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/categories_list_item.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/home_page_animations_controller.dart';
-import 'package:green_egypt/screens/home_page/waste_category_view.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/components/categories_list_item.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_animations_controller.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/components/waste_category_view.dart';
 
 class ListOfCategoriesItems extends StatelessWidget {
   ListOfCategoriesItems({super.key});

@@ -2,15 +2,14 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/home_page_animations_controller.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/home_page_appbar.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/home_page_body.dart';
-import 'package:green_egypt/screens/home_page/home_page_controller.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_animations_controller.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/widgets/home_page_appbar.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/components/home_page_body.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_controller.dart';
 import 'package:green_egypt/screens/home_page/more_page/more_page.dart';
 import 'package:green_egypt/screens/home_page/qrcode_page/qrcode_page.dart';
 import 'package:green_egypt/screens/home_page/qrcode_page/qrcode_page_appbar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:green_egypt/screens/home_page/transactions_page/transactions_page_components/transition_page_appbar.dart';
 import 'package:green_egypt/screens/home_page/transactions_page/transactions_page_body.dart';
 
 class HomePage extends StatefulWidget {
@@ -35,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                   : _pageIndex == 1
                       ? qrcodePageAppbar
                       : _pageIndex == 2
-                          ? transitionPageAppBar
+                          ? null
                           : AppBar(
                               title: Text('more page'.tr),
                             ),
