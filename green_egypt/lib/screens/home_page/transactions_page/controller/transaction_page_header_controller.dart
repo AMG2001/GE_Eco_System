@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
-import 'package:green_egypt/screens/home_page/transactions_page/components/month_bar_model.dart';
+import 'package:green_egypt/screens/home_page/transactions_page/widgets/bar_model.dart';
 
 class TransactionsPageUpperContainerController extends GetxController {
   int barsViewindex = 0;

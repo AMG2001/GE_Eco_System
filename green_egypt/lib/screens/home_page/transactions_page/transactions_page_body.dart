@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
-import 'package:green_egypt/screens/home_page/transactions_page/components/bottom_container.dart';
-import 'package:green_egypt/screens/home_page/transactions_page/components/top_container.dart';
+import 'package:green_egypt/screens/home_page/transactions_page/components/top_container/bottom_container.dart';
+import 'package:green_egypt/screens/home_page/transactions_page/components/top_container/top_container.dart';
 
 class TransactionPageBody extends StatelessWidget {
   TransactionPageBody({super.key});
