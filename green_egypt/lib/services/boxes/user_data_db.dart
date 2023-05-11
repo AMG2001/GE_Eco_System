@@ -15,7 +15,9 @@ class UserDataBox {
   String _key_apply_review_before = "apply_review_before";
   String _key_userEarnedCash = "user_earned_cash";
   String _key_userSavedCo2 = "user_saved_co2";
-  String _key_userRecycledItems = "user_recycled_items";
+  String _key_userTotalRecycledItems = "user_total_recycled_items";
+  String _key_recycledPlasticItemsNumber = 'recycled_plastic_number';
+  String _key_recycledCansItemsNumber = 'recycled_cans_number';
 
   /**
    * Singleton Class .
@@ -126,7 +128,7 @@ class UserDataBox {
   }
 
   /**
-   *  **************************** Apply review before Boolean operations ***********************************
+   *  **************************** Earned cash operations ***********************************
    */
   void put_earnedCash({required int earned}) async {
     await _userDataBox.put(_key_userEarnedCash, earned);
@@ -137,7 +139,7 @@ class UserDataBox {
   }
 
   /**
-   *  **************************** Apply review before Boolean operations ***********************************
+   *  **************************** Saved co2 operations ***********************************
    */
   void put_savedCo2({required int saved}) async {
     await _userDataBox.put(_key_userSavedCo2, saved);
@@ -148,14 +150,38 @@ class UserDataBox {
   }
 
   /**
-   *  **************************** Apply review before Boolean operations ***********************************
+   *  **************************** total Recycled items operations ***********************************
    */
-  void put_recycledItems({required int recycled}) async {
-    await _userDataBox.put(_key_userRecycledItems, recycled);
+  void put_totalrecycledItems({required int newTotalNumber}) async {
+    await _userDataBox.put(_key_userTotalRecycledItems, newTotalNumber);
   }
 
   int get_recycledItems() {
-    return _userDataBox.get(_key_userRecycledItems, defaultValue: 0);
+    return _userDataBox.get(_key_userTotalRecycledItems, defaultValue: 0);
+  }
+
+  /**
+   *  **************************** recycled plastic items number operations ***********************************
+   */
+  void put_increamentRecycledPasticItemsNumber(
+      {required int plasticItemsNumber}) async {
+    await _userDataBox.put(_key_recycledPlasticItemsNumber, plasticItemsNumber);
+  }
+
+  int get_recycledPlasticItemsNumber() {
+    return _userDataBox.get(_key_recycledPlasticItemsNumber, defaultValue: 0);
+  }
+
+  /**
+   *  **************************** recycled cans items number operations ***********************************
+   */
+  void put_increamentRecycledCansItemsNumber(
+      {required int cansItemsNumber}) async {
+    await _userDataBox.put(_key_recycledCansItemsNumber, cansItemsNumber);
+  }
+
+  int get_recycledCansItemsNumber() {
+    return _userDataBox.get(_key_recycledCansItemsNumber, defaultValue: 0);
   }
 
   void put_allUserData(
@@ -167,7 +193,9 @@ class UserDataBox {
       required String credintial,
       required int earned,
       required int savedCo2,
-      required int recycledItems,
+      required int cansItemsNumber,
+      required int plasticItemsNumber,
+      required int totalRecycledItems,
       required bool reviewedBefore,
       required bool loggedIn}) {
     put_userId(id: id);
@@ -178,13 +206,16 @@ class UserDataBox {
     put_userCredintial(credintail: credintial);
     put_earnedCash(earned: earned);
     put_savedCo2(saved: savedCo2);
-    put_recycledItems(recycled: recycledItems);
+    put_increamentRecycledPasticItemsNumber(
+        plasticItemsNumber: plasticItemsNumber);
+    put_increamentRecycledCansItemsNumber(cansItemsNumber: cansItemsNumber);
+    put_totalrecycledItems(newTotalNumber: totalRecycledItems);
     put_applyReviewBefore(apply: reviewedBefore);
     put_loggedInBool(loggedIn: loggedIn);
   }
 
   void userLoggedOut() {
-   put_userId(id: "");
+    put_userId(id: "");
     put_userName(userName: "");
     put_userEmail(email: "");
     put_userImageUrl(userImageUrl: "");
@@ -192,7 +223,7 @@ class UserDataBox {
     put_userCredintial(credintail: "");
     put_earnedCash(earned: 0);
     put_savedCo2(saved: 0);
-    put_recycledItems(recycled: 0);
+    put_totalrecycledItems(newTotalNumber: 0);
     put_applyReviewBefore(apply: false);
     put_loggedInBool(loggedIn: false);
   }

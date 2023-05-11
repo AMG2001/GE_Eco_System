@@ -10,7 +10,6 @@ import 'package:green_egypt/screens/home_page/more_page/more_page.dart';
 import 'package:green_egypt/screens/home_page/qrcode_page/qrcode_page.dart';
 import 'package:green_egypt/screens/home_page/qrcode_page/qrcode_page_appbar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:badges/badges.dart' as badges;
 import 'package:green_egypt/screens/home_page/transactions_page/transactions_page_components/transition_page_appbar.dart';
 import 'package:green_egypt/screens/home_page/transactions_page/transactions_page_body.dart';
 
