@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class QrCodePageBody extends StatefulWidget {
   const QrCodePageBody({super.key});
@@ -66,6 +65,9 @@ class _QrCodePageState extends State<QrCodePageBody> {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
       setState(() {
+        String qrcodeDataInString = scanData.code!;
+
+
         // TODO : get data from QR and store points into user Points .
         result = scanData;
       });

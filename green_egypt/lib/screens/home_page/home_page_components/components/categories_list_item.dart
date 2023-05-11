@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/home_page_animations_controller.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_animations_controller.dart';
 
 class CategoriesListItem extends StatelessWidget {
   late ApplicationThemeController applicationThemeController;

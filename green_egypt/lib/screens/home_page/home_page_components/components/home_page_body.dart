@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/default_fonts.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/card_of_earned_saved_recycled.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/eco_friendly_tips_row.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/list_of_categories_items.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/list_of_friendly_tips.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/components/card_of_earned_saved_recycled.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/components/eco_friendly_tips_row.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/components/list_of_categories_items.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/components/list_of_friendly_tips.dart';
 
 final homePageBody = SafeArea(
   child: Padding(

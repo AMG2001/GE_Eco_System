@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:green_egypt/config/dimensions.dart';
 
-class MonthBarModel extends StatelessWidget {
-  MonthBarModel({required this.month, required this.barHeight});
-  late String month;
+class BarModel extends StatelessWidget {
+  BarModel({required this.barText, required this.barHeight});
+  late String barText;
   late double barHeight;
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class MonthBarModel extends StatelessWidget {
           height: 8,
         ),
         Text(
-          month,
+          barText,
           style: TextStyle(fontWeight: FontWeight.w600),
         )
       ],
