@@ -21,13 +21,13 @@
 
 1. Mariam Ahmad Elsheikh “Team Leader” .
 2. Mohamad amgad elsaid ”Technical team leader & Repository Admin ”.
-3. Hamdy Mostafamahmoud “Java - Arduino Developer ” .
+3. Hamdy Mostafa mahmoud “لزق وصلات و وسارق الديزاين” .
 4. Salah ayman Eteam “Flutter developer” .
 5. Alaa mohamad Hammad “Flutter Developer” .
-6. mahmoud Shady.
-7. Mohamad samy alansary .
+6. mahmoud Shady "Flutter Developer".
+7. Mohamad samy alansary "Flutter Developer".
 
-# 🗺 Map of previous work in Green Egypt System :
+# 🗺 Implementation Map in Green Egypt :
 
 ## 📅 “Implement language transitions” 19/04/2023 .
 
