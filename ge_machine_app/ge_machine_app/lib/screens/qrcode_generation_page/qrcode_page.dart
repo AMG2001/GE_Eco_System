@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ge_machine_app/dimensions.dart';
-import 'package:ge_machine_app/features/bluetooth_controller.dart';
+import 'package:ge_machine_app/controllers/bluetooth_controller.dart';
 import 'package:ge_machine_app/screens/qrcode_generation_page/qrcode_generation_page_components/column_under_qr_code.dart';
 import 'package:ge_machine_app/screens/qrcode_generation_page/qrcode_generation_page_components/details_above_qrcode.dart';
 import 'package:ge_machine_app/screens/qrcode_generation_page/qrcode_generation_page_components/page_background_image.dart';
+import 'package:ge_machine_app/services/operations_box.dart';
 import 'package:syncfusion_flutter_barcodes/barcodes.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -63,7 +64,7 @@ class QrcodePage extends StatelessWidget {
                                  * time of process with secons,
                                  */
                                 value:
-                                    'GE-A1,${blueController.plastic_items},${blueController.cans_items},${DateFormat('yyyy-MM-dd').format(DateTime.now())},${DateFormat.Hms().format(DateTime.now())}',
+                                    'GE-A1,${OperationsBox.instance.lastOperationNumber},${blueController.plastic_items},${blueController.cans_items},${DateFormat('yyyy-MM-dd').format(DateTime.now())},${DateFormat.Hms().format(DateTime.now())}',
                                 symbology: QRCode(),
                               ),
                             ),
@@ -88,7 +89,7 @@ class QrcodePage extends StatelessWidget {
                    * Done Button .
                    * Auto navigation Text .
                    */
-                  const ColumnUnderQrCode()
+                   ColumnUnderQrCode()
                 ],
               ),
             ),

@@ -10,21 +10,32 @@ import 'package:ge_machine_app/screens/items_page/items_page.dart';
 import 'package:get/get.dart';
 
 class BluetoothController extends GetxController {
+
+  BluetoothController._privateConstructor();
+
+  static final BluetoothController _instance = BluetoothController._privateConstructor();
+
+  static BluetoothController get instance => _instance;
+  
   late int _pageIndex;
   late int plastic_items;
   late int cans_items;
   late int points;
+  bool firstTimeEstablishConnection = false;
+  late double operationNumber;
   BluetoothController() {
     _pageIndex = 0;
     resetItems();
-    ConsoleMessage.printMessage("Platic value in init : $plastic_items");
-    ConsoleMessage.printMessage("Page index = $_pageIndex");
-    initiateConnection();
+    try {
+      initiateConnection();
+    } catch (e) {
+      ConsoleMessage.printError('Error in Bluetooth Controller Constructor', e);
+    }
   }
 
   void increamentPlastic() {
     plastic_items++;
-    ConsoleMessage.printMessage("Platic value in increament : $plastic_items");
+
     update();
   }
 
@@ -47,7 +58,7 @@ class BluetoothController extends GetxController {
         duration: Duration(milliseconds: 500));
 
     _pageIndex++;
-    ConsoleMessage.printMessage("Page index = $_pageIndex");
+
     update();
   }
 
@@ -58,7 +69,7 @@ class BluetoothController extends GetxController {
         transition: Transition.leftToRight,
         curve: Curves.easeInCubic,
         duration: Duration(milliseconds: 500));
-    ConsoleMessage.printMessage("Page index = $_pageIndex");
+
     update();
   }
 
@@ -74,7 +85,6 @@ class BluetoothController extends GetxController {
   late BluetoothConnection connection;
 
   void initiateConnection() async {
-    ConsoleMessage.printMessage('bluetooth connection intialized');
     bool? isEnabled = await FlutterBluetoothSerial.instance.isEnabled;
     if (isEnabled!) {
       // get all bonded devices on tablet .
@@ -109,7 +119,11 @@ class BluetoothController extends GetxController {
     if (connection.isConnected) {
       CustomToast.showBlackToast(
           message: 'Screen connected with Aurdino successfully');
-      await startListeningToBluetoothStream();
+      try {
+        await startListeningToBluetoothStream();
+      } catch (e) {
+        print(e);
+      }
     } else {
       CustomToast.showRedToast(
           message: 'there is a problem while connecting with Aurdino Screen');
@@ -134,7 +148,7 @@ class BluetoothController extends GetxController {
             increamentCans();
           } else if (int.parse(comingMessage[3]) == 1) {
             increamentPlastic();
-          } else if (int.parse(comingMessage[3]) == 1) {
+          } else if (int.parse(comingMessage[5]) == 1) {
             increamentCans();
           }
         } catch (e) {

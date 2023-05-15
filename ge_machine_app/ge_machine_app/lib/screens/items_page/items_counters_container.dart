@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ge_machine_app/features/bluetooth_controller.dart';
+import 'package:ge_machine_app/controllers/bluetooth_controller.dart';
 import 'package:ge_machine_app/screens/items_page/green_divider.dart';
 import 'package:ge_machine_app/screens/items_page/items_counters.dart';
 import 'package:get/get.dart';
