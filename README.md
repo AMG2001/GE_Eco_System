@@ -38,4 +38,8 @@
 
 ## 📅 “Start working on Qrcode scanning” 11/05/2023 .
 
-- Eng / amgad implemented
+- Eng / amgad implemented qrcode sacnning and handling scanning the same qrcode multiple times .
+
+## 📅 “Finish Qrcode scanning and storing transactions in Transaction Page” 16/05/2023 .
+
+- Eng / amgad implemented Saving qrcode on local storage and also showing it on transaction page .
