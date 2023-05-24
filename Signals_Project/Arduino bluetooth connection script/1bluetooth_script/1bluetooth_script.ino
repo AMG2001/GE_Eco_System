@@ -23,14 +23,23 @@ and inside setup we will use :
 #include <string.h>
 #include <Servo.h>
 
-
 Servo servo_plastic;
 Servo servo_cans;
   // create servo object to control a servo
-
 // Serial3 Serial3(txCamera, rxCamera); // Tx, Rx in bluetooth module .
 // const byte rxCamera = 39; // rx in bluetooth module .
 // const byte txCamera = 38; // tx in bluetooth module .
+
+
+// "Plastic" Ultrasonic sensor pins
+const int trigPin_plasticUltra = 31;
+const int echoPin_plasticUltra = 30;
+
+// "Plastic" Ultrasonic sensor pins
+const int trigPin_cansUltra = 33;
+const int echoPin_cansUltra = 32;
+// Define the detection distance (in centimeters)
+const int detectionDistance = 25;
 
 void setup() {
   // to make pin 11 is output in aurd , input in bluetooth mdoule
@@ -39,13 +48,21 @@ void setup() {
   /**
   begin my software serial
   */
+  Serial.begin(9600);
   // Camera bluetooth on Serial 3 .
   Serial3.begin(9600);
   // Screen Bluetooth on Serial 2.
   Serial2.begin(9600);
+  // Set up the plastic_ultrasonic sensor pins
+  pinMode(trigPin_plasticUltra, OUTPUT);
+  pinMode(echoPin_plasticUltra, INPUT);
+
+   // Set up the cans_ultrasonic sensor pins
+  pinMode(trigPin_cansUltra, OUTPUT);
+  pinMode(echoPin_cansUltra, INPUT);
   ////////// Servo init ///////////
   initServo();
-  Serial3.println(F("Arduino here, command me!"));
+  Serial3.println("Arduino here, command me!");
 }
 
 void initServo(){
@@ -53,22 +70,73 @@ void initServo(){
 servo_plastic.attach(3);
 // cans servo motor in attached on digital pin -> 4 .
 servo_cans.attach(4);
-servo_plastic.write(0);
-servo_cans.write(0);
+servo_plastic.write(10);
+servo_cans.write(10);
 }
 
 String message="";
 
-void open_plastic_hole(){
-servo_plastic.write(90);                  // sets the servo position according to the scaled value
-  delay(3000); 
-  servo_plastic.write(0);    
+void open_plastic_hole() {
+  // Open the plastic servo
+  servo_plastic.write(90);
+  int temp = 0;
+  bool objectDetected = false;
+  while (temp <=600) {
+    // Measure the distance to the nearest object
+    int distance = getDistance();
+    // Check if plastic ultrasonic detect something, then open the motor
+    // and send the signal to the tablet.
+      // Serial.println("current Distance : ");
+      // Serial.println(distance);
+      Serial.println("Temp : ");
+      Serial.println(temp);
+      if(distance <= detectionDistance){
+        objectDetected=true;
+        break;
+      }else{
+      delay(100);
+      temp += 10;
+      }
+  }
+  if(objectDetected == true){
+ // send signal to tablet.
+  Serial2.println(message);
+  servo_plastic.write(0); // 90 degrees (or any other angle you prefer)
+  }else{
+     servo_plastic.write(0); // 90 degrees (or any other angle you prefer)
+  }
+ 
 }
 
 void open_cans_hole(){
-servo_cans.write(90);                  // sets the servo position according to the scaled value
-delay(3000); 
-servo_cans.write(0);  
+ // Open the plastic servo
+  servo_cans.write(90);
+  int temp = 0;
+  bool objectDetected = false;
+  while (temp <=600) {
+    // Measure the distance to the nearest object
+    int distance = getDistance();
+    // Check if plastic ultrasonic detect something, then open the motor
+    // and send the signal to the tablet.
+      // Serial.println("current Distance : ");
+      // Serial.println(distance);
+      Serial.println("Temp : ");
+      Serial.println(temp);
+      if(distance <= detectionDistance){
+        objectDetected=true;
+        break;
+      }else{
+      delay(100);
+      temp += 10;
+      }
+  }
+  if(objectDetected == true){
+ // send signal to tablet.
+  Serial2.println(message);
+  servo_cans.write(0); // 90 degrees (or any other angle you prefer)
+  }else{
+     servo_cans.write(0); // 90 degrees (or any other angle you prefer)
+  }
 }
 
 // this method is used to get data in message and analyze it .
@@ -108,20 +176,30 @@ void split_coming_message(char* message, int* numTokens) {
   // check the destination of the message .
   if(destination_device == 1) Serial3.println("Message Sent to tablet");
   else if(destination_device ==2) Serial3.println("Message Sent to Camera");
+
+  // if signal coming plastic and cans together , then open both holes :
+   if(atoi(tokens[1])==1&&atoi(tokens[2])==1){
+    Serial3.println("Open both plastic and cans hole");
+    open_plastic_hole();
+    open_cans_hole();
+     // i make it here wait for 1 second for lower power consumbtion .
+   // to not make arduino items power off and need to connect again .
+    // delay(1000);
+  }
   // check plastic and cans signal to open or close .
-  if(atoi(tokens[1])==1){
+  else if(atoi(tokens[1])==1){
     Serial3.println("Open plastic hole");
     open_plastic_hole();
      // i make it here wait for 1 second for lower power consumbtion .
    // to not make arduino items power off and need to connect again .
-    delay(1000);
+    // delay(1000);
   }
-  if(atoi(tokens[2])==1){
+  else if(atoi(tokens[2])==1){
     Serial3.println("open Cans hole");
     open_cans_hole();
    // i make it here wait for 1 second for lower power consumbtion .
    // to not make arduino items power off and need to connect again .
-    delay(1000);
+    // delay(1000);
   }
 }
 
@@ -131,7 +209,6 @@ void loop() {
    char data = (char) Serial3.read();
    message +=data;
    if(data=='\n'){
-     Serial2.println(message);
      for(int i =1;i<message.length()-1;i++){
        // to remove first double quotes from the message "1,0,1";
        message_in_char_array[i-1]=message.charAt(i);
@@ -142,15 +219,13 @@ void loop() {
  }
 }
 
-/**
-
-To Check type of variable in C :
-
- if(sizeof(tokens[0])==sizeof(char))
-    Serial3.println("char");
-    else if(sizeof(tokens[0])==sizeof(int))
-       Serial3.println("int");
-    else if(sizeof(tokens[0])==sizeof(double))
-        Serial3.println("double");
-
-***/
+int getDistance() {
+  digitalWrite(trigPin_plasticUltra, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin_plasticUltra, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin_plasticUltra, LOW);
+  long duration = pulseIn(echoPin_plasticUltra, HIGH);
+  int distance = duration * 0.0344 / 2;
+  return distance;
+}

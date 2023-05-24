@@ -1,35 +1,43 @@
 import 'dart:async';
-import 'package:ge_machine_app/features/bluetooth_controller.dart';
+import 'package:ge_machine_app/controllers/bluetooth_controller.dart';
+import 'package:ge_machine_app/services/operations_box.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:ge_machine_app/screens/home_page/home_page.dart';
 
 class ColumnUnderQrCode extends StatefulWidget {
   const ColumnUnderQrCode({super.key});
-
   @override
   State<ColumnUnderQrCode> createState() => _ColumnUnderQrCodeState();
 }
 
 class _ColumnUnderQrCodeState extends State<ColumnUnderQrCode> {
   @override
+  late Timer _timer;
+  int counter = 60;
+  @override
   void initState() {
-    decreaseCounter();
     super.initState();
+    startTimer();
   }
 
-  int counter = 60;
-  void decreaseCounter() {
-    if (counter > 0) {
-      Timer(Duration(seconds: 1), () {
+  void startTimer() {
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      if (counter > 0) {
         setState(() {
           counter--;
-          decreaseCounter();
         });
-      });
-    } else {
-      Get.find<BluetoothController>().navigateToHomePage();
-    }
+      } else {
+        timer.cancel();
+        BluetoothController.instance.navigateToHomePage();
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
   }
 
   @override
@@ -39,6 +47,13 @@ class _ColumnUnderQrCodeState extends State<ColumnUnderQrCode> {
         children: [
           TextButton(
             onPressed: () {
+              /**
+               * Increament last operation number to be not duplicated .
+               */
+              OperationsBox.instance.increamentLastOperationNumber();
+              /**
+               * Navigate to home page .
+               */
               controller.navigateToHomePage();
             },
             child: Row(
