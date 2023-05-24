@@ -69,6 +69,19 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
+                  /**
+                   * 2 : mean this message is from camera
+                   * 0 : mean there is no plastic .
+                   * 1 : mean open cans hole .
+                   */
+                  BluetoothController.instance.sendMessage(message: '"1,1,1,"');
+                },
+                child: Text("Send Both Plastic & Cans signal")),
+            SizedBox(
+              height: 12,
+            ),
+            ElevatedButton(
+                onPressed: () {
                   BluetoothController.instance.connectToCameraBluetoothModule();
                 },
                 child: Text("Connect with aurdino"))
