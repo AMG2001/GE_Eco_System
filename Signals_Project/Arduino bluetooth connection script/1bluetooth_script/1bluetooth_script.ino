@@ -83,7 +83,7 @@ void open_plastic_hole() {
   bool objectDetected = false;
   while (temp <=600) {
     // Measure the distance to the nearest object
-    int distance = getDistance();
+    int distance = getDistance_plastic();
     // Check if plastic ultrasonic detect something, then open the motor
     // and send the signal to the tablet.
       // Serial.println("current Distance : ");
@@ -91,6 +91,7 @@ void open_plastic_hole() {
       Serial.println("Temp : ");
       Serial.println(temp);
       if(distance <= detectionDistance){
+        delay(500);
         objectDetected=true;
         break;
       }else{
@@ -109,13 +110,13 @@ void open_plastic_hole() {
 }
 
 void open_cans_hole(){
- // Open the plastic servo
+ // Open the cans servo
   servo_cans.write(90);
   int temp = 0;
   bool objectDetected = false;
   while (temp <=600) {
     // Measure the distance to the nearest object
-    int distance = getDistance();
+    int distance = getDistance_cans();
     // Check if plastic ultrasonic detect something, then open the motor
     // and send the signal to the tablet.
       // Serial.println("current Distance : ");
@@ -123,6 +124,7 @@ void open_cans_hole(){
       Serial.println("Temp : ");
       Serial.println(temp);
       if(distance <= detectionDistance){
+        delay(500);
         objectDetected=true;
         break;
       }else{
@@ -219,13 +221,24 @@ void loop() {
  }
 }
 
-int getDistance() {
+int getDistance_plastic() {
   digitalWrite(trigPin_plasticUltra, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin_plasticUltra, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin_plasticUltra, LOW);
   long duration = pulseIn(echoPin_plasticUltra, HIGH);
+  int distance = duration * 0.0344 / 2;
+  return distance;
+}
+
+int getDistance_cans() {
+  digitalWrite(trigPin_cansUltra, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin_cansUltra, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin_cansUltra, LOW);
+  long duration = pulseIn(echoPin_cansUltra, HIGH);
   int distance = duration * 0.0344 / 2;
   return distance;
 }
