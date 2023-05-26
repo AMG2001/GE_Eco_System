@@ -20,7 +20,7 @@
 ### ** Members of Team :
 
 1. Mariam Ahmad Elsheikh “Team Leader” .
-2. Mohamad amgad elsaid ”Technical team leader & Repository Admin ”.
+2. Mohamad amgad elsaid ”Technical leader & Repository Admin ”.
 3. Hamdy Mostafa mahmoud “لزق وصلات و وسارق الديزاين” .
 4. Salah ayman Eteam “Flutter developer” .
 5. Alaa mohamad Hammad “Flutter Developer” .
