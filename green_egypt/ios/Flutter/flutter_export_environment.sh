@@ -1,6 +1,6 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\Users\mavic\fvm\versions\3.10.0"
+export "FLUTTER_ROOT=C:\Users\mavic\fvm\versions\3.7.12"
 export "FLUTTER_APPLICATION_PATH=C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib\main.dart"

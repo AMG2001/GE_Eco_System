@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\google_sign_in_android\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\google_sign_in_android\\intermediates\\merged_res\\release\\values-zh-rHK\\values-zh-rHK.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\6b0daa5fb4c2eb7e8b55778df9b972f6\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-zh-rHK\\values.xml",
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\53954d6df10d13093dc1d46643d284f8\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-zh-rHK\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -57,10 +57,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\google_sign_in_android\\intermediates\\merged_res\\release\\values-zh-rHK\\values-zh-rHK.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\google_sign_in_android\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\6b0daa5fb4c2eb7e8b55778df9b972f6\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-zh-rHK\\values.xml",
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\53954d6df10d13093dc1d46643d284f8\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-zh-rHK\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

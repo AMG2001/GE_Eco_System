@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\google_sign_in_android\\intermediates\\merged_res\\release\\values-ka\\values-ka.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\google_sign_in_android\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-ka\\values-ka.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\acbce933e4b464a5224ed377a62db1f5\\transformed\\core-1.6.0\\res\\values-ka\\values-ka.xml",
@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\53954d6df10d13093dc1d46643d284f8\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-ka\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "138",
+                        "endOffsets": "333"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1065",
+                        "endColumns": "142",
+                        "endOffsets": "1203"
+                    }
+                },
+                {
                     "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\3ff720be07735976176520d1c05fb799\\transformed\\jetified-play-services-base-18.0.1\\res\\values-ka\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -35,29 +52,12 @@
                         "startOffsets": "55,160,309,437,547,701,835,957,1208,1381,1489,1644,1772,1933,2072,2138,2199",
                         "endColumns": "104,148,127,109,153,133,121,107,172,107,154,127,160,138,65,60,75",
                         "endOffsets": "155,304,432,542,696,830,952,1060,1376,1484,1639,1767,1928,2067,2133,2194,2270"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\6b0daa5fb4c2eb7e8b55778df9b972f6\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-ka\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "138",
-                        "endOffsets": "333"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1065",
-                        "endColumns": "142",
-                        "endOffsets": "1203"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\google_sign_in_android\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-ka\\values-ka.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\google_sign_in_android\\intermediates\\merged_res\\release\\values-ka\\values-ka.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\acbce933e4b464a5224ed377a62db1f5\\transformed\\core-1.6.0\\res\\values-ka\\values-ka.xml",
@@ -77,6 +77,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\53954d6df10d13093dc1d46643d284f8\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-ka\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "138",
+                        "endOffsets": "333"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1065",
+                        "endColumns": "142",
+                        "endOffsets": "1203"
+                    }
+                },
+                {
                     "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\3ff720be07735976176520d1c05fb799\\transformed\\jetified-play-services-base-18.0.1\\res\\values-ka\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -91,23 +108,6 @@
                         "startOffsets": "55,160,309,437,547,701,835,957,1208,1381,1489,1644,1772,1933,2072,2138,2199",
                         "endColumns": "104,148,127,109,153,133,121,107,172,107,154,127,160,138,65,60,75",
                         "endOffsets": "155,304,432,542,696,830,952,1060,1376,1484,1639,1767,1928,2067,2133,2194,2270"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\6b0daa5fb4c2eb7e8b55778df9b972f6\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-ka\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "138",
-                        "endOffsets": "333"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1065",
-                        "endColumns": "142",
-                        "endOffsets": "1203"
                     }
                 }
             ]

@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\google_sign_in_android\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-fr\\values-fr.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\google_sign_in_android\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-fr\\values-fr.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\6b0daa5fb4c2eb7e8b55778df9b972f6\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-fr\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "160",
-                        "endOffsets": "355"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1118",
-                        "endColumns": "164",
-                        "endOffsets": "1278"
-                    }
-                },
                 {
                     "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\acbce933e4b464a5224ed377a62db1f5\\transformed\\core-1.6.0\\res\\values-fr\\values-fr.xml",
                     "from": {
@@ -52,30 +35,30 @@
                         "startOffsets": "55,161,341,471,580,751,884,1005,1283,1461,1573,1758,1894,2054,2233,2306,2373",
                         "endColumns": "105,179,129,108,170,132,120,112,177,111,184,135,159,178,72,66,83",
                         "endOffsets": "156,336,466,575,746,879,1000,1113,1456,1568,1753,1889,2049,2228,2301,2368,2452"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\53954d6df10d13093dc1d46643d284f8\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-fr\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "160",
+                        "endOffsets": "355"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1118",
+                        "endColumns": "164",
+                        "endOffsets": "1278"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\google_sign_in_android\\intermediates\\merged_res\\release\\values-fr\\values-fr.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\google_sign_in_android\\intermediates\\merged_res\\release\\values-fr\\values-fr.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\6b0daa5fb4c2eb7e8b55778df9b972f6\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-fr\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "160",
-                        "endOffsets": "355"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1118",
-                        "endColumns": "164",
-                        "endOffsets": "1278"
-                    }
-                },
                 {
                     "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\acbce933e4b464a5224ed377a62db1f5\\transformed\\core-1.6.0\\res\\values-fr\\values-fr.xml",
                     "from": {
@@ -108,6 +91,23 @@
                         "startOffsets": "55,161,341,471,580,751,884,1005,1283,1461,1573,1758,1894,2054,2233,2306,2373",
                         "endColumns": "105,179,129,108,170,132,120,112,177,111,184,135,159,178,72,66,83",
                         "endOffsets": "156,336,466,575,746,879,1000,1113,1456,1568,1753,1889,2049,2228,2301,2368,2452"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\53954d6df10d13093dc1d46643d284f8\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-fr\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "160",
+                        "endOffsets": "355"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1118",
+                        "endColumns": "164",
+                        "endOffsets": "1278"
                     }
                 }
             ]

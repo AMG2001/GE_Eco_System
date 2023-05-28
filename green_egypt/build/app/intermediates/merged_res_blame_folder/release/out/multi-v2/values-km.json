@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-km\\values-km.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-km\\values-km.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\6b0daa5fb4c2eb7e8b55778df9b972f6\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-km\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "144",
-                        "endOffsets": "339"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3792",
-                        "endColumns": "148",
-                        "endOffsets": "3936"
-                    }
-                },
                 {
                     "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\05304738454a7c6fee076a188df4c25d\\transformed\\browser-1.4.0\\res\\values-km\\values-km.xml",
                     "from": {
@@ -35,6 +18,23 @@
                         "startOffsets": "5014,5111,5208,5341",
                         "endColumns": "96,96,132,99",
                         "endOffsets": "5106,5203,5336,5436"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\53954d6df10d13093dc1d46643d284f8\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-km\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "144",
+                        "endOffsets": "339"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3792",
+                        "endColumns": "148",
+                        "endOffsets": "3936"
                     }
                 },
                 {

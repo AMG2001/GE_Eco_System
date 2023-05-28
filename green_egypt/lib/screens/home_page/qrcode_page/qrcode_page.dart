@@ -1,9 +1,19 @@
+import 'dart:async';
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
+import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_controller.dart';
+import 'package:green_egypt/screens/home_page/qrcode_page/controller/qrcode_page_controller.dart';
+import 'package:green_egypt/screens/home_page/transactions_page/transactions_page_body.dart';
+import 'package:green_egypt/services/boxes/transactions_box.dart';
+import 'package:green_egypt/services/console_message.dart';
+import 'package:green_egypt/services/custom_toast.dart';
+import 'package:green_egypt/services/qrcode_service/qrcode_class.dart';
+import 'package:green_egypt/services/show_progress_indicator.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QrCodePageBody extends StatefulWidget {
@@ -18,6 +28,7 @@ class _QrCodePageState extends State<QrCodePageBody> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   Barcode? result;
   QRViewController? controller;
+  String qrcodeScanningStatus = "";
 
   // In order to get hot reload to work we need to pause the camera if the platform
   // is android, or resume the camera if the platform is iOS.
@@ -52,7 +63,7 @@ class _QrCodePageState extends State<QrCodePageBody> {
             child: Center(
               child: (result != null)
                   ? Text(
-                      'Barcode Type: ${describeEnum(result!.format)}  \nData: ${result!.code}')
+                      'Barcode Type: ${describeEnum(result!.format)}  \nData: ${result!.code} \n qrcode scanning status : ${qrcodeScanningStatus}')
                   : Text('Scan a code'.tr),
             ),
           )
@@ -64,13 +75,57 @@ class _QrCodePageState extends State<QrCodePageBody> {
   void _onQRViewCreated(QRViewController controller) {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
-      setState(() {
-        String qrcodeDataInString = scanData.code!;
-
-
-        // TODO : get data from QR and store points into user Points .
-        result = scanData;
-      });
+      Timer(
+        Duration(milliseconds: 1500),
+        () {
+          setState(() {
+            /**
+         * readed data form from qrcode : 'GE-A1,${OperationsBox.instance.lastOperationNumber},${blueController.plastic_items},${blueController.cans_items},${DateFormat('yyyy-MM-dd').format(DateTime.now())},${DateFormat.Hms().format(DateTime.now())}',                 
+         * 1. name of machine : GE-A1 "String" .
+         * 2. last operation number to prevent user from scanning the same qrcode multiple times "int" .
+         * 3. number of plastic items "int" .
+         * 4. number of cans items "int" .
+         * 5. date "String" .
+         * 6. time "String" . 
+         */
+            String qrcodeDataInString = scanData.code!;
+            List<String> qrcodeDataInList = qrcodeDataInString.split(',');
+            if (qrcodeDataInList[0] == 'GE-A1') {
+              // if the qrcode scanned before , then it will return false .
+              QrcodePageController.instance
+                  .checkAndStore_storedLastOperationNom_with_NewLastOperationNumber(
+                      newLastOperationNumber: int.parse(qrcodeDataInList[1]))
+                  .then((value) {
+                ConsoleMessage.successMessage(
+                    'stored last operation number : ${QrcodePageController.instance.lastOperationNumber} \n last operation number in qrcode : ${int.parse(qrcodeDataInList[1])}');
+                if (value == true) {
+                  ShowProgressIndicator.instance
+                      .showLoadingIndicator(context: context);
+                  CustomToast.showGreenToast(messsage: 'new qrcode');
+                  Timer(
+                    Duration(seconds: 1),
+                    () {
+                      TransactionsBox.instance.addTransaction({
+                        'plastic': qrcodeDataInList[2],
+                        'cans': qrcodeDataInList[3],
+                        'points': (int.parse(qrcodeDataInList[2])*2 + int.parse(qrcodeDataInList[3])*3),
+                        'date': qrcodeDataInList[4],
+                        'time': qrcodeDataInList[5],
+                      });
+                      Get.back();
+                      HomePageController.instance.changePageIndex(newIndex: 2);
+                    },
+                  );
+                } else {
+                  qrcodeScanningStatus = 'qrcode scanned before !!';
+                }
+              });
+            }
+            // TODO : get data from QR and store points into user Points .
+            result = scanData;
+          });
+        },
+      );
     });
   }
 
