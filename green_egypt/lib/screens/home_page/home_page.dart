@@ -8,13 +8,12 @@ import 'package:green_egypt/screens/home_page/home_page_components/components/ho
 import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_controller.dart';
 import 'package:green_egypt/screens/home_page/more_page/more_page.dart';
 import 'package:green_egypt/screens/home_page/qrcode_page/qrcode_page.dart';
-import 'package:green_egypt/screens/home_page/qrcode_page/qrcode_page_appbar.dart';
+import 'package:green_egypt/screens/home_page/qrcode_page/components/qrcode_page_appbar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:green_egypt/screens/home_page/transactions_page/transactions_page_body.dart';
 
 class HomePage extends StatefulWidget {
   final homePageAnimationsController = Get.put(HomePageAnimationsController());
-  final homePageController = Get.put(HomePageController());
   HomePage({super.key});
 
   @override
@@ -22,18 +21,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _pageIndex = 0;
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomePageController>(
-        init: HomePageController(),
+        init: HomePageController.instance,
         builder: (controller) {
           return Scaffold(
-              appBar: _pageIndex == 0
+              appBar: controller.pageIndex == 0
                   ? homePageAppBar
-                  : _pageIndex == 1
+                  : controller.pageIndex == 1
                       ? qrcodePageAppbar
-                      : _pageIndex == 2
+                      : controller.pageIndex == 2
                           ? null
                           : AppBar(
                               title: Text('more page'.tr),
@@ -44,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor: ApplicationThemeController.instance.isDark
                       ? Colors.black
                       : Colors.white,
-                  selectedIndex: _pageIndex,
+                  selectedIndex: controller.pageIndex,
                   curve: Curves.linear,
                   iconSize: 20.sp,
                   items: [
@@ -99,18 +97,18 @@ class _HomePageState extends State<HomePage> {
                   ],
                   onItemSelected: (value) {
                     setState(() {
-                      _pageIndex = value;
+                      controller.pageIndex = value;
                     });
                   },
                 );
               }),
-              body: _pageIndex == 0
+              body: controller.pageIndex == 0
                   ? homePageBody
-                  : _pageIndex == 1
+                  : controller.pageIndex == 1
                       ? QrCodePageBody()
-                      : _pageIndex == 2
+                      : controller.pageIndex == 2
                           ? TransactionPageBody()
-                          : _pageIndex == 3
+                          : controller.pageIndex == 3
                               ? MorePageBody()
                               : SizedBox());
         });

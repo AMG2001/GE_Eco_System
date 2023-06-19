@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\google_sign_in_android\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\google_sign_in_android\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\1e28bb4d2dfdb26a699daa556422ff6d\\transformed\\jetified-play-services-auth-20.4.1\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\4279d419022346fdce0248d8d5ea79a4\\transformed\\jetified-play-services-auth-20.5.0\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -23,10 +23,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE Projects\\Green_Egypt\\green_egypt\\build\\google_sign_in_android\\intermediates\\merged_res\\release\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "C:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\google_sign_in_android\\intermediates\\merged_res\\release\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\1e28bb4d2dfdb26a699daa556422ff6d\\transformed\\jetified-play-services-auth-20.4.1\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\mavic\\.gradle\\caches\\transforms-3\\4279d419022346fdce0248d8d5ea79a4\\transformed\\jetified-play-services-auth-20.5.0\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

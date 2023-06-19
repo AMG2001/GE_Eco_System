@@ -3,10 +3,10 @@ import 'package:green_egypt/config/dimensions.dart';
 
 class TransactionInfoModel extends StatelessWidget {
   TransactionInfoModel(
-      {required this.date, required this.garbage, required this.price});
+      {required this.date, required this.garbage, required this.points});
   late String date;
   late String garbage;
-  late String price;
+  late String points;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,20 +24,27 @@ class TransactionInfoModel extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          title: Text(
-            date,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          title: Column(
+            children: [
+              Text(
+                date,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
+              SizedBox(
+                height: 8,
+              )
+            ],
           ),
           subtitle: Text(
             garbage,
             style: TextStyle(
-                color: Color(0XFFD9D9D9), fontWeight: FontWeight.w800),
+                color: Color(0XFFD9D9D9), fontWeight: FontWeight.w500),
           ),
           trailing: Text(
-            "${price}\$",
+            "${points} point",
             style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              fontSize: 16,
             ),
           ),
         ),

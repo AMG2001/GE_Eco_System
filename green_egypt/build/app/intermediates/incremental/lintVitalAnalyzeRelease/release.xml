@@ -4,9 +4,9 @@
     minSdkVersion="21"
     targetSdkVersion="33"
     shrinking="true"
-    mergedManifest="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\intermediates\merged_manifest\release\AndroidManifest.xml"
-    proguardFiles="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\intermediates\default_proguard_files\global\proguard-android.txt-7.1.2;C:\flutter_windows_3.7.10-stable\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro"
-    partialResultsDir="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\intermediates\lint_vital_partial_results\release\out">
+    mergedManifest="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\intermediates\merged_manifest\release\AndroidManifest.xml"
+    proguardFiles="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\intermediates\default_proguard_files\global\proguard-android.txt-7.1.2;C:\Users\mavic\fvm\versions\3.7.12\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro"
+    partialResultsDir="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\intermediates\lint_vital_partial_results\release\out">
   <buildFeatures
       namespacing="REQUIRED"/>
   <sourceProviders>
@@ -29,9 +29,9 @@
         value="android.app.Application" />
   </manifestPlaceholders>
   <mainArtifact
-      classOutputs="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\intermediates\javac\release\classes;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\tmp\kotlin-classes\release;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\kotlinToolingMetadata;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
+      classOutputs="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\intermediates\javac\release\classes;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\tmp\kotlin-classes\release;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\kotlinToolingMetadata;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
       applicationId="tech.mavica.green_egypt"
-      generatedSourceFolders="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\generated\ap_generated_sources\release\out;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\generated\aidl_source_output_dir\release\out;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\generated\source\buildConfig\release;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\generated\renderscript_source_output_dir\release\out"
-      generatedResourceFolders="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\generated\res\rs\release;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\generated\res\resValues\release">
+      generatedSourceFolders="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\generated\ap_generated_sources\release\out;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\generated\aidl_source_output_dir\release\out;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\generated\source\buildConfig\release;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\generated\renderscript_source_output_dir\release\out"
+      generatedResourceFolders="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\generated\res\rs\release;C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\generated\res\resValues\release">
   </mainArtifact>
 </variant>

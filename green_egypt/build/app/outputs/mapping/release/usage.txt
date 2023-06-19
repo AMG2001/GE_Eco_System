@@ -7358,7 +7358,6 @@ com.android.installreferrer.BuildConfig
 com.android.installreferrer.R
 com.android.installreferrer.api.InstallReferrerClient$InstallReferrerResponse
 com.android.installreferrer.api.InstallReferrerClient:
-    public abstract void endConnection()
     public abstract boolean isReady()
 com.android.installreferrer.api.InstallReferrerClientImpl$ClientState
 com.android.installreferrer.api.InstallReferrerClientImpl:
@@ -7367,7 +7366,6 @@ com.android.installreferrer.api.InstallReferrerClientImpl:
     private static final java.lang.String SERVICE_NAME
     private static final java.lang.String SERVICE_PACKAGE_NAME
     private static final java.lang.String TAG
-    public void endConnection()
 com.android.installreferrer.api.ReferrerDetails:
     private static final java.lang.String KEY_INSTALL_BEGIN_TIMESTAMP
     private static final java.lang.String KEY_INSTALL_REFERRER
@@ -9733,6 +9731,7 @@ com.facebook.internal.instrument.InstrumentUtility:
     public static final java.lang.String ERROR_REPORT_PREFIX
     private static final java.lang.String FBSDK_PREFIX
     private static final java.lang.String INSTRUMENT_DIR
+    private static final java.lang.String METASDK_PREFIX
     private static final java.lang.String SUGGESTED_EVENTS_PREFIX
     public static final java.lang.String THREAD_CHECK_PREFIX
 com.facebook.internal.instrument.anrreport.ANRDetector:
@@ -9801,6 +9800,8 @@ com.facebook.login.DeviceAuthDialog:
     public static final synthetic int access$getLOGIN_ERROR_SUBCODE_AUTHORIZATION_PENDING$cp()
 com.facebook.login.DeviceAuthMethodHandler:
     public static final synchronized java.util.concurrent.ScheduledThreadPoolExecutor getBackgroundExecutor()
+com.facebook.login.DeviceLoginManager$Companion$instance$2
+com.facebook.login.DeviceLoginManager$Companion
 com.facebook.login.DeviceLoginManager
 com.facebook.login.LoginBehavior:
     public final boolean allowsFacebookLiteAuth()
@@ -10028,26 +10029,22 @@ com.facebook.login.WebViewLoginMethodHandler:
     public final com.facebook.internal.WebDialog getLoginDialog()
     public final void setE2e(java.lang.String)
     public final void setLoginDialog(com.facebook.internal.WebDialog)
-com.facebook.login.widget.DeviceLoginButton$1
 com.facebook.login.widget.DeviceLoginButton$DeviceLoginClickListener
 com.facebook.login.widget.DeviceLoginButton
-com.facebook.login.widget.LoginButton$1
-com.facebook.login.widget.LoginButton$2$1
-com.facebook.login.widget.LoginButton$2
-com.facebook.login.widget.LoginButton$3
-com.facebook.login.widget.LoginButton$4
+com.facebook.login.widget.LoginButton$Companion
 com.facebook.login.widget.LoginButton$LoginButtonProperties
-com.facebook.login.widget.LoginButton$LoginClickListener$1
 com.facebook.login.widget.LoginButton$LoginClickListener
+com.facebook.login.widget.LoginButton$ToolTipMode$Companion
 com.facebook.login.widget.LoginButton$ToolTipMode
+com.facebook.login.widget.LoginButton$WhenMappings
+com.facebook.login.widget.LoginButton$configureButton$1
+com.facebook.login.widget.LoginButton$loginManagerLazy$1
 com.facebook.login.widget.LoginButton
-com.facebook.login.widget.ProfilePictureView$1
-com.facebook.login.widget.ProfilePictureView$2
+com.facebook.login.widget.ProfilePictureView$Companion
 com.facebook.login.widget.ProfilePictureView$OnErrorListener
+com.facebook.login.widget.ProfilePictureView$initialize$1
 com.facebook.login.widget.ProfilePictureView
-com.facebook.login.widget.ToolTipPopup$1
-com.facebook.login.widget.ToolTipPopup$2
-com.facebook.login.widget.ToolTipPopup$3
+com.facebook.login.widget.ToolTipPopup$Companion
 com.facebook.login.widget.ToolTipPopup$PopupContentView
 com.facebook.login.widget.ToolTipPopup$Style
 com.facebook.login.widget.ToolTipPopup
@@ -10281,7 +10278,6 @@ com.google.android.gms.auth.api.R$drawable
 com.google.android.gms.auth.api.R$id
 com.google.android.gms.auth.api.R$integer
 com.google.android.gms.auth.api.R$layout
-com.google.android.gms.auth.api.R$menu
 com.google.android.gms.auth.api.R$string
 com.google.android.gms.auth.api.R$style
 com.google.android.gms.auth.api.R$styleable
@@ -10353,6 +10349,8 @@ com.google.android.gms.auth.api.credentials.zbf
 com.google.android.gms.auth.api.identity.BeginSignInRequest$Builder
 com.google.android.gms.auth.api.identity.BeginSignInRequest$GoogleIdTokenRequestOptions$Builder
 com.google.android.gms.auth.api.identity.BeginSignInRequest$GoogleIdTokenRequestOptions
+com.google.android.gms.auth.api.identity.BeginSignInRequest$PasskeyJsonRequestOptions$Builder
+com.google.android.gms.auth.api.identity.BeginSignInRequest$PasskeyJsonRequestOptions
 com.google.android.gms.auth.api.identity.BeginSignInRequest$PasskeysRequestOptions$Builder
 com.google.android.gms.auth.api.identity.BeginSignInRequest$PasskeysRequestOptions
 com.google.android.gms.auth.api.identity.BeginSignInRequest$PasswordRequestOptions$Builder
@@ -10390,6 +10388,7 @@ com.google.android.gms.auth.api.identity.zbm
 com.google.android.gms.auth.api.identity.zbn
 com.google.android.gms.auth.api.identity.zbo
 com.google.android.gms.auth.api.identity.zbp
+com.google.android.gms.auth.api.identity.zbq
 com.google.android.gms.auth.api.phone.R
 com.google.android.gms.auth.api.phone.SmsCodeAutofillClient$PermissionState
 com.google.android.gms.auth.api.phone.SmsCodeAutofillClient
@@ -11112,6 +11111,7 @@ com.google.android.gms.common.internal.BaseGmsClient:
     public boolean providesSignIn()
     protected void triggerNotAvailable(com.google.android.gms.common.internal.BaseGmsClient$ConnectionProgressReportCallbacks,int,android.app.PendingIntent)
 com.google.android.gms.common.internal.BinderWrapper
+com.google.android.gms.common.internal.CallbackExecutor
 com.google.android.gms.common.internal.ClientIdentity
 com.google.android.gms.common.internal.ClientSettings:
     public void <init>(android.accounts.Account,java.util.Set,java.util.Map,int,android.view.View,java.lang.String,java.lang.String,com.google.android.gms.signin.SignInOptions)
@@ -11129,7 +11129,9 @@ com.google.android.gms.common.internal.GmsClient:
     protected void <init>(android.content.Context,android.os.Looper,int,com.google.android.gms.common.internal.ClientSettings)
     public com.google.android.gms.common.Feature[] getRequiredFeatures()
 com.google.android.gms.common.internal.GmsClientSupervisor:
+    public boolean bindService(android.content.ComponentName,android.content.ServiceConnection,java.lang.String,java.util.concurrent.Executor)
     public boolean bindService(java.lang.String,android.content.ServiceConnection,java.lang.String)
+    public static void setDefaultBindExecutor(java.util.concurrent.Executor)
     public static void setUseHandlerThreadForCallbacks()
     public void unbindService(java.lang.String,android.content.ServiceConnection,java.lang.String)
 com.google.android.gms.common.internal.GmsLogger:
@@ -11163,6 +11165,10 @@ com.google.android.gms.common.internal.PendingResultUtil:
     public void <init>()
 com.google.android.gms.common.internal.Preconditions:
     private void <init>()
+    public static double checkArgumentInRange(double,double,double,java.lang.String)
+    public static float checkArgumentInRange(float,float,float,java.lang.String)
+    public static int checkArgumentInRange(int,int,int,java.lang.String)
+    public static long checkArgumentInRange(long,long,long,java.lang.String)
     public static void checkHandlerThread(android.os.Handler,java.lang.String)
     public static void checkMainThread()
     public static void checkMainThread(java.lang.String)
@@ -11171,6 +11177,7 @@ com.google.android.gms.common.internal.Preconditions:
     public static long checkNotZero(long)
     public static long checkNotZero(long,java.lang.Object)
     public static varargs void checkState(boolean,java.lang.String,java.lang.Object[])
+    static varargs java.lang.String zza(java.lang.String,java.lang.Object[])
 com.google.android.gms.common.internal.ResourceUtils
 com.google.android.gms.common.internal.ServiceSpecificExtraArgs$CastExtraArgs
 com.google.android.gms.common.internal.ServiceSpecificExtraArgs$GamesExtraArgs
@@ -11318,24 +11325,27 @@ com.google.android.gms.common.internal.zav:
 com.google.android.gms.common.internal.zax
 com.google.android.gms.common.internal.zay
 com.google.android.gms.common.internal.zaz
-com.google.android.gms.common.internal.zzaa
-com.google.android.gms.common.internal.zzad
+com.google.android.gms.common.internal.zzab
 com.google.android.gms.common.internal.zzae
 com.google.android.gms.common.internal.zzaf
-com.google.android.gms.common.internal.zzag:
+com.google.android.gms.common.internal.zzag
+com.google.android.gms.common.internal.zzah:
     public static java.lang.String zzb(android.content.Context)
-com.google.android.gms.common.internal.zzaj
 com.google.android.gms.common.internal.zzak
+com.google.android.gms.common.internal.zzal
 com.google.android.gms.common.internal.zzh
 com.google.android.gms.common.internal.zzi
-com.google.android.gms.common.internal.zzn:
+com.google.android.gms.common.internal.zzj
+com.google.android.gms.common.internal.zzo:
     public void <init>(java.lang.String,int,boolean)
-com.google.android.gms.common.internal.zzr:
-    final void zzi(android.os.Looper)
-com.google.android.gms.common.internal.zzw
+com.google.android.gms.common.internal.zzs:
+    final void zzi(java.util.concurrent.Executor)
+    final void zzj(android.os.Looper)
+com.google.android.gms.common.internal.zzu
 com.google.android.gms.common.internal.zzx
-com.google.android.gms.common.internal.zzy:
-    public static com.google.android.gms.common.internal.zzz zzg(android.os.IBinder)
+com.google.android.gms.common.internal.zzy
+com.google.android.gms.common.internal.zzz:
+    public static com.google.android.gms.common.internal.zzaa zzg(android.os.IBinder)
 com.google.android.gms.common.logging.Logger:
     public java.lang.String getTag()
     public varargs void v(java.lang.String,java.lang.Throwable,java.lang.Object[])
@@ -11505,7 +11515,7 @@ com.google.android.gms.common.zzae
 com.google.android.gms.common.zzd
 com.google.android.gms.common.zze
 com.google.android.gms.common.zzn:
-    private static volatile com.google.android.gms.common.internal.zzaf zze
+    private static volatile com.google.android.gms.common.internal.zzag zze
     static com.google.android.gms.common.zzx zza(java.lang.String,com.google.android.gms.common.zzj,boolean,boolean)
     static com.google.android.gms.common.zzx zzb(java.lang.String,boolean,boolean,boolean)
     static com.google.android.gms.common.zzx zzc(java.lang.String,boolean,boolean,boolean)
@@ -11569,6 +11579,7 @@ com.google.android.gms.fido.fido2.api.common.AuthenticationExtensions$Builder
 com.google.android.gms.fido.fido2.api.common.AuthenticationExtensions
 com.google.android.gms.fido.fido2.api.common.AuthenticationExtensionsClientOutputs$Builder
 com.google.android.gms.fido.fido2.api.common.AuthenticationExtensionsClientOutputs
+com.google.android.gms.fido.fido2.api.common.AuthenticationExtensionsCredPropsOutputs
 com.google.android.gms.fido.fido2.api.common.AuthenticatorAssertionResponse
 com.google.android.gms.fido.fido2.api.common.AuthenticatorAttestationResponse
 com.google.android.gms.fido.fido2.api.common.AuthenticatorErrorResponse
@@ -11640,7 +11651,12 @@ com.google.android.gms.fido.fido2.api.common.zzas
 com.google.android.gms.fido.fido2.api.common.zzat
 com.google.android.gms.fido.fido2.api.common.zzau
 com.google.android.gms.fido.fido2.api.common.zzav
+com.google.android.gms.fido.fido2.api.common.zzaw
+com.google.android.gms.fido.fido2.api.common.zzax
+com.google.android.gms.fido.fido2.api.common.zzay
+com.google.android.gms.fido.fido2.api.common.zzaz
 com.google.android.gms.fido.fido2.api.common.zzb
+com.google.android.gms.fido.fido2.api.common.zzba
 com.google.android.gms.fido.fido2.api.common.zzc
 com.google.android.gms.fido.fido2.api.common.zzd
 com.google.android.gms.fido.fido2.api.common.zze
@@ -11687,11 +11703,6 @@ com.google.android.gms.fido.fido2.zzs
 com.google.android.gms.fido.fido2.zzt
 com.google.android.gms.fido.fido2.zzu
 com.google.android.gms.fido.fido2.zzv
-com.google.android.gms.fido.sourcedevice.SourceDirectTransferClient
-com.google.android.gms.fido.sourcedevice.SourceDirectTransferResult
-com.google.android.gms.fido.sourcedevice.SourceStartDirectTransferOptions
-com.google.android.gms.fido.sourcedevice.zza
-com.google.android.gms.fido.sourcedevice.zzb
 com.google.android.gms.fido.u2f.U2fApiClient
 com.google.android.gms.fido.u2f.U2fPendingIntent
 com.google.android.gms.fido.u2f.api.common.ChannelIdValue$ChannelIdValueType
@@ -11981,9 +11992,10 @@ com.google.android.gms.internal.common.zzai
 com.google.android.gms.internal.common.zzaj
 com.google.android.gms.internal.common.zzak
 com.google.android.gms.internal.common.zzc:
+    public static final synthetic int zza
+    public static void zzc(android.os.Parcel,android.os.Parcelable)
     public static void zzd(android.os.Parcel,android.os.Parcelable)
-    public static void zze(android.os.Parcel,android.os.Parcelable)
-    public static boolean zzg(android.os.Parcel)
+    public static boolean zzf(android.os.Parcel)
 com.google.android.gms.internal.common.zze
 com.google.android.gms.internal.common.zzf
 com.google.android.gms.internal.common.zzg
@@ -12046,12 +12058,6 @@ com.google.android.gms.internal.fido.zzbh
 com.google.android.gms.internal.fido.zzbi
 com.google.android.gms.internal.fido.zzbj
 com.google.android.gms.internal.fido.zzbk
-com.google.android.gms.internal.fido.zzbl
-com.google.android.gms.internal.fido.zzbm
-com.google.android.gms.internal.fido.zzbn
-com.google.android.gms.internal.fido.zzbo
-com.google.android.gms.internal.fido.zzbp
-com.google.android.gms.internal.fido.zzbq
 com.google.android.gms.internal.fido.zzc
 com.google.android.gms.internal.fido.zzd
 com.google.android.gms.internal.fido.zze
@@ -12077,25 +12083,25 @@ com.google.android.gms.internal.fido.zzx
 com.google.android.gms.internal.fido.zzy
 com.google.android.gms.internal.fido.zzz
 com.google.android.gms.internal.firebase-auth-api.zzaaf:
-    public final com.google.android.gms.tasks.Task zzm(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.AuthCredential,java.lang.String,com.google.firebase.auth.internal.zzby)
-    public final com.google.android.gms.tasks.Task zzo(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.EmailAuthCredential,java.lang.String,com.google.firebase.auth.internal.zzby)
-    public final com.google.android.gms.tasks.Task zzq(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.firebase.auth.internal.zzby)
-    public final com.google.android.gms.tasks.Task zzs(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.PhoneAuthCredential,java.lang.String,com.google.firebase.auth.internal.zzby)
-    public final com.google.android.gms.tasks.Task zzy(java.lang.String)
+    public final com.google.android.gms.tasks.Task zzn(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.AuthCredential,java.lang.String,com.google.firebase.auth.internal.zzcb)
+    public final com.google.android.gms.tasks.Task zzp(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.EmailAuthCredential,java.lang.String,com.google.firebase.auth.internal.zzcb)
+    public final com.google.android.gms.tasks.Task zzr(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.firebase.auth.internal.zzcb)
+    public final com.google.android.gms.tasks.Task zzt(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.PhoneAuthCredential,java.lang.String,com.google.firebase.auth.internal.zzcb)
+    public final com.google.android.gms.tasks.Task zzz(java.lang.String)
 com.google.android.gms.internal.firebase-auth-api.zzaag:
     public abstract void zzo()
 com.google.android.gms.internal.firebase-auth-api.zzaah:
     public final void zzo()
 com.google.android.gms.internal.firebase-auth-api.zzaai:
-    public final void zzu(com.google.android.gms.internal.firebase-auth-api.zzwc,com.google.android.gms.internal.firebase-auth-api.zzaag)
+    public final void zzu(com.google.android.gms.internal.firebase-auth-api.zzwi,com.google.android.gms.internal.firebase-auth-api.zzaag)
 com.google.android.gms.internal.firebase-auth-api.zzaaw:
-    public final void zzo(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzabo)
+    public final void zzn(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzabo)
 com.google.android.gms.internal.firebase-auth-api.zzaax:
     public final void zzb(java.lang.String)
 com.google.android.gms.internal.firebase-auth-api.zzabg:
     public final void zzo()
 com.google.android.gms.internal.firebase-auth-api.zzabp:
-    public abstract void zzo(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzabo)
+    public abstract void zzn(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzabo)
 com.google.android.gms.internal.firebase-auth-api.zzadz:
     public void <init>()
 com.google.android.gms.internal.firebase-auth-api.zzaeo:
@@ -12161,36 +12167,22 @@ com.google.android.gms.internal.firebase-auth-api.zzfj:
     private void <init>()
 com.google.android.gms.internal.firebase-auth-api.zzg:
     public void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzjt:
+com.google.android.gms.internal.firebase-auth-api.zzhk:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzjw:
+com.google.android.gms.internal.firebase-auth-api.zzhr:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzlg:
+com.google.android.gms.internal.firebase-auth-api.zzkl:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzlo:
+com.google.android.gms.internal.firebase-auth-api.zzko:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzmc:
+com.google.android.gms.internal.firebase-auth-api.zzly:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzmk:
+com.google.android.gms.internal.firebase-auth-api.zzmg:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzno:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zznr:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zznu:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zznx:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzoa:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzod:
-    static final synthetic int[] zza
-    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzmu:
+    private void <init>()
+com.google.android.gms.internal.firebase-auth-api.zznc:
+    private void <init>()
 com.google.android.gms.internal.firebase-auth-api.zzog:
     static final synthetic int[] zza
     static void <clinit>()
@@ -12230,102 +12222,120 @@ com.google.android.gms.internal.firebase-auth-api.zzpn:
 com.google.android.gms.internal.firebase-auth-api.zzpq:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzpr:
+com.google.android.gms.internal.firebase-auth-api.zzpt:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzpw:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzpz:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzqc:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzqf:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzqi:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzqj:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzpv:
+com.google.android.gms.internal.firebase-auth-api.zzqn:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzpy:
+com.google.android.gms.internal.firebase-auth-api.zzqq:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzqb:
+com.google.android.gms.internal.firebase-auth-api.zzqt:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzqe:
+com.google.android.gms.internal.firebase-auth-api.zzqw:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzqh:
+com.google.android.gms.internal.firebase-auth-api.zzqz:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzqk:
+com.google.android.gms.internal.firebase-auth-api.zzrc:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzqp:
+com.google.android.gms.internal.firebase-auth-api.zzrh:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzqu:
+com.google.android.gms.internal.firebase-auth-api.zzrm:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzqx:
+com.google.android.gms.internal.firebase-auth-api.zzrp:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzra:
+com.google.android.gms.internal.firebase-auth-api.zzrs:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzrf:
+com.google.android.gms.internal.firebase-auth-api.zzrx:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzri:
+com.google.android.gms.internal.firebase-auth-api.zzsa:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzrl:
+com.google.android.gms.internal.firebase-auth-api.zzsd:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzro:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzrr:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzry:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzsb:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzsc:
-    private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzse:
+com.google.android.gms.internal.firebase-auth-api.zzsg:
     static final synthetic int[] zza
     static void <clinit>()
 com.google.android.gms.internal.firebase-auth-api.zzsj:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzso:
+com.google.android.gms.internal.firebase-auth-api.zzsq:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzsr:
+com.google.android.gms.internal.firebase-auth-api.zzst:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzss:
-    private void <init>()
 com.google.android.gms.internal.firebase-auth-api.zzsu:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzsx:
-    static final synthetic int[] zza
-    static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzsy:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zztc:
+com.google.android.gms.internal.firebase-auth-api.zzsw:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zztd:
-    private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zztf:
+com.google.android.gms.internal.firebase-auth-api.zztb:
     static final synthetic int[] zza
     static void <clinit>()
-com.google.android.gms.internal.firebase-auth-api.zzti:
+com.google.android.gms.internal.firebase-auth-api.zztg:
     static final synthetic int[] zza
     static void <clinit>()
 com.google.android.gms.internal.firebase-auth-api.zztj:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zztk:
+    private void <init>()
+com.google.android.gms.internal.firebase-auth-api.zztm:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zztp:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zztq:
+    private void <init>()
+com.google.android.gms.internal.firebase-auth-api.zztu:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zztv:
+    private void <init>()
+com.google.android.gms.internal.firebase-auth-api.zztx:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzua:
+    static final synthetic int[] zza
+    static void <clinit>()
+com.google.android.gms.internal.firebase-auth-api.zzub:
     private void <init>()
 com.google.android.gms.internal.firebase-auth-api.zzw:
     private void <init>()
-com.google.android.gms.internal.firebase-auth-api.zzwc
+com.google.android.gms.internal.firebase-auth-api.zzwi
 com.google.android.gms.internal.firebase-auth-api.zzyb
 com.google.android.gms.internal.firebase-auth-api.zzyk:
-    public final void zzA(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzaah)
+    public final void zzz(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzaah)
 com.google.android.gms.internal.firebase-auth-api.zzzb
 com.google.android.gms.internal.firebase-auth-api.zzzd
 com.google.android.gms.internal.firebase-auth-api.zzzf
@@ -19266,6 +19276,7 @@ com.google.firebase.auth.FacebookAuthProvider:
     private void <init>()
 com.google.firebase.auth.FirebaseAuth:
     public com.google.android.gms.tasks.Task getPendingAuthResult()
+    public com.google.android.gms.tasks.Task initializeRecaptchaConfig()
     public boolean isSignInWithEmailLink(java.lang.String)
     public com.google.android.gms.tasks.Task setFirebaseUIVersion(java.lang.String)
     public com.google.android.gms.tasks.Task updateCurrentUser(com.google.firebase.auth.FirebaseUser)
@@ -19336,9 +19347,9 @@ com.google.firebase.auth.internal.zzae:
     public final com.google.android.gms.tasks.Task unenroll(com.google.firebase.auth.MultiFactorInfo)
 com.google.firebase.auth.internal.zzag:
     public final com.google.firebase.auth.FirebaseAuth getFirebaseAuth()
-com.google.firebase.auth.internal.zzbg:
+com.google.firebase.auth.internal.zzbh:
     public final com.google.android.gms.tasks.Task zza()
-com.google.firebase.auth.internal.zzca:
+com.google.firebase.auth.internal.zzcd:
     public final com.google.android.gms.tasks.Task zza()
 com.google.firebase.auth.internal.zzp:
     public final com.google.firebase.auth.MultiFactorInfo getMultiFactorInfo()
@@ -19346,11 +19357,14 @@ com.google.firebase.auth.internal.zzq:
     public final java.lang.String getData(int)
 com.google.firebase.auth.internal.zzz:
     public static com.google.firebase.auth.FirebaseUser zzk(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser)
-com.google.firebase.auth.zzac
+com.google.firebase.auth.zzaa
+com.google.firebase.auth.zzad
+com.google.firebase.auth.zzat:
+    public final java.lang.String getFactorId()
 com.google.firebase.auth.zze:
     public final java.lang.String getIdToken()
     public final java.lang.String getSecret()
-com.google.firebase.auth.zzy
+com.google.firebase.auth.zzx
 com.google.firebase.components.BuildConfig
 com.google.firebase.components.Component$Builder:
     public com.google.firebase.components.Component$Builder alwaysEager()
@@ -19484,9 +19498,23 @@ com.google.firebase.events.Subscriber:
     public abstract void subscribe(java.lang.Class,com.google.firebase.events.EventHandler)
     public abstract void subscribe(java.lang.Class,java.util.concurrent.Executor,com.google.firebase.events.EventHandler)
     public abstract void unsubscribe(java.lang.Class,com.google.firebase.events.EventHandler)
+com.google.firebase.firestore.AggregateField$AverageAggregateField:
+    private void <init>(com.google.firebase.firestore.FieldPath)
+    synthetic void <init>(com.google.firebase.firestore.FieldPath,com.google.firebase.firestore.AggregateField$1)
+com.google.firebase.firestore.AggregateField$SumAggregateField:
+    private void <init>(com.google.firebase.firestore.FieldPath)
+    synthetic void <init>(com.google.firebase.firestore.FieldPath,com.google.firebase.firestore.AggregateField$1)
+com.google.firebase.firestore.AggregateField:
+    public static com.google.firebase.firestore.AggregateField$AverageAggregateField average(com.google.firebase.firestore.FieldPath)
+    public static com.google.firebase.firestore.AggregateField$AverageAggregateField average(java.lang.String)
+    public static com.google.firebase.firestore.AggregateField$SumAggregateField sum(com.google.firebase.firestore.FieldPath)
+    public static com.google.firebase.firestore.AggregateField$SumAggregateField sum(java.lang.String)
 com.google.firebase.firestore.AggregateQuery:
-    public com.google.firebase.firestore.Query getQuery()
+    public java.util.List getAggregateFields()
 com.google.firebase.firestore.AggregateQuerySnapshot:
+    public java.lang.Double get(com.google.firebase.firestore.AggregateField$AverageAggregateField)
+    public java.lang.Object get(com.google.firebase.firestore.AggregateField)
+    public java.lang.Double getDouble(com.google.firebase.firestore.AggregateField)
     public com.google.firebase.firestore.AggregateQuery getQuery()
 com.google.firebase.firestore.BuildConfig
 com.google.firebase.firestore.CollectionReference:
@@ -19537,10 +19565,7 @@ com.google.firebase.firestore.DocumentSnapshot:
     private java.lang.Object getTypedValue(java.lang.String,java.lang.Class)
     public java.lang.Object toObject(java.lang.Class)
     public java.lang.Object toObject(java.lang.Class,com.google.firebase.firestore.DocumentSnapshot$ServerTimestampBehavior)
-com.google.firebase.firestore.Filter$CompositeFilter:
-    public void <init>(java.util.List,com.google.firebase.firestore.core.CompositeFilter$Operator)
 com.google.firebase.firestore.Filter:
-    public static varargs com.google.firebase.firestore.Filter and(com.google.firebase.firestore.Filter[])
     public static com.google.firebase.firestore.Filter arrayContains(java.lang.String,java.lang.Object)
     public static com.google.firebase.firestore.Filter arrayContainsAny(java.lang.String,java.util.List)
     public static com.google.firebase.firestore.Filter equalTo(java.lang.String,java.lang.Object)
@@ -19551,7 +19576,6 @@ com.google.firebase.firestore.Filter:
     public static com.google.firebase.firestore.Filter lessThanOrEqualTo(java.lang.String,java.lang.Object)
     public static com.google.firebase.firestore.Filter notEqualTo(java.lang.String,java.lang.Object)
     public static com.google.firebase.firestore.Filter notInArray(java.lang.String,java.util.List)
-    public static varargs com.google.firebase.firestore.Filter or(com.google.firebase.firestore.Filter[])
 com.google.firebase.firestore.FirebaseFirestore:
     private static final java.lang.String TAG
     public com.google.firebase.firestore.ListenerRegistration addSnapshotsInSyncListener(android.app.Activity,java.lang.Runnable)
@@ -19586,11 +19610,13 @@ com.google.firebase.firestore.LoadBundleTask:
     private void removeOnProgressListener(com.google.firebase.firestore.OnProgressListener)
 com.google.firebase.firestore.LoadBundleTaskProgress:
     public java.lang.Exception getException()
+com.google.firebase.firestore.Query$1
 com.google.firebase.firestore.Query:
     public com.google.firebase.firestore.ListenerRegistration addSnapshotListener(android.app.Activity,com.google.firebase.firestore.EventListener)
     public com.google.firebase.firestore.ListenerRegistration addSnapshotListener(android.app.Activity,com.google.firebase.firestore.MetadataChanges,com.google.firebase.firestore.EventListener)
     public com.google.firebase.firestore.ListenerRegistration addSnapshotListener(com.google.firebase.firestore.EventListener)
     public com.google.firebase.firestore.ListenerRegistration addSnapshotListener(java.util.concurrent.Executor,com.google.firebase.firestore.EventListener)
+    public varargs com.google.firebase.firestore.AggregateQuery aggregate(com.google.firebase.firestore.AggregateField,com.google.firebase.firestore.AggregateField[])
     private com.google.firebase.firestore.core.Bound boundFromDocumentSnapshot(java.lang.String,com.google.firebase.firestore.DocumentSnapshot,boolean)
     public com.google.firebase.firestore.Query endAt(com.google.firebase.firestore.DocumentSnapshot)
     public com.google.firebase.firestore.Query endBefore(com.google.firebase.firestore.DocumentSnapshot)
@@ -20185,6 +20211,9 @@ com.google.firebase.firestore.remote.RemoteStore:
     private static final int MAX_PENDING_WRITES
     void forceEnableNetwork()
 com.google.firebase.firestore.remote.Stream
+com.google.firebase.firestore.remote.TestingHooks:
+    com.google.firebase.firestore.ListenerRegistration addExistenceFilterMismatchListener(com.google.firebase.firestore.remote.TestingHooks$ExistenceFilterMismatchListener)
+    private synthetic void lambda$addExistenceFilterMismatchListener$1(java.util.concurrent.atomic.AtomicReference)
 com.google.firebase.firestore.remote.WatchChange$WatchTargetChange:
     public void <init>(com.google.firebase.firestore.remote.WatchChange$WatchTargetChangeType,java.util.List)
     public void <init>(com.google.firebase.firestore.remote.WatchChange$WatchTargetChangeType,java.util.List,com.google.protobuf.ByteString)
@@ -22047,7 +22076,7 @@ com.google.firestore.v1.RunAggregationQueryRequest$Builder:
     public com.google.firestore.v1.RunAggregationQueryRequest$Builder setParentBytes(com.google.protobuf.ByteString)
     public com.google.firestore.v1.RunAggregationQueryRequest$Builder setReadTime(com.google.protobuf.Timestamp$Builder)
     public com.google.firestore.v1.RunAggregationQueryRequest$Builder setReadTime(com.google.protobuf.Timestamp)
-    public com.google.firestore.v1.RunAggregationQueryRequest$Builder setStructuredAggregationQuery(com.google.firestore.v1.StructuredAggregationQuery)
+    public com.google.firestore.v1.RunAggregationQueryRequest$Builder setStructuredAggregationQuery(com.google.firestore.v1.StructuredAggregationQuery$Builder)
     public com.google.firestore.v1.RunAggregationQueryRequest$Builder setTransaction(com.google.protobuf.ByteString)
 com.google.firestore.v1.RunAggregationQueryRequest$ConsistencySelectorCase
 com.google.firestore.v1.RunAggregationQueryRequest$QueryTypeCase
@@ -22176,9 +22205,7 @@ com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder:
     public boolean hasField()
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder mergeField(com.google.firestore.v1.StructuredQuery$FieldReference)
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder setField(com.google.firestore.v1.StructuredQuery$FieldReference$Builder)
-    public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder setField(com.google.firestore.v1.StructuredQuery$FieldReference)
 com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg:
-    static synthetic void access$1100(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg,com.google.firestore.v1.StructuredQuery$FieldReference)
     static synthetic void access$1200(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg,com.google.firestore.v1.StructuredQuery$FieldReference)
     static synthetic void access$1300(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
     private void clearField()
@@ -22186,7 +22213,6 @@ com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg:
     public com.google.firestore.v1.StructuredQuery$FieldReference getField()
     public boolean hasField()
     private void mergeField(com.google.firestore.v1.StructuredQuery$FieldReference)
-    public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder newBuilder()
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder newBuilder(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg parseDelimitedFrom(java.io.InputStream)
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)
@@ -22201,7 +22227,6 @@ com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg:
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg parseFrom(byte[])
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg parseFrom(byte[],com.google.protobuf.ExtensionRegistryLite)
     public static com.google.protobuf.Parser parser()
-    private void setField(com.google.firestore.v1.StructuredQuery$FieldReference)
 com.google.firestore.v1.StructuredAggregationQuery$Aggregation$AvgOrBuilder
 com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder:
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder clearAlias()
@@ -22223,10 +22248,8 @@ com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder:
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder mergeSum(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder setAliasBytes(com.google.protobuf.ByteString)
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder setAvg(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder)
-    public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder setAvg(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder setCount(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Count$Builder)
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder setSum(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder)
-    public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder setSum(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
 com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Count$Builder:
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Count$Builder clearUpTo()
     public com.google.protobuf.Int64Value getUpTo()
@@ -22266,9 +22289,7 @@ com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder:
     public boolean hasField()
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder mergeField(com.google.firestore.v1.StructuredQuery$FieldReference)
     public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder setField(com.google.firestore.v1.StructuredQuery$FieldReference$Builder)
-    public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder setField(com.google.firestore.v1.StructuredQuery$FieldReference)
 com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum:
-    static synthetic void access$600(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum,com.google.firestore.v1.StructuredQuery$FieldReference)
     static synthetic void access$700(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum,com.google.firestore.v1.StructuredQuery$FieldReference)
     static synthetic void access$800(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
     private void clearField()
@@ -22276,7 +22297,6 @@ com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum:
     public com.google.firestore.v1.StructuredQuery$FieldReference getField()
     public boolean hasField()
     private void mergeField(com.google.firestore.v1.StructuredQuery$FieldReference)
-    public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder newBuilder()
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder newBuilder(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum parseDelimitedFrom(java.io.InputStream)
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)
@@ -22291,16 +22311,13 @@ com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum:
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum parseFrom(byte[])
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum parseFrom(byte[],com.google.protobuf.ExtensionRegistryLite)
     public static com.google.protobuf.Parser parser()
-    private void setField(com.google.firestore.v1.StructuredQuery$FieldReference)
 com.google.firestore.v1.StructuredAggregationQuery$Aggregation$SumOrBuilder
 com.google.firestore.v1.StructuredAggregationQuery$Aggregation:
     static synthetic void access$1600(com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
     static synthetic void access$1800(com.google.firestore.v1.StructuredAggregationQuery$Aggregation,com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Count)
     static synthetic void access$1900(com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
-    static synthetic void access$2000(com.google.firestore.v1.StructuredAggregationQuery$Aggregation,com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
     static synthetic void access$2100(com.google.firestore.v1.StructuredAggregationQuery$Aggregation,com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
     static synthetic void access$2200(com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
-    static synthetic void access$2300(com.google.firestore.v1.StructuredAggregationQuery$Aggregation,com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
     static synthetic void access$2400(com.google.firestore.v1.StructuredAggregationQuery$Aggregation,com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
     static synthetic void access$2500(com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
     static synthetic void access$2700(com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
@@ -22338,14 +22355,12 @@ com.google.firestore.v1.StructuredAggregationQuery$Aggregation:
     public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation parseFrom(byte[],com.google.protobuf.ExtensionRegistryLite)
     public static com.google.protobuf.Parser parser()
     private void setAliasBytes(com.google.protobuf.ByteString)
-    private void setAvg(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
-    private void setSum(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
 com.google.firestore.v1.StructuredAggregationQuery$AggregationOrBuilder
 com.google.firestore.v1.StructuredAggregationQuery$Builder:
     public com.google.firestore.v1.StructuredAggregationQuery$Builder addAggregations(int,com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder)
     public com.google.firestore.v1.StructuredAggregationQuery$Builder addAggregations(int,com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
+    public com.google.firestore.v1.StructuredAggregationQuery$Builder addAggregations(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder)
     public com.google.firestore.v1.StructuredAggregationQuery$Builder addAggregations(com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
-    public com.google.firestore.v1.StructuredAggregationQuery$Builder addAllAggregations(java.lang.Iterable)
     public com.google.firestore.v1.StructuredAggregationQuery$Builder clearAggregations()
     public com.google.firestore.v1.StructuredAggregationQuery$Builder clearQueryType()
     public com.google.firestore.v1.StructuredAggregationQuery$Builder clearStructuredQuery()
@@ -22366,12 +22381,12 @@ com.google.firestore.v1.StructuredAggregationQuery:
     static synthetic void access$3300(com.google.firestore.v1.StructuredAggregationQuery,com.google.firestore.v1.StructuredQuery)
     static synthetic void access$3400(com.google.firestore.v1.StructuredAggregationQuery)
     static synthetic void access$3500(com.google.firestore.v1.StructuredAggregationQuery,int,com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
+    static synthetic void access$3600(com.google.firestore.v1.StructuredAggregationQuery,com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
     static synthetic void access$3700(com.google.firestore.v1.StructuredAggregationQuery,int,com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
-    static synthetic void access$3800(com.google.firestore.v1.StructuredAggregationQuery,java.lang.Iterable)
     static synthetic void access$3900(com.google.firestore.v1.StructuredAggregationQuery)
     static synthetic void access$4000(com.google.firestore.v1.StructuredAggregationQuery,int)
     private void addAggregations(int,com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
-    private void addAllAggregations(java.lang.Iterable)
+    private void addAggregations(com.google.firestore.v1.StructuredAggregationQuery$Aggregation)
     private void clearAggregations()
     private void clearQueryType()
     private void clearStructuredQuery()
@@ -26419,6 +26434,7 @@ com.tekartik.sqflite.Constant:
     static final java.lang.String ERROR_DATABASE_CLOSED
     static final java.lang.String ERROR_OPEN_FAILED
     static final java.lang.String MEMORY_DATABASE_PATH
+    public static final java.lang.String METHOD_ANDROID_SET_LOCALE
     public static final java.lang.String METHOD_BATCH
     public static final java.lang.String METHOD_CLOSE_DATABASE
     public static final java.lang.String METHOD_DATABASE_EXISTS
@@ -26446,6 +26462,7 @@ com.tekartik.sqflite.Constant:
     public static final java.lang.String PARAM_ERROR_MESSAGE
     static final java.lang.String PARAM_ID
     public static final java.lang.String PARAM_IN_TRANSACTION_CHANGE
+    static final java.lang.String PARAM_LOCALE
     static final java.lang.String PARAM_LOG_LEVEL
     public static final java.lang.String PARAM_METHOD
     public static final java.lang.String PARAM_NO_RESULT
@@ -26471,6 +26488,7 @@ com.tekartik.sqflite.Database:
     static final boolean WAL_ENABLED_BY_DEFAULT
     private static final java.lang.String WAL_ENABLED_META_NAME
     public boolean enableWriteAheadLogging()
+com.tekartik.sqflite.LocaleUtils
 com.tekartik.sqflite.LogLevel:
     static final int none
     static final int sql
@@ -26538,6 +26556,7 @@ io.flutter.app.FlutterPluginRegistry$FlutterRegistrar
 io.flutter.app.FlutterPluginRegistry
 io.flutter.embedding.android.AndroidTouchProcessor$PointerChange
 io.flutter.embedding.android.AndroidTouchProcessor$PointerDeviceKind
+io.flutter.embedding.android.AndroidTouchProcessor$PointerPreferredStylusAuxiliaryAction
 io.flutter.embedding.android.AndroidTouchProcessor$PointerSignalKind
 io.flutter.embedding.android.AndroidTouchProcessor:
     static final int BYTES_PER_FIELD
@@ -26546,6 +26565,7 @@ io.flutter.embedding.android.AndroidTouchProcessor:
 io.flutter.embedding.android.DrawableSplashScreen$DrawableSplashScreenView:
     public void <init>(android.content.Context,android.util.AttributeSet)
 io.flutter.embedding.android.FlutterActivity$CachedEngineIntentBuilder
+io.flutter.embedding.android.FlutterActivity$NewEngineInGroupIntentBuilder
 io.flutter.embedding.android.FlutterActivity$NewEngineIntentBuilder
 io.flutter.embedding.android.FlutterActivity:
     private static final java.lang.String TAG
@@ -26555,6 +26575,7 @@ io.flutter.embedding.android.FlutterActivity:
     public void updateSystemUiOverlays()
     public static io.flutter.embedding.android.FlutterActivity$CachedEngineIntentBuilder withCachedEngine(java.lang.String)
     public static io.flutter.embedding.android.FlutterActivity$NewEngineIntentBuilder withNewEngine()
+    public static io.flutter.embedding.android.FlutterActivity$NewEngineInGroupIntentBuilder withNewEngineInGroup(java.lang.String)
 io.flutter.embedding.android.FlutterActivityAndFragmentDelegate$DelegateFactory
 io.flutter.embedding.android.FlutterActivityAndFragmentDelegate$Host:
     public abstract io.flutter.embedding.android.ExclusiveAppComponent getExclusiveAppComponent()
@@ -26571,8 +26592,10 @@ io.flutter.embedding.android.FlutterFragment$1
 io.flutter.embedding.android.FlutterFragment$ActivityCallThrough
 io.flutter.embedding.android.FlutterFragment$CachedEngineFragmentBuilder
 io.flutter.embedding.android.FlutterFragment$NewEngineFragmentBuilder
+io.flutter.embedding.android.FlutterFragment$NewEngineInGroupFragmentBuilder
 io.flutter.embedding.android.FlutterFragment
 io.flutter.embedding.android.FlutterFragmentActivity$CachedEngineIntentBuilder
+io.flutter.embedding.android.FlutterFragmentActivity$NewEngineInGroupIntentBuilder
 io.flutter.embedding.android.FlutterFragmentActivity$NewEngineIntentBuilder
 io.flutter.embedding.android.FlutterFragmentActivity
 io.flutter.embedding.android.FlutterImageView:
@@ -26631,14 +26654,13 @@ io.flutter.embedding.engine.FlutterEngine:
     public void <init>(android.content.Context,io.flutter.embedding.engine.loader.FlutterLoader,io.flutter.embedding.engine.FlutterJNI,java.lang.String[],boolean)
     public void <init>(android.content.Context,java.lang.String[])
     public void <init>(android.content.Context,java.lang.String[],boolean)
-    public void addEngineLifecycleListener(io.flutter.embedding.engine.FlutterEngine$EngineLifecycleListener)
+    public void <init>(android.content.Context,java.lang.String[],boolean,boolean)
     public io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverControlSurface getBroadcastReceiverControlSurface()
     public io.flutter.embedding.engine.plugins.contentprovider.ContentProviderControlSurface getContentProviderControlSurface()
     public io.flutter.embedding.engine.systemchannels.DeferredComponentChannel getDeferredComponentChannel()
     public io.flutter.embedding.engine.systemchannels.LocalizationChannel getLocalizationChannel()
     public io.flutter.embedding.engine.plugins.service.ServiceControlSurface getServiceControlSurface()
     public void removeEngineLifecycleListener(io.flutter.embedding.engine.FlutterEngine$EngineLifecycleListener)
-    io.flutter.embedding.engine.FlutterEngine spawn(android.content.Context,io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint,java.lang.String,java.util.List,io.flutter.plugin.platform.PlatformViewsController,boolean,boolean)
 io.flutter.embedding.engine.FlutterEngineCache:
     public void clear()
     public boolean contains(java.lang.String)
@@ -26684,9 +26706,18 @@ io.flutter.embedding.engine.FlutterEngineConnectionRegistry:
     public io.flutter.embedding.engine.plugins.FlutterPlugin get(java.lang.Class)
     public void onMoveToBackground()
     public void onMoveToForeground()
-io.flutter.embedding.engine.FlutterEngineGroup$1
-io.flutter.embedding.engine.FlutterEngineGroup$Options
-io.flutter.embedding.engine.FlutterEngineGroup
+io.flutter.embedding.engine.FlutterEngineGroup$Options:
+    public io.flutter.embedding.engine.FlutterEngineGroup$Options setPlatformViewsController(io.flutter.plugin.platform.PlatformViewsController)
+io.flutter.embedding.engine.FlutterEngineGroup:
+    public void <init>(android.content.Context)
+    public io.flutter.embedding.engine.FlutterEngine createAndRunDefaultEngine(android.content.Context)
+    public io.flutter.embedding.engine.FlutterEngine createAndRunEngine(android.content.Context,io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint)
+    public io.flutter.embedding.engine.FlutterEngine createAndRunEngine(android.content.Context,io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint,java.lang.String)
+io.flutter.embedding.engine.FlutterEngineGroupCache:
+    public void clear()
+    public boolean contains(java.lang.String)
+    public void put(java.lang.String,io.flutter.embedding.engine.FlutterEngineGroup)
+    public void remove(java.lang.String)
 io.flutter.embedding.engine.FlutterShellArgs:
     public static final java.lang.String ARG_CACHE_SKSL
     public static final java.lang.String ARG_DART_FLAGS
@@ -26695,6 +26726,7 @@ io.flutter.embedding.engine.FlutterShellArgs:
     public static final java.lang.String ARG_ENABLE_DART_PROFILING
     public static final java.lang.String ARG_ENABLE_IMPELLER
     public static final java.lang.String ARG_ENABLE_SOFTWARE_RENDERING
+    public static final java.lang.String ARG_ENABLE_VULKAN_VALIDATION
     public static final java.lang.String ARG_ENDLESS_TRACE_BUFFER
     public static final java.lang.String ARG_KEY_CACHE_SKSL
     public static final java.lang.String ARG_KEY_DART_FLAGS
@@ -26703,6 +26735,7 @@ io.flutter.embedding.engine.FlutterShellArgs:
     public static final java.lang.String ARG_KEY_ENABLE_DART_PROFILING
     public static final java.lang.String ARG_KEY_ENABLE_IMPELLER
     public static final java.lang.String ARG_KEY_ENABLE_SOFTWARE_RENDERING
+    public static final java.lang.String ARG_KEY_ENABLE_VULKAN_VALIDATION
     public static final java.lang.String ARG_KEY_ENDLESS_TRACE_BUFFER
     public static final java.lang.String ARG_KEY_MSAA_SAMPLES
     public static final java.lang.String ARG_KEY_OBSERVATORY_PORT
@@ -26715,8 +26748,8 @@ io.flutter.embedding.engine.FlutterShellArgs:
     public static final java.lang.String ARG_KEY_TRACE_SYSTRACE
     public static final java.lang.String ARG_KEY_USE_TEST_FONTS
     public static final java.lang.String ARG_KEY_VERBOSE_LOGGING
+    public static final java.lang.String ARG_KEY_VM_SERVICE_PORT
     public static final java.lang.String ARG_MSAA_SAMPLES
-    public static final java.lang.String ARG_OBSERVATORY_PORT
     public static final java.lang.String ARG_PURGE_PERSISTENT_CACHE
     public static final java.lang.String ARG_SKIA_DETERMINISTIC_RENDERING
     public static final java.lang.String ARG_START_PAUSED
@@ -26726,13 +26759,12 @@ io.flutter.embedding.engine.FlutterShellArgs:
     public static final java.lang.String ARG_TRACE_SYSTRACE
     public static final java.lang.String ARG_USE_TEST_FONTS
     public static final java.lang.String ARG_VERBOSE_LOGGING
+    public static final java.lang.String ARG_VM_SERVICE_PORT
     public void <init>(java.util.Set)
     public void <init>(java.lang.String[])
     public void add(java.lang.String)
     public void remove(java.lang.String)
 io.flutter.embedding.engine.dart.DartExecutor$DartCallback
-io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint:
-    public static io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint createDefault()
 io.flutter.embedding.engine.dart.DartExecutor$DefaultBinaryMessenger:
     public void disableBufferingIncomingMessages()
     public void enableBufferingIncomingMessages()
@@ -26774,7 +26806,6 @@ io.flutter.embedding.engine.loader.FlutterLoader:
     private static final java.lang.String DEFAULT_KERNEL_BLOB
     private static final java.lang.String DEFAULT_LIBRARY
     private static final java.lang.String ENABLE_IMPELLER_META_DATA_KEY
-    private static final java.lang.String ENABLE_SKPARAGRAPH_META_DATA_KEY
     static final java.lang.String FLUTTER_ASSETS_DIR_KEY
     static final java.lang.String ISOLATE_SNAPSHOT_DATA_KEY
     private static final java.lang.String LEAK_VM_META_DATA_KEY
@@ -26788,7 +26819,6 @@ io.flutter.embedding.engine.loader.FlutterLoader:
     private java.lang.String fullAssetPathFrom(java.lang.String)
     public java.lang.String getLookupKeyForAsset(java.lang.String)
     public java.lang.String getLookupKeyForAsset(java.lang.String,java.lang.String)
-    public boolean initialized()
     private synthetic void lambda$ensureInitializationCompleteAsync$0(android.content.Context,java.lang.String[],android.os.Handler,java.lang.Runnable)
     private synthetic void lambda$ensureInitializationCompleteAsync$1(android.content.Context,java.lang.String[],android.os.Handler,java.lang.Runnable)
 io.flutter.embedding.engine.loader.ResourceExtractor$1
@@ -26831,6 +26861,7 @@ io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterAssets:
     public abstract java.lang.String getAssetFilePathBySubpath(java.lang.String)
     public abstract java.lang.String getAssetFilePathBySubpath(java.lang.String,java.lang.String)
 io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding:
+    public io.flutter.embedding.engine.FlutterEngineGroup getEngineGroup()
     public io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterAssets getFlutterAssets()
     public io.flutter.embedding.engine.FlutterEngine getFlutterEngine()
     public io.flutter.view.TextureRegistry getTextureRegistry()
@@ -26901,6 +26932,7 @@ io.flutter.embedding.engine.systemchannels.MouseCursorChannel:
     public void synthesizeMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result)
 io.flutter.embedding.engine.systemchannels.NavigationChannel:
     private static final java.lang.String TAG
+    public void pushRoute(java.lang.String)
     public void setMethodCallHandler(io.flutter.plugin.common.MethodChannel$MethodCallHandler)
 io.flutter.embedding.engine.systemchannels.PlatformChannel:
     private static final java.lang.String TAG
@@ -27032,6 +27064,7 @@ io.flutter.plugin.platform.PlatformViewWrapper:
     public android.graphics.SurfaceTexture getTexture()
 io.flutter.plugin.platform.PlatformViewsController:
     private static final java.lang.String TAG
+    public android.util.SparseArray getOverlayLayerViews()
 io.flutter.plugin.platform.SingleViewPresentation$WindowManagerHandler:
     private static final java.lang.String TAG
 io.flutter.plugin.platform.VirtualDisplayController:
@@ -27092,8 +27125,6 @@ io.flutter.plugins.firebase.core.GeneratedAndroidFirebaseCore$PigeonInitializeRe
     public java.lang.String getName()
     public io.flutter.plugins.firebase.core.GeneratedAndroidFirebaseCore$PigeonFirebaseOptions getOptions()
     public java.util.Map getPluginConstants()
-io.flutter.plugins.firebase.core.GeneratedAndroidFirebaseCore:
-    public void <init>()
 io.flutter.plugins.firebase.core.R$attr
 io.flutter.plugins.firebase.core.R$color
 io.flutter.plugins.firebase.core.R$dimen
@@ -27217,12 +27248,13 @@ io.flutter.plugins.googlesignin.R$drawable
 io.flutter.plugins.googlesignin.R$id
 io.flutter.plugins.googlesignin.R$integer
 io.flutter.plugins.googlesignin.R$layout
-io.flutter.plugins.googlesignin.R$menu
 io.flutter.plugins.googlesignin.R$string
 io.flutter.plugins.googlesignin.R$style
 io.flutter.plugins.googlesignin.R$styleable
 io.flutter.plugins.googlesignin.R
 io.flutter.plugins.pathprovider.BuildConfig
+io.flutter.plugins.pathprovider.Messages$FlutterError:
+    public void <init>(java.lang.String,java.lang.String,java.lang.Object)
 io.flutter.plugins.pathprovider.Messages:
     public void <init>()
 io.flutter.plugins.pathprovider.PathProviderPlugin:
@@ -27241,11 +27273,10 @@ io.flutter.plugins.pathprovider.R$styleable
 io.flutter.plugins.pathprovider.R
 io.flutter.plugins.pathprovider.StorageDirectoryMapper
 io.flutter.plugins.sharedpreferences.BuildConfig
-io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl:
-    private static final java.lang.String BIG_INTEGER_PREFIX
-    private static final java.lang.String DOUBLE_PREFIX
-    private static final java.lang.String LIST_IDENTIFIER
-    private static final java.lang.String SHARED_PREFERENCES_NAME
+io.flutter.plugins.sharedpreferences.Messages$FlutterError:
+    public void <init>(java.lang.String,java.lang.String,java.lang.Object)
+io.flutter.plugins.sharedpreferences.Messages:
+    public void <init>()
 io.flutter.plugins.sharedpreferences.R$attr
 io.flutter.plugins.sharedpreferences.R$color
 io.flutter.plugins.sharedpreferences.R$dimen
@@ -27258,7 +27289,11 @@ io.flutter.plugins.sharedpreferences.R$style
 io.flutter.plugins.sharedpreferences.R$styleable
 io.flutter.plugins.sharedpreferences.R
 io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin:
-    private static final java.lang.String CHANNEL_NAME
+    private static final java.lang.String BIG_INTEGER_PREFIX
+    private static final java.lang.String DOUBLE_PREFIX
+    private static final java.lang.String LIST_IDENTIFIER
+    private static final java.lang.String SHARED_PREFERENCES_NAME
+    private static final java.lang.String TAG
     public static void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar)
 io.flutter.plugins.urllauncher.BuildConfig
 io.flutter.plugins.urllauncher.MethodCallHandlerImpl:
@@ -27279,6 +27314,11 @@ io.flutter.plugins.urllauncher.UrlLauncher:
 io.flutter.plugins.urllauncher.UrlLauncherPlugin:
     private static final java.lang.String TAG
     public static void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar)
+io.flutter.plugins.urllauncher.WebViewActivity:
+    public static final java.lang.String ACTION_CLOSE
+    private static final java.lang.String ENABLE_DOM_EXTRA
+    private static final java.lang.String ENABLE_JS_EXTRA
+    private static final java.lang.String URL_EXTRA
 io.flutter.util.HandlerCompat:
     public void <init>()
 io.flutter.util.PathUtils:
@@ -36273,8 +36313,10 @@ com.google.crypto.tink.subtle.Base64:
     private void <init>()
 com.google.firebase.auth.FirebaseAuth:
     public static final synthetic int zza
-com.google.firebase.auth.internal.zzbt:
+com.google.firebase.auth.internal.zzbw:
     private void <init>()
+com.google.firebase.firestore.AggregateField$AverageAggregateField
+com.google.firebase.firestore.AggregateField$SumAggregateField
 com.google.firebase.heartbeatinfo.HeartBeatInfoStorage:
     private static com.google.firebase.heartbeatinfo.HeartBeatInfoStorage instance
 com.google.firebase.storage.FirebaseStorage:
@@ -36287,6 +36329,26 @@ com.google.firebase.storage.StorageReference:
     static final synthetic boolean $assertionsDisabled
 com.google.firebase.storage.network.NetworkRequest:
     static final synthetic boolean $assertionsDisabled
+com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder:
+    public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder setField(com.google.firestore.v1.StructuredQuery$FieldReference)
+com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg:
+    static synthetic void access$1100(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg,com.google.firestore.v1.StructuredQuery$FieldReference)
+    public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg$Builder newBuilder()
+    private void setField(com.google.firestore.v1.StructuredQuery$FieldReference)
+com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder:
+    public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder setAvg(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
+    public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Builder setSum(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
+com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder:
+    public com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder setField(com.google.firestore.v1.StructuredQuery$FieldReference)
+com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum:
+    static synthetic void access$600(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum,com.google.firestore.v1.StructuredQuery$FieldReference)
+    public static com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum$Builder newBuilder()
+    private void setField(com.google.firestore.v1.StructuredQuery$FieldReference)
+com.google.firestore.v1.StructuredAggregationQuery$Aggregation:
+    static synthetic void access$2000(com.google.firestore.v1.StructuredAggregationQuery$Aggregation,com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
+    static synthetic void access$2300(com.google.firestore.v1.StructuredAggregationQuery$Aggregation,com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
+    private void setAvg(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Avg)
+    private void setSum(com.google.firestore.v1.StructuredAggregationQuery$Aggregation$Sum)
 com.google.protobuf.ExtensionRegistryLite:
     private static volatile boolean eagerlyParseMessageSets
 com.google.protobuf.FieldInfo:
@@ -36351,6 +36413,10 @@ io.flutter.plugin.common.BinaryMessenger$-CC:
     public static void $default$setMessageHandler(io.flutter.plugin.common.BinaryMessenger,java.lang.String,io.flutter.plugin.common.BinaryMessenger$BinaryMessageHandler,io.flutter.plugin.common.BinaryMessenger$TaskQueue)
 io.flutter.plugin.platform.VirtualDisplayController:
     private static java.lang.String TAG
+io.flutter.plugins.firebase.core.GeneratedAndroidFirebaseCore:
+    public void <init>()
+io.flutter.plugins.urllauncher.UrlLauncherPlugin:
+    static final synthetic boolean $assertionsDisabled
 io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
 io.grpc.Attributes$Builder:
     static final synthetic boolean $assertionsDisabled

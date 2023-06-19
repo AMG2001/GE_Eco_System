@@ -1,13 +1,13 @@
 <libraries>
   <library
-      name="__local_aars__:C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\intermediates\flutter\release\libs.jar"
-      resolved="__local_aars__:C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
+      name="__local_aars__:C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\intermediates\flutter\release\libs.jar"
+      resolved="__local_aars__:C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:cloud_firestore::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\cloud_firestore\.transforms\29b0e935b78dc7a51866749059344dff\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:cloud_firestore::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\cloud_firestore\.transforms\062fbe0ce652db866e2050cac543c0a3\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.firebase.cloudfirestore:cloud_firestore:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\cloud_firestore\.transforms\29b0e935b78dc7a51866749059344dff\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\cloud_firestore\.transforms\062fbe0ce652db866e2050cac543c0a3\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -17,10 +17,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:firebase_auth::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\firebase_auth\.transforms\0c651532408d9cef3ec14a0f9e994fcb\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:firebase_auth::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\firebase_auth\.transforms\c9e97755b01ee5b80f08bebf17a00da0\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.firebase.auth:firebase_auth:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\firebase_auth\.transforms\0c651532408d9cef3ec14a0f9e994fcb\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\firebase_auth\.transforms\c9e97755b01ee5b80f08bebf17a00da0\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -30,10 +30,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:firebase_storage::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\firebase_storage\.transforms\5448dd10c20ab979a1c3ada432c21df1\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:firebase_storage::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\firebase_storage\.transforms\0230455798ad2ee892744ccb5819d8be\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.firebase.storage:firebase_storage:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\firebase_storage\.transforms\5448dd10c20ab979a1c3ada432c21df1\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\firebase_storage\.transforms\0230455798ad2ee892744ccb5819d8be\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -43,10 +43,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:firebase_core::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\firebase_core\.transforms\88472acb4d0d40bc01756435ed19ed9e\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:firebase_core::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\firebase_core\.transforms\a094af0b861511dd96ab3a3dd4bdc3a2\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.firebase.core:firebase_core:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\firebase_core\.transforms\88472acb4d0d40bc01756435ed19ed9e\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\firebase_core\.transforms\a094af0b861511dd96ab3a3dd4bdc3a2\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -56,10 +56,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:sqflite::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\sqflite\.transforms\2ab29c8daee77dbe38116d6f311d27f4\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:sqflite::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\sqflite\.transforms\13dbb9c4f1bd1f8dbbd91999f8046fae\transformed\out\jars\classes.jar"
       resolved="com.tekartik.sqflite:sqflite:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\sqflite\.transforms\2ab29c8daee77dbe38116d6f311d27f4\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\sqflite\.transforms\13dbb9c4f1bd1f8dbbd91999f8046fae\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -69,10 +69,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:url_launcher_android::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\url_launcher_android\.transforms\807f27eef20b822a60825f5acc3da3dc\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:url_launcher_android::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\url_launcher_android\.transforms\0fbb79579053c23119e040b193131d9e\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.urllauncher:url_launcher_android:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\url_launcher_android\.transforms\807f27eef20b822a60825f5acc3da3dc\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\url_launcher_android\.transforms\0fbb79579053c23119e040b193131d9e\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -82,10 +82,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:path_provider_android::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\path_provider_android\.transforms\4b87e04276d719b20d71241fbbaf70aa\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:path_provider_android::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\path_provider_android\.transforms\b633eecc35294d2ab1421a0e24893b49\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\path_provider_android\.transforms\4b87e04276d719b20d71241fbbaf70aa\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\path_provider_android\.transforms\b633eecc35294d2ab1421a0e24893b49\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -95,10 +95,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:qr_code_scanner::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\qr_code_scanner\.transforms\a83192248b99436a4af2a77571b4852e\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:qr_code_scanner::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\qr_code_scanner\.transforms\b9175cb7e0baf8a28accf0637494fb10\transformed\out\jars\classes.jar"
       resolved="net.touchcapture.qr.flutterqr:qr_code_scanner:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\qr_code_scanner\.transforms\a83192248b99436a4af2a77571b4852e\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\qr_code_scanner\.transforms\b9175cb7e0baf8a28accf0637494fb10\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -108,10 +108,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:google_sign_in_android::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\google_sign_in_android\.transforms\7f6f1d53a898814fa9029272e9be7421\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:google_sign_in_android::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\google_sign_in_android\.transforms\25d710d5d6d06f0b252b43830c7c932e\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.googlesignin:google_sign_in_android:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\google_sign_in_android\.transforms\7f6f1d53a898814fa9029272e9be7421\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\google_sign_in_android\.transforms\25d710d5d6d06f0b252b43830c7c932e\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -121,10 +121,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:flutter_secure_storage::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\flutter_secure_storage\.transforms\bf2d9fb750afe0e58437ef0738f70d9a\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:flutter_secure_storage::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\flutter_secure_storage\.transforms\9d23188088362aa3ba499e3339dfd983\transformed\out\jars\classes.jar"
       resolved="com.it_nomads.fluttersecurestorage:flutter_secure_storage:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\flutter_secure_storage\.transforms\bf2d9fb750afe0e58437ef0738f70d9a\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\flutter_secure_storage\.transforms\9d23188088362aa3ba499e3339dfd983\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -134,10 +134,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:flutter_facebook_auth::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\flutter_facebook_auth\.transforms\4d078af9f19ed0701c807c62a7fbb199\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:flutter_facebook_auth::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\flutter_facebook_auth\.transforms\9b7342b73c9f9ee5185af9454d5cccbe\transformed\out\jars\classes.jar"
       resolved="app.meedu.flutter_facebook_auth:flutter_facebook_auth:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\flutter_facebook_auth\.transforms\4d078af9f19ed0701c807c62a7fbb199\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\flutter_facebook_auth\.transforms\9b7342b73c9f9ee5185af9454d5cccbe\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -147,10 +147,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:shared_preferences_android::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\shared_preferences_android\.transforms\98a0e50349743bc5fdeb14f639dd3adb\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:shared_preferences_android::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\shared_preferences_android\.transforms\d85c743d85e7c11e8e1d7dd2f7080c83\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.sharedpreferences:shared_preferences_android:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\shared_preferences_android\.transforms\98a0e50349743bc5fdeb14f639dd3adb\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\shared_preferences_android\.transforms\d85c743d85e7c11e8e1d7dd2f7080c83\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -160,10 +160,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\android@@:fluttertoast::release"
-      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\fluttertoast\.transforms\1c060342f0c35668f64e44b6a9f17a99\transformed\out\jars\classes.jar"
+      name="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android@@:fluttertoast::release"
+      jars="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\fluttertoast\.transforms\514582c631a801cad11c45a18f2e71f6\transformed\out\jars\classes.jar"
       resolved="com.example.FlutterToast:fluttertoast:unspecified"
-      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE Projects\Green_Egypt\green_egypt\build\fluttertoast\.transforms\1c060342f0c35668f64e44b6a9f17a99\transformed\out"
+      folder="C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\build\fluttertoast\.transforms\514582c631a801cad11c45a18f2e71f6\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -173,9 +173,9 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="io.flutter:flutter_embedding_release:1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314@jar"
-      jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\io.flutter\flutter_embedding_release\1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314\88383da8418511a23e318ac08cd9846f983bbde0\flutter_embedding_release-1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314.jar"
-      resolved="io.flutter:flutter_embedding_release:1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314"/>
+      name="io.flutter:flutter_embedding_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084@jar"
+      jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\io.flutter\flutter_embedding_release\1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084\9cba41c99092591788ce04ddd2ca65cc86ce15b8\flutter_embedding_release-1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084.jar"
+      resolved="io.flutter:flutter_embedding_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"/>
   <library
       name="androidx.window:window-java:1.0.0-beta04@aar"
       jars="C:\Users\mavic\.gradle\caches\transforms-3\246793f755122fe14a5802655438cb75\transformed\jetified-window-java-1.0.0-beta04\jars\classes.jar"
@@ -219,17 +219,17 @@
       jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.10\1ef73fee66f45d52c67e2aca12fd945dbe0659bf\kotlin-stdlib-jdk7-1.7.10.jar"
       resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"/>
   <library
-      name="io.flutter:armeabi_v7a_release:1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314@jar"
-      jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\io.flutter\armeabi_v7a_release\1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314\29cb8ef6ea8d71a74bd7f22f1aa4304ab7ec287d\armeabi_v7a_release-1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314.jar"
-      resolved="io.flutter:armeabi_v7a_release:1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314"/>
+      name="io.flutter:armeabi_v7a_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084@jar"
+      jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\io.flutter\armeabi_v7a_release\1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084\be798ac70f6ec03e19a065fd52e31e30aebcf134\armeabi_v7a_release-1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084.jar"
+      resolved="io.flutter:armeabi_v7a_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"/>
   <library
-      name="io.flutter:arm64_v8a_release:1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314@jar"
-      jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\io.flutter\arm64_v8a_release\1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314\2d46d9200976fd6c33744a6956fd99b7ba84592a\arm64_v8a_release-1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314.jar"
-      resolved="io.flutter:arm64_v8a_release:1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314"/>
+      name="io.flutter:arm64_v8a_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084@jar"
+      jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\io.flutter\arm64_v8a_release\1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084\b294286ffc612be286161bd5cc525478dd04e47a\arm64_v8a_release-1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084.jar"
+      resolved="io.flutter:arm64_v8a_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"/>
   <library
-      name="io.flutter:x86_64_release:1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314@jar"
-      jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\io.flutter\x86_64_release\1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314\2b36edf4e0fbc3924761953730ec50173c180cb1\x86_64_release-1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314.jar"
-      resolved="io.flutter:x86_64_release:1.0.0-1a65d409c7a1438a34d21b60bf30a6fd5db59314"/>
+      name="io.flutter:x86_64_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084@jar"
+      jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\io.flutter\x86_64_release\1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084\56b44a0d2b9cd8b9e5c2446fe601b2c66f31098c\x86_64_release-1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084.jar"
+      resolved="io.flutter:x86_64_release:1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"/>
   <library
       name="androidx.fragment:fragment:1.3.6@aar"
       jars="C:\Users\mavic\.gradle\caches\transforms-3\a6bf228adcf2ade0b45c4be1ab213b75\transformed\fragment-1.3.6\jars\classes.jar"
@@ -471,10 +471,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.google.firebase:firebase-auth:21.2.0@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\7532096d84f83ed34d3b1030d9a454b9\transformed\jetified-firebase-auth-21.2.0\jars\classes.jar"
-      resolved="com.google.firebase:firebase-auth:21.2.0"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\7532096d84f83ed34d3b1030d9a454b9\transformed\jetified-firebase-auth-21.2.0"
+      name="com.google.firebase:firebase-auth:21.3.0@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\2e2c17ff215a3686a45189dbf70231eb\transformed\jetified-firebase-auth-21.3.0\jars\classes.jar"
+      resolved="com.google.firebase:firebase-auth:21.3.0"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\2e2c17ff215a3686a45189dbf70231eb\transformed\jetified-firebase-auth-21.3.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -501,10 +501,10 @@
       jars="C:\Users\mavic\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-play-services\1.6.1\4a3877d9838cb26ba12186604397259f89dbc820\kotlinx-coroutines-play-services-1.6.1.jar"
       resolved="org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.1"/>
   <library
-      name="com.google.firebase:firebase-firestore:24.4.5@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\e524cbd346d293943469795f8963dd63\transformed\jetified-firebase-firestore-24.4.5\jars\classes.jar"
-      resolved="com.google.firebase:firebase-firestore:24.4.5"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\e524cbd346d293943469795f8963dd63\transformed\jetified-firebase-firestore-24.4.5"
+      name="com.google.firebase:firebase-firestore:24.5.0@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\302c14be1e4f673f1c8b3a31a49a4109\transformed\jetified-firebase-firestore-24.5.0\jars\classes.jar"
+      resolved="com.google.firebase:firebase-firestore:24.5.0"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\302c14be1e4f673f1c8b3a31a49a4109\transformed\jetified-firebase-firestore-24.5.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -566,10 +566,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.facebook.android:facebook-login:15.0.2@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\ff2243ebfb84ad367d96b2fd99bb673e\transformed\jetified-facebook-login-15.0.2\jars\classes.jar"
-      resolved="com.facebook.android:facebook-login:15.0.2"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\ff2243ebfb84ad367d96b2fd99bb673e\transformed\jetified-facebook-login-15.0.2"
+      name="com.facebook.android:facebook-login:16.0.1@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\5ba61272c901a7d74eb11789c93c9685\transformed\jetified-facebook-login-16.0.1\jars\classes.jar"
+      resolved="com.facebook.android:facebook-login:16.0.1"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\5ba61272c901a7d74eb11789c93c9685\transformed\jetified-facebook-login-16.0.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -579,10 +579,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.facebook.android:facebook-common:15.0.2@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\6ed6aee449decd2fad7545c214d97a8b\transformed\jetified-facebook-common-15.0.2\jars\classes.jar"
-      resolved="com.facebook.android:facebook-common:15.0.2"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\6ed6aee449decd2fad7545c214d97a8b\transformed\jetified-facebook-common-15.0.2"
+      name="com.facebook.android:facebook-common:16.0.1@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\9a211962981b8b8dc2d65041e0eebae3\transformed\jetified-facebook-common-16.0.1\jars\classes.jar"
+      resolved="com.facebook.android:facebook-common:16.0.1"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\9a211962981b8b8dc2d65041e0eebae3\transformed\jetified-facebook-common-16.0.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -618,10 +618,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.google.android.gms:play-services-auth:20.4.1@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\1e28bb4d2dfdb26a699daa556422ff6d\transformed\jetified-play-services-auth-20.4.1\jars\classes.jar"
-      resolved="com.google.android.gms:play-services-auth:20.4.1"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\1e28bb4d2dfdb26a699daa556422ff6d\transformed\jetified-play-services-auth-20.4.1"
+      name="com.google.android.gms:play-services-auth:20.5.0@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\jars\classes.jar"
+      resolved="com.google.android.gms:play-services-auth:20.5.0"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -657,10 +657,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.google.android.gms:play-services-fido:19.0.1@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\f8f9640b68f57571cf61c9b96af70c02\transformed\jetified-play-services-fido-19.0.1\jars\classes.jar"
-      resolved="com.google.android.gms:play-services-fido:19.0.1"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\f8f9640b68f57571cf61c9b96af70c02\transformed\jetified-play-services-fido-19.0.1"
+      name="com.google.android.gms:play-services-fido:20.0.1@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\93153336f090f557947b12b8de4af3a4\transformed\jetified-play-services-fido-20.0.1\jars\classes.jar"
+      resolved="com.google.android.gms:play-services-fido:20.0.1"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\93153336f090f557947b12b8de4af3a4\transformed\jetified-play-services-fido-20.0.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -735,10 +735,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.google.android.gms:play-services-basement:18.1.0@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\6b0daa5fb4c2eb7e8b55778df9b972f6\transformed\jetified-play-services-basement-18.1.0\jars\classes.jar"
-      resolved="com.google.android.gms:play-services-basement:18.1.0"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\6b0daa5fb4c2eb7e8b55778df9b972f6\transformed\jetified-play-services-basement-18.1.0"
+      name="com.google.android.gms:play-services-basement:18.2.0@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\53954d6df10d13093dc1d46643d284f8\transformed\jetified-play-services-basement-18.2.0\jars\classes.jar"
+      resolved="com.google.android.gms:play-services-basement:18.2.0"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\53954d6df10d13093dc1d46643d284f8\transformed\jetified-play-services-basement-18.2.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -852,10 +852,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.facebook.android:facebook-core:15.0.2@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\f2cbe7b4e9b348ec7769fce33f9c8b9b\transformed\jetified-facebook-core-15.0.2\jars\classes.jar"
-      resolved="com.facebook.android:facebook-core:15.0.2"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\f2cbe7b4e9b348ec7769fce33f9c8b9b\transformed\jetified-facebook-core-15.0.2"
+      name="com.facebook.android:facebook-core:16.0.1@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\f2019afce102daf14040476cfe791170\transformed\jetified-facebook-core-16.0.1\jars\classes.jar"
+      resolved="com.facebook.android:facebook-core:16.0.1"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\f2019afce102daf14040476cfe791170\transformed\jetified-facebook-core-16.0.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -943,10 +943,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.facebook.android:facebook-bolts:15.0.2@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\cc5409a81dba2fc6d7d95bae4e0d31ab\transformed\jetified-facebook-bolts-15.0.2\jars\classes.jar"
-      resolved="com.facebook.android:facebook-bolts:15.0.2"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\cc5409a81dba2fc6d7d95bae4e0d31ab\transformed\jetified-facebook-bolts-15.0.2"
+      name="com.facebook.android:facebook-bolts:16.0.1@aar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\c6726867221b92d2e645184352cc991d\transformed\jetified-facebook-bolts-16.0.1\jars\classes.jar"
+      resolved="com.facebook.android:facebook-bolts:16.0.1"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\c6726867221b92d2e645184352cc991d\transformed\jetified-facebook-bolts-16.0.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -1211,9 +1211,9 @@
       resolved="com.google.code.gson:gson:2.9.0"/>
   <library
       name="com.android.installreferrer:installreferrer:1.0@aar"
-      jars="C:\Users\mavic\.gradle\caches\transforms-3\bf9f1493f74353993d2967db33b9705a\transformed\jetified-installreferrer-1.0\jars\classes.jar"
+      jars="C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\jars\classes.jar"
       resolved="com.android.installreferrer:installreferrer:1.0"
-      folder="C:\Users\mavic\.gradle\caches\transforms-3\bf9f1493f74353993d2967db33b9705a\transformed\jetified-installreferrer-1.0"
+      folder="C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
