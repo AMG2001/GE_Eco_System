@@ -10,13 +10,12 @@ import 'package:ge_machine_app/screens/items_page/items_page.dart';
 import 'package:get/get.dart';
 
 class BluetoothController extends GetxController {
+  @override
+  void onInit() {
+    initiateConnection();
+    super.onInit();
+  }
 
-  BluetoothController._privateConstructor();
-
-  static final BluetoothController _instance = BluetoothController._privateConstructor();
-
-  static BluetoothController get instance => _instance;
-  
   late int _pageIndex;
   late int plastic_items;
   late int cans_items;
@@ -35,12 +34,13 @@ class BluetoothController extends GetxController {
 
   void increamentPlastic() {
     plastic_items++;
-
+    points += 2;
     update();
   }
 
   void increamentCans() {
     cans_items++;
+    points += 3;
     update();
   }
 
@@ -52,13 +52,12 @@ class BluetoothController extends GetxController {
   }
 
   void navigateToItemsPage() {
+    resetItems();
     Get.to(() => ItemsPage(),
         transition: Transition.downToUp,
         curve: Curves.easeInOutCubic,
         duration: Duration(milliseconds: 500));
-
     _pageIndex++;
-
     update();
   }
 
@@ -75,6 +74,13 @@ class BluetoothController extends GetxController {
 
   late BluetoothDevice arduniDevice;
 
+  late String connection_status;
+  String connection_status_message = '';
+  String connect_status_not_connected = 'not connected';
+  String connect_status_connected = 'connected';
+  String connect_status_connecting = 'connecting';
+  Widget showProgressIndicator = SizedBox();
+
   String comingData = "";
 
   String macAddress_tablet = "0C:2F:B0:FE:ED:23";
@@ -84,49 +90,73 @@ class BluetoothController extends GetxController {
 
   late BluetoothConnection connection;
 
+  /**
+   * After the connection has been Stablished , 
+   * show all bonded device to get HC-05 Bluetooth module 
+   * to connect with ✅ .
+   */
+
   void initiateConnection() async {
+    connection_status = connect_status_not_connected;
+    connection_status_message = connect_status_not_connected;
+    showProgressIndicator = Text("Machine Status : $connection_status_message");
+    update();
     bool? isEnabled = await FlutterBluetoothSerial.instance.isEnabled;
     if (isEnabled!) {
-      // get all bonded devices on tablet .
-      var bondedDevices =
-          await FlutterBluetoothSerial.instance.getBondedDevices();
+      await getAllBoundedDeviceThenStartConnection();
+    } else {
+      await FlutterBluetoothSerial.instance.requestEnable().then((value) async {
+        if (value == true) {
+          await getAllBoundedDeviceThenStartConnection();
+        }
+      });
+    }
+  }
+
+  Future<void> getAllBoundedDeviceThenStartConnection() async {
+    // get all bonded devices on tablet .
+    await FlutterBluetoothSerial.instance
+        .getBondedDevices()
+        .then((bondedDevices) async {
       for (int i = 0; i < bondedDevices.length; i++) {
         if (bondedDevices[i].address == macAddress_arduino_screen) {
           arduniDevice = bondedDevices[i];
           break;
         }
       }
-      print('is camera connected : ${arduniDevice.isConnected}');
-    } else {
-      await FlutterBluetoothSerial.instance.requestEnable();
-    }
-    if (!arduniDevice.isConnected) {
-      await connectToScreenBluetoothModule();
-    }
+      if (!arduniDevice.isConnected) {
+        await connectToScreenBluetoothModule();
+      } else {
+        ConsoleMessage.printMessage('Closing Connection ##');
+        await closeConnection().then((value) async {
+          ConsoleMessage.printMessage('Re-connecting again ##');
+          await connectToScreenBluetoothModule();
+        });
+      }
+    });
   }
 
   Future<void> connectToScreenBluetoothModule() async {
     try {
+      showConnectingStatus();
       /**
        * to connect with bluetooth module .
        */
       connection =
-          await BluetoothConnection.toAddress(macAddress_arduino_screen);
+          await BluetoothConnection.toAddress(macAddress_arduino_screen).then(
+        (value) async {
+          showConnectedStatus();
+          await startListeningToBluetoothStream();
+          return value;
+        },
+      );
     } catch (e) {
-      ConsoleMessage.printError(
-          'error while connecting to Aurdino Screen', e.toString());
-    }
-    if (connection.isConnected) {
-      CustomToast.showBlackToast(
-          message: 'Screen connected with Aurdino successfully');
-      try {
-        await startListeningToBluetoothStream();
-      } catch (e) {
-        print(e);
-      }
-    } else {
-      CustomToast.showRedToast(
-          message: 'there is a problem while connecting with Aurdino Screen');
+      Timer(
+        Duration(seconds: 2),
+        () async {
+          await connectToScreenBluetoothModule();
+        },
+      );
     }
   }
 
@@ -136,12 +166,12 @@ class BluetoothController extends GetxController {
 
   Future<void> startListeningToBluetoothStream() async {
     try {
-      ConsoleMessage.printMessage('start listening to Aurdino');
       connection.input!.listen((Uint8List data) {
+        showConnectedAndListeningStatus();
         _pageIndex == 0 ? navigateToItemsPage() : null;
         try {
           String comingMessage = utf8.decode(data);
-
+          ConsoleMessage.printMessage('coming data : $comingData');
           if (int.parse(comingMessage[3]) == 1 &&
               int.parse(comingMessage[5]) == 1) {
             increamentPlastic();
@@ -164,24 +194,118 @@ class BluetoothController extends GetxController {
         ConsoleMessage.printMessage('${ascii.decode(data)}');
       });
     } catch (e) {
-      ConsoleMessage.printError(
-          'error while listening to camera', e.toString());
-      CustomToast.showRedToast(message: e.toString());
+      showConnectedButNotListeningStatus(e);
+      Timer(
+        Duration(seconds: 2),
+        () async {
+          await startListeningToBluetoothStream();
+        },
+      );
     }
   }
 
-  void sendMessage({required String message}) async {
-    message = message + "\n";
-    var data = ascii.encode(message);
-    try {
-      connection.output.add(data); // Sending data
-    } catch (e) {
-      ConsoleMessage.printError(
-          'error while sending message to camera', e.toString());
-    }
+  // void sendMessage({required String message}) async {
+  //   message = message + "\n";
+  //   var data = ascii.encode(message);
+  //   try {
+  //     connection.output.add(data); // Sending data
+  //   } catch (e) {
+  //     ConsoleMessage.printError(
+  //         'error while sending message to camera', e.toString());
+  //   }
+  // }
+
+  void showConnectedStatus() {
+    /**
+         * Change connection_status to Connected .
+         */
+    connection_status = connect_status_connected;
+    connection_status_message = connect_status_connected;
+    showProgressIndicator = Row(
+      children: [
+        Text("Machine status : $connect_status_connected"),
+        SizedBox(
+          width: 8,
+        ),
+        Icon(
+          Icons.check_circle_outline_outlined,
+          color: Colors.white,
+        )
+      ],
+    );
+    update();
   }
 
-  void closeConnection() {
-    connection.close();
+  void showConnectingStatus() {
+    connection_status = connect_status_connecting;
+    connection_status_message = connect_status_connecting;
+    showProgressIndicator = Row(
+      children: [
+        Text("Machine Status : $connection_status_message"),
+        SizedBox(
+          width: 8,
+        ),
+        CircularProgressIndicator(
+          color: Colors.white,
+        )
+      ],
+    );
+    update();
+  }
+
+  void showNotConnectedStatus() {
+    connection_status = connect_status_not_connected;
+    connection_status_message = connect_status_not_connected;
+    showProgressIndicator = Row(
+      children: [
+        Text("Machine Status : $connection_status_message - Reconnicting"),
+        SizedBox(
+          width: 8,
+        ),
+        Icon(
+          Icons.error_outline_outlined,
+          color: Colors.red,
+        )
+      ],
+    );
+    update();
+  }
+
+  void showConnectedAndListeningStatus() {
+    showProgressIndicator = Row(
+      children: [
+        Text("Machine Status : $connection_status_message , listening : yes"),
+        SizedBox(
+          width: 8,
+        ),
+        Icon(
+          Icons.hearing,
+          color: Colors.white,
+        )
+      ],
+    );
+    update();
+  }
+
+  void showConnectedButNotListeningStatus(var e) {
+    showProgressIndicator = Row(
+      children: [
+        Text("Machine Status : $connection_status_message , listening : no"),
+        SizedBox(
+          width: 8,
+        ),
+        Icon(
+          Icons.hearing_disabled,
+          color: Colors.red,
+        )
+      ],
+    );
+    update();
+    ConsoleMessage.printError('error while listening to camera', e.toString());
+    CustomToast.showRedToast(message: e.toString());
+  }
+
+  Future<void> closeConnection() async {
+    await connection.close();
   }
 }

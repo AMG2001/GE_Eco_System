@@ -22,18 +22,22 @@ class StartButton extends StatelessWidget {
                 EdgeInsets.symmetric(vertical: 12, horizontal: 32),
               )),
           child: Row(
-            children: const [
-              Text(
+            children: [
+             const Text(
                 "Tap to start",
                 style: TextStyle(fontSize: 24),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 8,
               ),
-              Icon(
+             const  Icon(
                 Icons.flag_circle_outlined,
                 size: 28,
-              )
+              ),
+             const  SizedBox(
+                width: 8,
+              ),
+              controller.showProgressIndicator
             ],
           ),
           onPressed: () {
