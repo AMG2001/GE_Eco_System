@@ -62,6 +62,8 @@ class BluetoothController extends GetxController {
     } else {
       await FlutterBluetoothSerial.instance.requestEnable().then((value) async {
         if (value == true) {
+
+          
           await getAllBoundedDeviceThenStartConnection();
         }
       });

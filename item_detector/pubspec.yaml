@@ -28,7 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  camera: ^0.9.4+4
+  camera: ^0.9.4+5
   cupertino_icons: ^1.0.2
   firebase_ml_vision: ^0.9.9
   flutter:
@@ -36,7 +36,10 @@ dependencies:
   google_mlkit_object_detection: ^0.6.0
   image_picker: ^0.8.7
   path_provider: ^2.0.14
-  tflite_flutter: ^0.9.4
+  tflite_flutter: ^0.9.5
+  tflite_flutter_helper: ^0.2.0
+  # tflite_flutter_plugin: ^0.1.0 # Add this line
+  image: ^3.2.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0

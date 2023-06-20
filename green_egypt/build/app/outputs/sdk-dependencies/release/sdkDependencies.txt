@@ -915,10 +915,10 @@ library {
   maven_library {
     groupId: "io.flutter"
     artifactId: "flutter_embedding_release"
-    version: "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+    version: "1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420"
   }
   digests {
-    sha256: "\254e\356\340\a\242J\023y\354\2704\364#s\262\023<\237p\335\274\n\225\3700\300\t)\231V%"
+    sha256: "\357_\357)\376\004\322D\264F\025\231\022\274\330X\277*\223\017dL\254\027\311\370\374\254\264\221#\225"
   }
   repo_index {
     value: 2
@@ -1378,37 +1378,11 @@ library {
 library {
   maven_library {
     groupId: "io.flutter"
-    artifactId: "armeabi_v7a_release"
-    version: "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
-  }
-  digests {
-    sha256: "1z\253\274\202\306\\v\364M\r\275,\340Z\364\035\330\021C\fqZ`\fS>\267\f_Cp"
-  }
-  repo_index {
-    value: 2
-  }
-}
-library {
-  maven_library {
-    groupId: "io.flutter"
     artifactId: "arm64_v8a_release"
-    version: "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+    version: "1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420"
   }
   digests {
-    sha256: "\322r\005\016\306\035\217\246%\321:\324\345j\'\341(\243\371\242b\031\362\331\206&p\016\t\242\276\271"
-  }
-  repo_index {
-    value: 2
-  }
-}
-library {
-  maven_library {
-    groupId: "io.flutter"
-    artifactId: "x86_64_release"
-    version: "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
-  }
-  digests {
-    sha256: "\223\314\340\212,k\214\203\256 \001T\300\036\367r\253b\360|\241O\243\303\037R@8\233j>F"
+    sha256: "\020Y\000\203\365\272y\336BBm\266<\027\262\251\206xw\202\361\244\302 <\362\377)\026\272\324\373"
   }
   repo_index {
     value: 2
@@ -1416,7 +1390,7 @@ library {
 }
 library {
   digests {
-    sha256: "\270\233\354\341\261\316\374\367\245\213i*o_]*\302\235\022h@\347\341\263\367\264D\022\321h\\\302"
+    sha256: "\212\357\017-\302\235#\022\361\300\032\300F\204\177\004\262\b\036\366:\313Q|\300U;<\366d\222\277"
   }
 }
 library_dependencies {
@@ -2047,8 +2021,6 @@ module_dependencies {
   module_name: "base"
   dependency_index: 44
   dependency_index: 112
-  dependency_index: 113
-  dependency_index: 114
   dependency_index: 0
   dependency_index: 48
   dependency_index: 4
@@ -2063,7 +2035,7 @@ module_dependencies {
   dependency_index: 95
   dependency_index: 1
   dependency_index: 73
-  dependency_index: 115
+  dependency_index: 113
 }
 repositories {
   maven_repo {

@@ -13,11 +13,15 @@ class UserDataBox {
   String _key_userCredintial = 'userCredintial';
   String _key_userId = 'userId';
   String _key_apply_review_before = "apply_review_before";
-  String _key_userEarnedCash = "user_earned_cash";
+  String _key_userTotalPoints = "user_total_points";
   String _key_userSavedCo2 = "user_saved_co2";
   String _key_userTotalRecycledItems = "user_total_recycled_items";
   String _key_recycledPlasticItemsNumber = 'recycled_plastic_number';
   String _key_recycledCansItemsNumber = 'recycled_cans_number';
+
+  late int _number_of_total_plastic_items;
+  late int _number_of_total_cans_items;
+  late int _number_of_total_points;
 
   /**
    * Singleton Class .
@@ -36,6 +40,9 @@ class UserDataBox {
    */
   void initiateUserBox() async {
     _userDataBox = await Hive.openBox('userBox');
+    _number_of_total_plastic_items = get_recycledPlasticItemsNumber();
+    _number_of_total_cans_items = get_recycledPlasticItemsNumber();
+    _number_of_total_points = get_totalPoints();
     ConsoleMessage.successMessage('User box opened');
   }
 
@@ -130,23 +137,12 @@ class UserDataBox {
   /**
    *  **************************** Earned cash operations ***********************************
    */
-  void put_earnedCash({required int earned}) async {
-    await _userDataBox.put(_key_userEarnedCash, earned);
+  void put_newPoints({required int points}) async {
+    await _userDataBox.put(_key_userTotalPoints, points + get_totalPoints());
   }
 
-  int get_earnedCash() {
-    return _userDataBox.get(_key_userEarnedCash, defaultValue: 0);
-  }
-
-  /**
-   *  **************************** Saved co2 operations ***********************************
-   */
-  void put_savedCo2({required int saved}) async {
-    await _userDataBox.put(_key_userSavedCo2, saved);
-  }
-
-  int get_savedCo2() {
-    return _userDataBox.get(_key_userSavedCo2, defaultValue: "");
+  int get_totalPoints() {
+    return _userDataBox.get(_key_userTotalPoints, defaultValue: 0);
   }
 
   /**
@@ -161,11 +157,12 @@ class UserDataBox {
   }
 
   /**
-   *  **************************** recycled plastic items number operations ***********************************
+   *  **************************** recycled plastic items operations ***********************************
    */
   void put_increamentRecycledPasticItemsNumber(
       {required int plasticItemsNumber}) async {
-    await _userDataBox.put(_key_recycledPlasticItemsNumber, plasticItemsNumber);
+    await _userDataBox.put(_key_recycledPlasticItemsNumber,
+        plasticItemsNumber + get_recycledPlasticItemsNumber());
   }
 
   int get_recycledPlasticItemsNumber() {
@@ -177,7 +174,8 @@ class UserDataBox {
    */
   void put_increamentRecycledCansItemsNumber(
       {required int cansItemsNumber}) async {
-    await _userDataBox.put(_key_recycledCansItemsNumber, cansItemsNumber);
+    await _userDataBox.put(_key_recycledCansItemsNumber,
+        cansItemsNumber + get_recycledCansItemsNumber());
   }
 
   int get_recycledCansItemsNumber() {
@@ -204,8 +202,7 @@ class UserDataBox {
     put_userImageUrl(userImageUrl: imageUrl);
     put_userPhoneNumber(phoneNumber: phoneNumber);
     put_userCredintial(credintail: credintial);
-    put_earnedCash(earned: earned);
-    put_savedCo2(saved: savedCo2);
+    put_newPoints(points: earned);
     put_increamentRecycledPasticItemsNumber(
         plasticItemsNumber: plasticItemsNumber);
     put_increamentRecycledCansItemsNumber(cansItemsNumber: cansItemsNumber);
@@ -221,8 +218,7 @@ class UserDataBox {
     put_userImageUrl(userImageUrl: "");
     put_userPhoneNumber(phoneNumber: "");
     put_userCredintial(credintail: "");
-    put_earnedCash(earned: 0);
-    put_savedCo2(saved: 0);
+    put_newPoints(points: 0);
     put_totalrecycledItems(newTotalNumber: 0);
     put_applyReviewBefore(apply: false);
     put_loggedInBool(loggedIn: false);
