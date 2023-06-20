@@ -1,7 +1,7 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="tech.mavica.green_egypt"
-4    android:versionCode="4001"
+4    android:versionCode="1"
 5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
@@ -69,8 +69,8 @@
 38-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\mavic\.gradle\caches\transforms-3\77be51fb7627331aa2f8ec0f3aaea8ed\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
 39
 40    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-40-->[com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
-40-->[com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+40-->[com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+40-->[com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
 41
 42    <application
 43        android:name="android.app.Application"

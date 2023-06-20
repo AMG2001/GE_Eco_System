@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
@@ -31,13 +32,13 @@ class CardOfEarnedSavedRecycled extends StatelessWidget {
                              * Earned Currency Column
                              */
               UserDetailColumn(
-                  icon: Icon(
-                    Icons.currency_exchange_rounded,
-                    color: Colors.yellow[400],
+                  icon: FaIcon(
+                    FontAwesomeIcons.bottleWater,
+                    color: Colors.green[400],
                   ),
-                  detailValue: '${UserDataBox.instance.get_earnedCash()}',
-                  valueMark: '\$'.tr,
-                  detailTitle: 'EARNED'.tr,
+                  detailValue: '${UserDataBox.instance.get_recycledPlasticItemsNumber()}',
+                  valueMark: '',
+                  detailTitle: 'Plastic'.tr,
                   animationMilliSeconds: 500),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -50,14 +51,14 @@ class CardOfEarnedSavedRecycled extends StatelessWidget {
                 ],
               ),
               UserDetailColumn(
-                  icon: Icon(
-                    Icons.cloud,
+                  icon: FaIcon(
+                    FontAwesomeIcons.bottleDroplet,
                     color: Colors.grey[350],
                     size: 28,
                   ),
-                  detailValue: '${UserDataBox.instance.get_savedCo2()}',
-                  valueMark: 'g'.tr,
-                  detailTitle: 'SAVED CO2'.tr,
+                  detailValue: '${UserDataBox.instance.get_recycledCansItemsNumber()}',
+                  valueMark: '',
+                  detailTitle: 'Cans'.tr,
                   animationMilliSeconds: 500),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -70,14 +71,14 @@ class CardOfEarnedSavedRecycled extends StatelessWidget {
                 ],
               ),
               UserDetailColumn(
-                  icon: Icon(
-                    Icons.recycling_outlined,
-                    color: Colors.green[800],
+                  icon: FaIcon(
+                    FontAwesomeIcons.coins,
+                    color: Colors.yellow[400],
                     size: 28,
                   ),
                   detailValue: '${UserDataBox.instance.get_recycledItems()}',
                   valueMark: "",
-                  detailTitle: 'RECYCLED'.tr,
+                  detailTitle: 'Points'.tr,
                   animationMilliSeconds: 500),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -61,8 +61,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ma
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\mavic\.gradle\caches\transforms-3\c6290d38a27dcf8d064fa9cefcb89071\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\mavic\.gradle\caches\transforms-3\77be51fb7627331aa2f8ec0f3aaea8ed\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:46:5-54:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\mavic\.gradle\caches\transforms-3\77be51fb7627331aa2f8ec0f3aaea8ed\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:46:5-54:19
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\mavic\.gradle\caches\transforms-3\5e083c06c9925c2309f02468fc66e376\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
@@ -161,7 +161,7 @@ MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\mavic\.gradl
 MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\mavic\.gradle\caches\transforms-3\aba35e3624ac76b5b23eb423c4e68886\transformed\jetified-grpc-android-1.52.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\mavic\.gradle\caches\transforms-3\e564f562ddf1e7bad87ac8206b50e367\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\mavic\.gradle\caches\transforms-3\58e3540d7f5a5bac6af9a8f8fab44363\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
 INJECTED from C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android\app\src\main\AndroidManifest.xml:1:1-52:12
 INJECTED from C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android\app\src\main\AndroidManifest.xml:1:1-52:12
 INJECTED from C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android\app\src\main\AndroidManifest.xml:1:1-52:12
@@ -359,8 +359,8 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\mav
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\mavic\.gradle\caches\transforms-3\e564f562ddf1e7bad87ac8206b50e367\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\mavic\.gradle\caches\transforms-3\58e3540d7f5a5bac6af9a8f8fab44363\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\mavic\.gradle\caches\transforms-3\58e3540d7f5a5bac6af9a8f8fab44363\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
 INJECTED from C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt\android\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
@@ -758,6 +758,6 @@ ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\mavic\.gradle
 	android:name
 		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\mavic\.gradle\caches\transforms-3\77be51fb7627331aa2f8ec0f3aaea8ed\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
 	android:name
-		ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\86e31e73dfd02c06c5c74ff60f63cd66\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+		ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\mavic\.gradle\caches\transforms-3\6a15056465b7cc921e74811e6e5580bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107

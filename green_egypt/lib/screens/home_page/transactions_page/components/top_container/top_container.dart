@@ -50,7 +50,7 @@ class TopContainer extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Total : ${UserDataBox.instance.get_earnedCash()} point'
+                          'Total : ${UserDataBox.instance.get_totalPoints()} point'
                               .tr,
                           style: TextStyle(
                               color: Colors.white,
