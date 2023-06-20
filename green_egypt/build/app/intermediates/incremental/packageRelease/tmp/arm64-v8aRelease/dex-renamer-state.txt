@@ -1,4 +1,4 @@
-#Tue May 16 07:43:51 EET 2023
+#Fri Jun 16 14:49:40 EET 2023
 base.0=C\:\\Users\\mavic\\OneDrive\\Desktop\\Mine Projects\\GE_Eco_System\\green_egypt\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-path.0=classes.dex
 renamed.0=classes.dex
+path.0=classes.dex
