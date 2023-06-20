@@ -31,19 +31,22 @@
 
 ## 📅 “Implement language transitions” 19/04/2023 .
 
-- Eng / alaa hammad implemented application multi language option by adding ‘ar - en’ languages data and also language switching but without storing last option .
-- Eng / amgad implemented storing last choosen language option and fix language transition mark ✔ .
+- Eng / Alaa Hammad implemented application multi language option by adding ‘ar - en’ languages data and also language switching but without storing last option .
+ 
+- Eng / Amgad implemented storing last choosen language option and fix language transition mark ✔ .
 
----
+## 📅 11/05/2023 - “Start working on Qrcode scanning”  .
 
-## 📅 “Start working on Qrcode scanning” 11/05/2023 .
+- Eng / Amgad implemented qrcode scanning and handling scan the same qrcode multiple times .
 
-- Eng / Amgad implemented qrcode sacnning and handling scanning the same qrcode multiple times .
-
-## 📅 “Finish Qrcode scanning and storing transactions in Transaction Page” 16/05/2023 .
+## 📅 16/05/2023 - “Finish Qrcode scanning and storing transactions in Transaction Page”  .
 
 - Eng / Amgad implemented Saving qrcode on local storage and also showing it on transaction page .
 
-## 📅 “Add Ultra sonic to Machine and implement it's code” 25/05/2023 .
+## 📅 25/05/2023 -  “Add Ultra sonic to Machine and implement it's code”  .
 
 - Eng / Amgad implemented Ultrasonic code and handle sending signals to screen only if the item putted inside machine .
+
+## 📅 19/06/2023 - “Bluetooth Aito reconnect stablished” .
+
+- Eng / Amgad implemented "Camera and Screen Bluetotooth auto Reconnect" to make system more reliable and get rid of restarting applications over head.
