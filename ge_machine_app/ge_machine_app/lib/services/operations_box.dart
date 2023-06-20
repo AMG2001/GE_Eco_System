@@ -21,12 +21,12 @@ class OperationsBox {
   Future<void> init_OperationsBox() async {
     _operations_box = await Hive.openBox(_key_operations_box);
     lastOperationNumber =
-        _operations_box.get(_key_lastOperationNumber, defaultValue: 0);
+        _operations_box.get(_key_lastOperationNumber, defaultValue: 0)+1;
     ConsoleMessage.printMessage(
         'Last operation number initialized ✔ with : ${lastOperationNumber}');
   }
 
-  void increamentLastOperationNumber() {
-    _operations_box.put(_key_lastOperationNumber, ++lastOperationNumber);
+  Future<void> increamentLastOperationNumber() async {
+    await _operations_box.put(_key_lastOperationNumber, ++lastOperationNumber);
   }
 }

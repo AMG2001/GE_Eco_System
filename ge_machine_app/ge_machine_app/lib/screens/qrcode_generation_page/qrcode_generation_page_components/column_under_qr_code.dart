@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:ge_machine_app/screens/home_page/home_page.dart';
 
 class ColumnUnderQrCode extends StatefulWidget {
+
   const ColumnUnderQrCode({super.key});
   @override
   State<ColumnUnderQrCode> createState() => _ColumnUnderQrCodeState();
@@ -29,7 +30,7 @@ class _ColumnUnderQrCodeState extends State<ColumnUnderQrCode> {
         });
       } else {
         timer.cancel();
-        BluetoothController.instance.navigateToHomePage();
+        Get.find<BluetoothController>().navigateToHomePage();
       }
     });
   }
@@ -46,7 +47,7 @@ class _ColumnUnderQrCodeState extends State<ColumnUnderQrCode> {
       return Column(
         children: [
           TextButton(
-            onPressed: () {
+            onPressed: () async{
               /**
                * Increament last operation number to be not duplicated .
                */
