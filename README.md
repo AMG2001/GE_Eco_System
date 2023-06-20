@@ -5,7 +5,7 @@
 - this git repo contain all software that we use inside our GE Eco System as :
 1. Green Egypt user app 📱 : this application that contain all user info “User account , user points , number of recycled items and history of all transactions that user implement inside our system”.
     
-    ![https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP5O-mAsZ4z3ArULmiUduJum8edRINshEO7TR7s5sj2_2TCYY3jIz1KH3WI1nD96TFnzV5NWrvrK_3eCgl3ra5tUz3ziMNQkuPA_Fh-yZ-lFja4HZqI44arl2QQ3MGPrneVPTXTAk5WFaj_Rv8g3J2x6HT0A-l4axxwLZfRvkeAyAWILJoJJbEPkXf/s1600/GE%20Logo.png](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP5O-mAsZ4z3ArULmiUduJum8edRINshEO7TR7s5sj2_2TCYY3jIz1KH3WI1nD96TFnzV5NWrvrK_3eCgl3ra5tUz3ziMNQkuPA_Fh-yZ-lFja4HZqI44arl2QQ3MGPrneVPTXTAk5WFaj_Rv8g3J2x6HT0A-l4axxwLZfRvkeAyAWILJoJJbEPkXf/s1600/GE%20Logo.png)
+    <img src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP5O-mAsZ4z3ArULmiUduJum8edRINshEO7TR7s5sj2_2TCYY3jIz1KH3WI1nD96TFnzV5NWrvrK_3eCgl3ra5tUz3ziMNQkuPA_Fh-yZ-lFja4HZqI44arl2QQ3MGPrneVPTXTAk5WFaj_Rv8g3J2x6HT0A-l4axxwLZfRvkeAyAWILJoJJbEPkXf/s1600/GE%20Logo.png" width = 125 height = 125/>
     
 2. Green Egypt Screen app 💻 : this application is used to interact with all user actions and tracking number and type of items that user put inside our GE Machine and at last generate qrcode that user scan to take his / her points .
 3. Green Egypt Camera app 📸 : we use camera with tflite model to detect classify the type of item that user put in front of the machine to open the hole of the item or refuse to take it if it neigther plastic nor cans .
@@ -29,9 +29,9 @@
 
 # 🗺 Implementation Map in Green Egypt :
 
-## 📅 “Implement language transitions” 19/04/2023 .
+## 📅 “Implement App Localization” 19/04/2023 .
 
-- Eng / Alaa Hammad implemented application multi language option by adding ‘ar - en’ languages data and also language switching but without storing last option .
+- Eng / Alaa Hammad implemented Added Arabic language to application , now application support ‘ar - en’ languages and also language switching but without storing last option .
  
 - Eng / Amgad implemented storing last choosen language option and fix language transition mark ✔ .
 
@@ -47,6 +47,6 @@
 
 - Eng / Amgad implemented Ultrasonic code and handle sending signals to screen only if the item putted inside machine .
 
-## 📅 19/06/2023 - “Bluetooth Aito reconnect stablished” .
+## 📅 19/06/2023 - “Bluetooth Auto reconnect stablished” .
 
 - Eng / Amgad implemented "Camera and Screen Bluetotooth auto Reconnect" to make system more reliable and get rid of restarting applications over head.
