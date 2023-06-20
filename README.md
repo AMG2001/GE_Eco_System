@@ -50,3 +50,9 @@
 ## 📅 19/06/2023 - “Bluetooth Auto reconnect stablished” .
 
 - Eng / Amgad implemented "Camera and Screen Bluetotooth auto Reconnect" to make system more reliable and get rid of restarting applications over head.
+
+## 📅 20/06/2023 - “Transactions Animations implmented” .
+
+- Eng / salah implemented "Modern Success Transition animation".
+
+- Eng / amgad implemented "Modern Failed Transition animation".
