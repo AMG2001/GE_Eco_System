@@ -53,6 +53,6 @@
 
 ## 📅 20/06/2023 - “Transactions Animations implmented” .
 
-- Eng / salah implemented "Modern Success Transition animation".
+- Eng / salah implemented "Modern Success Transaction animation".
 
-- Eng / amgad implemented "Modern Failed Transition animation".
+- Eng / amgad implemented "Modern Failed Transaction animation".
