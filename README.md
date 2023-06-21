@@ -31,7 +31,7 @@
 
 ## 📅 “Implement App Localization” 19/04/2023 .
 
-- Eng / Alaa Hammad implemented Added Arabic language to application , now application support ‘ar - en’ languages and also language switching but without storing last option .
+- Eng / Alaa Hammad Added Arabic language to application , now application support ‘ar - en’ languages and also language switching but without storing last option .
  
 - Eng / Amgad implemented storing last choosen language option and fix language transition mark ✔ .
 
