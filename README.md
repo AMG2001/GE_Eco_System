@@ -59,3 +59,12 @@
 - Eng / salah implemented "Modern Success Transaction animation".
 
 - Eng / amgad implemented "Modern Failed Transaction animation".
+
+## 📅 22/06/2023 - “Get Cash Page Added” .
+
+- Eng / Amgad implemented "Get cash page" which allow user to convert his/het points to cash Using Qrcode :
+
+1. User get his/het qrcode .
+2. Admin scan this qrcode using GE Admin App .
+3. GE Admin App show Amount of cash that must be given to user .
+4. After finishing this process , points transfered from user account to admin account - and user got his / her points .
