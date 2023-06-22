@@ -36,6 +36,7 @@ class QrcodePageController {
 
   Future<void> clear_lastOperationNumber() async {
     await lastOperationBox.put(_key_last_operation, 0);
+    lastOperationNumber = 0;
   }
 
   Future<bool> checkAndStore_storedLastOperationNom_with_NewLastOperationNumber(
@@ -91,6 +92,7 @@ class QrcodePageController {
       required QRViewController cameraController}) {
     showModalBottomSheet(
         isDismissible: false,
+        enableDrag: false,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
@@ -240,6 +242,8 @@ class QrcodePageController {
 
   void showQrcodeScannedBeforeBottomSheet({required BuildContext context}) {
     showModalBottomSheet(
+      isDismissible: false,
+      enableDrag: false,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(36),

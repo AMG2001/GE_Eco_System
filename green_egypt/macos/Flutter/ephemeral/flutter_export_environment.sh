@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\Users\mavic\fvm\versions\3.7.12"
-export "FLUTTER_APPLICATION_PATH=C:\Users\mavic\OneDrive\Desktop\Mine Projects\GE_Eco_System\green_egypt"
+export "FLUTTER_ROOT=/home/amgad/snap/flutter/common/flutter"
+export "FLUTTER_APPLICATION_PATH=/home/amgad/Desktop/Green_Egypt/green_egypt"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
