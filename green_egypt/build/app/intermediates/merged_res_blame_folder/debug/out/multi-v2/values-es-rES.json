@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/amgad/Desktop/Green_Egypt/green_egypt/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rES/values-es-rES.xml",
+            "outputFile": "/home/amgad/Desktop/GE_Eco_System/green_egypt/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "/home/amgad/.gradle/caches/transforms-3/5ba61272c901a7d74eb11789c93c9685/transformed/jetified-facebook-login-16.0.1/res/values-es-rES/values-es-rES.xml",
+                    "source": "/home/amgad/.gradle/caches/transforms-3/44aca4ec078cf2e01b561d3125b8f3b9/transformed/jetified-facebook-login-16.0.1/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
