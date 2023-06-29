@@ -1,5 +1,8 @@
 # Green Egypt Repository
 
+- Item Detector repo :
+https://github.com/MavicaSoftwareDev/ge_item_detection
+
 ## 🏭 Green Egypt Eco System :
 
 - this git repo contain all software that we use inside our GE Eco System as :
