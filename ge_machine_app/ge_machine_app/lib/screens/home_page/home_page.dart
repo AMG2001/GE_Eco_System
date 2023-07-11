@@ -6,11 +6,16 @@ import 'package:ge_machine_app/screens/home_page/home_page_components/start_butt
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   HomePage({super.key});
-  int _pageIndex = 1;
+
   @override
-  Widget build(BuildContext context) {
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
     /**
      * this line is used to hide upper status bar .
      */
@@ -18,16 +23,26 @@ class HomePage extends StatelessWidget {
         overlays: [
           SystemUiOverlay.bottom,
         ]); // to hide only bottom bar,
+    super.initState();
+  }
 
+  int _pageIndex = 1;
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-        body: GetBuilder<BluetoothController>(builder: (blueController) {
-      return Container(
+      body: Container(
         height: DeviceDimensions.height,
         width: DeviceDimensions.width,
         child: Stack(
           children: [HomePageBackground(), StartButton()],
         ),
-      );
-    }));
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }

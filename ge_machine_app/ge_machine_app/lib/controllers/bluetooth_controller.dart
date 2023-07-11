@@ -7,12 +7,20 @@ import 'package:ge_machine_app/features/console_messages.dart';
 import 'package:ge_machine_app/features/custom_toast.dart';
 import 'package:ge_machine_app/screens/home_page/home_page.dart';
 import 'package:ge_machine_app/screens/items_page/items_page.dart';
+import 'package:ge_machine_app/services/operations_box.dart';
 import 'package:get/get.dart';
 
 class BluetoothController extends GetxController {
   @override
-  void onInit() {
-    initiateConnection();
+  void onInit() async {
+    _pageIndex = 0;
+    resetItems();
+    try {
+      initiateConnection();
+      await OperationsBox.instance.init_OperationsBox();
+    } catch (e) {
+      ConsoleMessage.printError('Error in Bluetooth Controller Constructor', e);
+    }
     super.onInit();
   }
 
@@ -22,55 +30,6 @@ class BluetoothController extends GetxController {
   late int points;
   bool firstTimeEstablishConnection = false;
   late double operationNumber;
-  BluetoothController() {
-    _pageIndex = 0;
-    resetItems();
-    try {
-      initiateConnection();
-    } catch (e) {
-      ConsoleMessage.printError('Error in Bluetooth Controller Constructor', e);
-    }
-  }
-
-  void increamentPlastic() {
-    plastic_items++;
-    points += 2;
-    update();
-  }
-
-  void increamentCans() {
-    cans_items++;
-    points += 3;
-    update();
-  }
-
-  void resetItems() {
-    plastic_items = 0;
-    cans_items = 0;
-    points = 0;
-    update();
-  }
-
-  void navigateToItemsPage() {
-    resetItems();
-    Get.to(() => ItemsPage(),
-        transition: Transition.downToUp,
-        curve: Curves.easeInOutCubic,
-        duration: Duration(milliseconds: 500));
-    _pageIndex++;
-    update();
-  }
-
-  void navigateToHomePage() {
-    _pageIndex = 0;
-    resetItems();
-    Get.offAll(() => HomePage(),
-        transition: Transition.leftToRight,
-        curve: Curves.easeInCubic,
-        duration: Duration(milliseconds: 500));
-
-    update();
-  }
 
   late BluetoothDevice arduniDevice;
 
@@ -127,11 +86,12 @@ class BluetoothController extends GetxController {
       if (!arduniDevice.isConnected) {
         await connectToScreenBluetoothModule();
       } else {
-        ConsoleMessage.printMessage('Closing Connection ##');
-        await closeConnection().then((value) async {
-          ConsoleMessage.printMessage('Re-connecting again ##');
-          await connectToScreenBluetoothModule();
-        });
+        Timer(
+          Duration(seconds: 5),
+          () async {
+            await connectToScreenBluetoothModule();
+          },
+        );
       }
     });
   }
@@ -142,14 +102,15 @@ class BluetoothController extends GetxController {
       /**
        * to connect with bluetooth module .
        */
-      connection =
-          await BluetoothConnection.toAddress(macAddress_arduino_screen).then(
-        (value) async {
-          showConnectedStatus();
-          await startListeningToBluetoothStream();
-          return value;
-        },
-      );
+
+      await BluetoothConnection.toAddress(macAddress_arduino_screen)
+          .then((value) async {
+        connection = value;
+        print('''\n\n\n Connected ✅ \n\n\n''');
+        showConnectedStatus();
+        await startListeningToBluetoothStream();
+        print('''\n\n\n Listening ✅ \n\n\n''');
+      });
     } catch (e) {
       Timer(
         Duration(seconds: 2),
@@ -157,6 +118,7 @@ class BluetoothController extends GetxController {
           await connectToScreenBluetoothModule();
         },
       );
+      print('''\n\n\n Reconnecting with HC-05 bluetooth \n\n\n''');
     }
   }
 
@@ -166,41 +128,47 @@ class BluetoothController extends GetxController {
 
   Future<void> startListeningToBluetoothStream() async {
     try {
-      connection.input!.listen((Uint8List data) {
-        showConnectedAndListeningStatus();
-        _pageIndex == 0 ? navigateToItemsPage() : null;
-        try {
-          String comingMessage = utf8.decode(data);
-          ConsoleMessage.printMessage('coming data : $comingData');
-          if (int.parse(comingMessage[3]) == 1 &&
-              int.parse(comingMessage[5]) == 1) {
-            increamentPlastic();
-            increamentCans();
-          } else if (int.parse(comingMessage[3]) == 1) {
-            increamentPlastic();
-          } else if (int.parse(comingMessage[5]) == 1) {
-            increamentCans();
+      // showConnectedAndListeningStatus();
+      connection.input!.listen(
+        (Uint8List data) {
+          _pageIndex == 0 ? navigateToItemsPage() : null;
+          try {
+            String comingMessage = utf8.decode(data);
+            ConsoleMessage.printMessage('coming data : $comingData');
+            if (int.parse(comingMessage[3]) == 1 &&
+                int.parse(comingMessage[5]) == 1) {
+              increamentPlastic();
+              increamentCans();
+            } else if (int.parse(comingMessage[3]) == 1) {
+              increamentPlastic();
+            } else if (int.parse(comingMessage[5]) == 1) {
+              increamentCans();
+            }
+          } catch (e) {
+            ConsoleMessage.printError(e, 'decoded data is empty');
           }
-        } catch (e) {
-          ConsoleMessage.printError(e, 'decoded data is empty');
-        }
-        /**
+          /**
          * Coming message must end with '.'
          * to print coming message only 1 time .
          */
-        // if(data[data.last]==46){
-        // ConsoleMessage.printMessage('${ascii.decode(data)}');
-        // },
-        ConsoleMessage.printMessage('${ascii.decode(data)}');
-      });
-    } catch (e) {
-      showConnectedButNotListeningStatus(e);
-      Timer(
-        Duration(seconds: 2),
-        () async {
-          await startListeningToBluetoothStream();
+          // if(data[data.last]==46){
+          // ConsoleMessage.printMessage('${ascii.decode(data)}');
+          // },
+          ConsoleMessage.printMessage('${ascii.decode(data)}');
+        },
+        onDone: () {
+          // this is to make application reconnect again of the connection lost .
+          connectToScreenBluetoothModule();
         },
       );
+    } catch (e) {
+      print('\n\n Error While listening to HC-05 -> $e');
+      // Timer(
+      //   Duration(seconds: 5),
+      //   () async {
+      //     await startListeningToBluetoothStream();
+      //   },
+      // );
     }
   }
 
@@ -274,7 +242,7 @@ class BluetoothController extends GetxController {
   void showConnectedAndListeningStatus() {
     showProgressIndicator = Row(
       children: [
-        Text("Machine Status : $connection_status_message , listening : yes"),
+        Text("Machine Status : $connection_status_message , Started Listening"),
         SizedBox(
           width: 8,
         ),
@@ -287,25 +255,44 @@ class BluetoothController extends GetxController {
     update();
   }
 
-  void showConnectedButNotListeningStatus(var e) {
-    showProgressIndicator = Row(
-      children: [
-        Text("Machine Status : $connection_status_message , listening : no"),
-        SizedBox(
-          width: 8,
-        ),
-        Icon(
-          Icons.hearing_disabled,
-          color: Colors.red,
-        )
-      ],
-    );
-    update();
-    ConsoleMessage.printError('error while listening to camera', e.toString());
-    CustomToast.showRedToast(message: e.toString());
-  }
-
   Future<void> closeConnection() async {
     await connection.close();
+  }
+
+  void increamentPlastic() {
+    plastic_items++;
+    points += 2;
+    update();
+  }
+
+  void increamentCans() {
+    cans_items++;
+    points += 3;
+    update();
+  }
+
+  void resetItems() {
+    plastic_items = 0;
+    cans_items = 0;
+    points = 0;
+    update();
+  }
+
+  void navigateToItemsPage() {
+    resetItems();
+    Get.to(() => ItemsPage(),
+        transition: Transition.downToUp,
+        curve: Curves.easeInOutCubic,
+        duration: Duration(milliseconds: 500));
+    _pageIndex++;
+  }
+
+  void navigateToHomePage() {
+    _pageIndex = 0;
+    resetItems();
+    Get.off(() => HomePage(),
+        transition: Transition.leftToRight,
+        curve: Curves.easeInCubic,
+        duration: Duration(milliseconds: 500));
   }
 }

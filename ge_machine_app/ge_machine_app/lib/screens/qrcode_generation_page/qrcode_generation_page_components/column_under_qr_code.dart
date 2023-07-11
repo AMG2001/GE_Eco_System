@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:ge_machine_app/screens/home_page/home_page.dart';
 
 class ColumnUnderQrCode extends StatefulWidget {
-
   const ColumnUnderQrCode({super.key});
   @override
   State<ColumnUnderQrCode> createState() => _ColumnUnderQrCodeState();
