@@ -8,7 +8,7 @@ import 'package:signals_app/features/custom_toast.dart';
 
 class BluetoothController extends GetxController {
   late String connection_status;
-  String connection_status_message='';
+  String connection_status_message = '';
   late BluetoothDevice arduniDevice;
 
   String comingData = "";
@@ -62,8 +62,6 @@ class BluetoothController extends GetxController {
     } else {
       await FlutterBluetoothSerial.instance.requestEnable().then((value) async {
         if (value == true) {
-
-          
           await getAllBoundedDeviceThenStartConnection();
         }
       });
@@ -85,9 +83,10 @@ class BluetoothController extends GetxController {
         /**
        * to connect with bluetooth module .
        */
-        connection =
-            await BluetoothConnection.toAddress(macAddress_arduino_camera).then(
+
+        await BluetoothConnection.toAddress(macAddress_arduino_camera).then(
           (value) async {
+            connection = value;
             /**
          * Change connection_status to Connected .
          */
@@ -98,8 +97,10 @@ class BluetoothController extends GetxController {
               color: Colors.green,
             );
             update();
-
-            return value;
+            connection.input!.listen(
+              (event) {},
+              onDone: () => connectToCameraBluetoothModule(),
+            );
           },
         );
       } catch (e) {
