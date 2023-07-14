@@ -101,5 +101,5 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 - Eng / Hamdi added Localization :
 
 1. header of transaction page
-2. Get cash page
-3. QR code scan page
+2. Get cash page.
+3. QR code scan page.
