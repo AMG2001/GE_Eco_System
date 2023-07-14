@@ -48,8 +48,9 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 ## 📅 15/05/2023 - “Contact Us Page Added” .
 
 - Eng / Hamdi  implemented  “Contact Us Page”
-  1. which Allow the user to contact us by chat us , email us and call us.
-  2. Allow the user message us.
+  
+1. which Allow the user to contact us by chat us , email us and call us.
+2. Allow the user message us.
 
 ## 📅 16/05/2023 - “Finish Qrcode scanning and storing transactions in Transaction Page”  .
 
@@ -99,6 +100,6 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 
 - Eng / Hamdi added Localization :
 
-  1. header of transaction page
-  2. Get cash page
-  3- QR code scan page
+1. header of transaction page
+2. Get cash page
+3. QR code scan page
