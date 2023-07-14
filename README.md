@@ -97,8 +97,8 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 
 ## 📅 5/07/2023 - “Edit Of App Localization” .
 
-Eng / Hamdi added Localization :
+- Eng / Hamdi added Localization :
 
- 1- header of transaction page
- 2- Get cash page
- 3- QR code scan page
+  1. header of transaction page
+  2. Get cash page
+  3- QR code scan page
