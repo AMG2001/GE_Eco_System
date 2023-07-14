@@ -45,6 +45,12 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 
 - Eng / Amgad implemented qrcode scanning and handling scan the same qrcode multiple times .
 
+## 📅 15/05/2023 - “Contact Us Page Added” .
+
+- Eng / Hamdi  implemented  “Contact Us Page”
+  1. which Allow the user to contact us by chat us , email us and call us.
+  2. Allow the user message us.
+
 ## 📅 16/05/2023 - “Finish Qrcode scanning and storing transactions in Transaction Page”  .
 
 - Eng / Amgad implemented Saving qrcode on local storage and also showing it on transaction page .
@@ -63,6 +69,7 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 
 - Eng / amgad implemented "Modern Failed Transaction animation".
 
+
 ## 📅 22/06/2023 - “Get Cash Page Added” .
 
 - Eng / Amgad implemented "Get cash page" which allow user to convert his/het points to cash Using Qrcode :
@@ -71,3 +78,21 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 2. Admin scan this qrcode using GE Admin App .
 3. GE Admin App show Amount of cash that must be given to user .
 4. After finishing this process , points transfered from user account to admin account - and user got his / her points .
+
+## 📅 22/06/2023 - “Header oF Transaction page Added” .
+- Eng / Hamdi  implemented "Header oF Transaction page" which show graphs that visually show how user performed “in one Week , or in one Month , or in one year”.
+
+## 📅 24/06/2023 - “Responsive Of Application Added” .
+- Eng / Hamdi added the level application response
+
+## 📅 26/06/2023 - “Theme Of Application Completed” .
+- Eng / Hamdi added Theme To Get Cash Page
+  
+## 📅 04/07/2023 - “Edit Of Home page” .
+- Eng / Hamdi added the function of showing points in the header of the main page.
+
+## 📅 5/07/2023 - “Edit Of App Localization” .
+Eng / Hamdi added Localization :
+ 1- header of transaction page
+ 2- Get cash page
+ 3- QR code scan page
