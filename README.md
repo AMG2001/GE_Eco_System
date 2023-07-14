@@ -1,7 +1,7 @@
 # Green Egypt Repository
 
-- Item Detector repo :
-https://github.com/MavicaSoftwareDev/ge_item_detection
+- Objecy Detection repo :
+[https://github.com/MavicaSoftwareDev/ge_item_detection](https://github.com/MavicaSoftwareDev/GE_Object_Detection.git)
 
 ## 🏭 Green Egypt Eco System :
 
