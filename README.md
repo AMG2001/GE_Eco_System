@@ -69,6 +69,9 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 
 - Eng / amgad implemented "Modern Failed Transaction animation".
 
+## 📅 20/06/2023 - “Header oF Transaction page Added” .
+
+- Eng / Hamdi  implemented "Header oF Transaction page" which show graphs that visually show how user performed “in one Week , or in one Month , or in one year”.
 
 ## 📅 22/06/2023 - “Get Cash Page Added” .
 
@@ -79,20 +82,23 @@ https://github.com/MavicaSoftwareDev/ge_item_detection
 3. GE Admin App show Amount of cash that must be given to user .
 4. After finishing this process , points transfered from user account to admin account - and user got his / her points .
 
-## 📅 22/06/2023 - “Header oF Transaction page Added” .
-- Eng / Hamdi  implemented "Header oF Transaction page" which show graphs that visually show how user performed “in one Week , or in one Month , or in one year”.
 
-## 📅 24/06/2023 - “Responsive Of Application Added” .
+## 📅 26/06/2023 - “Responsive Of Application Added” .
+
 - Eng / Hamdi added the level application response
 
-## 📅 26/06/2023 - “Theme Of Application Completed” .
+## 📅 31/06/2023 - “Theme Of Application Completed” .
+
 - Eng / Hamdi added Theme To Get Cash Page
   
 ## 📅 04/07/2023 - “Edit Of Home page” .
+
 - Eng / Hamdi added the function of showing points in the header of the main page.
 
 ## 📅 5/07/2023 - “Edit Of App Localization” .
+
 Eng / Hamdi added Localization :
+
  1- header of transaction page
  2- Get cash page
  3- QR code scan page
