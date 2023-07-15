@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LastNameTF extends StatelessWidget {
   const LastNameTF({
@@ -15,7 +16,7 @@ class LastNameTF extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Last Name",
+          "Last Name".tr,
           style: Theme.of(context).textTheme.subtitle1,
         ),
         SizedBox(
@@ -31,7 +32,7 @@ class LastNameTF extends StatelessWidget {
             },
             controller: lastNameController,
             decoration: InputDecoration(
-                hintText: "enter last name",
+                hintText: "enter last name".tr,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                 )),

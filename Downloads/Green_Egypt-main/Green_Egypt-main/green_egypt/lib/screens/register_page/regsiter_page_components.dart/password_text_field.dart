@@ -21,9 +21,9 @@ class PasswordTF extends StatelessWidget {
         child: TextFormField(
           validator: (value) {
             if (value == "" || value == null) {
-              return "You can't leave password empty";
+              return "You can't leave password empty".tr;
             } else if (value.length < 8) {
-              return "Password must be 8 or more !!";
+              return "Password must be 8 or more !!".tr;
             }
           },
           controller: passwordController,
@@ -39,7 +39,7 @@ class PasswordTF extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: FaIcon(FontAwesomeIcons.shieldHalved),
               ),
-              hintText: "enter your password",
+              hintText: "enter your password".tr,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
               )),

@@ -25,7 +25,7 @@ class StartScreenLoginButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Login",
+            "Login".tr,
             style: TextStyle(color: Colors.white, fontSize: 16),
           ),
           SizedBox(

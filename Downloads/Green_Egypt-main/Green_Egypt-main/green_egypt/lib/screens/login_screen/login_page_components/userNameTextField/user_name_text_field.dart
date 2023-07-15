@@ -26,9 +26,9 @@ class UserNameTextField extends StatelessWidget {
         child: TextFormField(
           validator: ((value) {
             if (value!.isEmpty) {
-              return "you can't leave user name field empty !!";
+              return "you can't leave user name field empty !!".tr;
             } else if (!value.isEmail) {
-              return "this is not email !!";
+              return "this is not email !!".tr;
             }
           }),
           style: Theme.of(context).textTheme.subtitle1,
@@ -48,7 +48,7 @@ class UserNameTextField extends StatelessWidget {
                   FontAwesomeIcons.user,
                   color: userNameController.labelColor,
                 )),
-            labelText: "Email",
+            labelText: "Email".tr,
             labelStyle: TextStyle(color: controller.labelColor),
             focusColor: Colors.green,
             focusedBorder: OutlineInputBorder(

@@ -43,18 +43,18 @@ class GoogleSignInButton extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(
-              width: MediaQuery.of(context).size.width * .12,
+              width: MediaQuery.of(context).size.width * .1,
             ),
             Image(
-              width: MediaQuery.of(context).size.width * .08,
+              width: MediaQuery.of(context).size.width * .06,
               height: MediaQuery.of(context).size.height * .04,
               image: AssetImage("assets/icons/google.png"),
             ),
             SizedBox(
-              width: MediaQuery.of(context).size.width * .05,
+              width: MediaQuery.of(context).size.width * .03,
             ),
             Text(
-              "Sign with Google",
+              "Sign with Google".tr,
               style: TextStyle(color: Colors.black),
             )
           ],

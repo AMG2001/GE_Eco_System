@@ -28,15 +28,15 @@ class PasswordTextField extends StatelessWidget {
         child: TextFormField(
           validator: (value) {
             if (value == "" || value == null) {
-              return "You can't leave password empty";
+              return "You can't leave password empty".tr;
             } else if (value.length < 8) {
-              return "Password must be 8 or more !!";
+              return "Password must be 8 or more !!".tr;
             }
           },
           style: Theme.of(context).textTheme.subtitle1,
           controller: passwordTextEditingController,
           onEditingComplete: () {
-            print("onEditingComplete Called");
+            print("onEditingComplete Called".tr);
             controller.changeLabelColorToLeave();
           },
           onTap: () {
@@ -51,7 +51,7 @@ class PasswordTextField extends StatelessWidget {
               child: FaIcon(FontAwesomeIcons.shieldHalved,
                   color: controller.pLabelColor),
             ),
-            labelText: "Password",
+            labelText: "Password".tr,
             labelStyle: TextStyle(color: controller.pLabelColor),
             focusColor: Colors.green,
             focusedBorder: OutlineInputBorder(

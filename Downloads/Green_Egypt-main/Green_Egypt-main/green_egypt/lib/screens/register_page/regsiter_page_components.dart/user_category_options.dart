@@ -16,7 +16,7 @@ class UserCategoryOptions extends StatelessWidget {
       builder: ((context, setState) {
         return Row(
           children: [
-            Text("Regsiter as :  "),
+            Text("Regsiter as :  ".tr),
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -37,11 +37,11 @@ class UserCategoryOptions extends StatelessWidget {
                     });
                   }),
                 ),
-                Text("Default User")
+                Text("Default User".tr)
               ],
             ),
             SizedBox(
-              width: Dimensions.width * .05,
+              width: Dimensions.width * .03,
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
@@ -62,7 +62,7 @@ class UserCategoryOptions extends StatelessWidget {
                     });
                   }),
                 ),
-                Text("Staff")
+                Text("Staff".tr)
               ],
             ),
           ],

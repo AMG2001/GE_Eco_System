@@ -22,9 +22,9 @@ class UserNumberTF extends StatelessWidget {
         keyboardType: TextInputType.number,
         validator: (value) {
           if (value!.isEmpty) {
-            return "please enter your phone number !!";
+            return "please enter your phone number !!".tr;
           } else if (value.length < 11) {
-            return "this is not correct phone number !!";
+            return "this is not correct phone number !!".tr;
           }
         },
         controller: userNumberController,
@@ -33,7 +33,7 @@ class UserNumberTF extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Icon(Icons.call),
             ),
-            hintText: "enter your mobile number",
+            hintText: "enter your mobile number".tr,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
             )),

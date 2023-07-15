@@ -84,7 +84,7 @@ class SignInButton extends StatelessWidget {
                       return Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Lottie.asset(
-                            'assets/animated_vectors/register_success.json',
+                            'assets/animated_vectors/register_success.json'.tr,
                             repeat: false),
                       );
                     });
@@ -95,12 +95,12 @@ class SignInButton extends StatelessWidget {
              * Remove loading indicator
              */
             Get.back();
-            if (e.code == 'user-not-found') {
+            if (e.code == 'user-not-found'.tr) {
               CustomToast.showRedToast(
-                  messsage: 'No user found for that email.');
+                  messsage: 'No user found for that email.'.tr);
             } else if (e.code == 'wrong-password') {
               CustomToast.showRedToast(
-                  messsage: 'Wrong password provided for that user.');
+                  messsage: 'Wrong password provided for that user.'.tr);
             }
           }
         }
@@ -111,7 +111,7 @@ class SignInButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Sign in",
+              "Sign in".tr,
               style: TextStyle(
                 color: Colors.white,
               ),

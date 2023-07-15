@@ -37,7 +37,7 @@ class SignUpButton extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text("Register now"),
+            Text("Register now".tr),
             SizedBox(
               width: 10,
             ),
@@ -60,8 +60,8 @@ class SignUpButton extends StatelessWidget {
           } else {
             CustomToast.showBlackToast(
                 messsage:
-                    "user credintial = ${registerPageController.userCredintial}");
-            CustomToast.showRedToast(messsage: "error in validation");
+                    "user credintial = ${registerPageController.userCredintial}".tr);
+            CustomToast.showRedToast(messsage: "error in validation".tr);
           }
         },
       ),

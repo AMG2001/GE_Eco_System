@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/screens/start_screen/components/start_screen_login_button.dart';
 import 'package:green_egypt/screens/start_screen/components/start_screen_register_button.dart';
@@ -26,7 +27,7 @@ class StartScreen extends StatelessWidget {
                   height: 24,
                 ),
                 Text(
-                  "We are happy to see you in Green Egypt",
+                  "We are happy to see you in Green Egypt".tr,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
@@ -36,7 +37,7 @@ class StartScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Don't have an Account !",
+                    "Don't have an Account !".tr,
                     style: TextStyle(
                         fontSize: 16,
                         color: Colors.black,
@@ -56,7 +57,7 @@ class StartScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Already have an Account !",
+                    "Already have an Account !".tr,
                     style: TextStyle(
                       color: Colors.black,
                     ),

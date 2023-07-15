@@ -42,7 +42,7 @@ class RegisterAndForgetPasswordRow extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "Register    ",
+                  "Register    ".tr,
                   style: Theme.of(context).textTheme.button,
                 ),
                 FaIcon(
@@ -62,7 +62,7 @@ class RegisterAndForgetPasswordRow extends StatelessWidget {
                   backgroundColor: Colors.black);
             },
             child: Text(
-              "Forgot Password?",
+              "Forgot Password?".tr,
               style: TextStyle(color: DefaultColors.defaultGreen, fontSize: 14),
             ),
           )

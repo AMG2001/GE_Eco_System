@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -36,7 +37,7 @@ class Page2 extends StatelessWidget {
                         controller.jumpToPage(4);
                       },
                       child: Text(
-                        "Skip now > ",
+                        "Skip now > ".tr,
                         style: TextStyle(color: Colors.grey[400]),
                       )),
                   SizedBox(

@@ -31,7 +31,7 @@ class StartScreenRegisterButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Register",
+            "Register".tr,
             style: TextStyle(color:ApplicationThemeController.instance.isDark
                                         ? Colors.white
                                         : Colors.black),

@@ -102,7 +102,7 @@ class RegisterPage extends StatelessWidget {
                                 height:
                                     MediaQuery.of(context).size.height * .02,
                               ),
-                              Text("Email"),
+                              Text("Email".tr),
                               SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * .01,
@@ -119,7 +119,7 @@ class RegisterPage extends StatelessWidget {
                                  * Password TF
                                  */
 
-                              Text("Password"),
+                              Text("Password".tr),
                               SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * .01,
@@ -131,7 +131,7 @@ class RegisterPage extends StatelessWidget {
                                 height:
                                     MediaQuery.of(context).size.height * .02,
                               ),
-                              Text("Mobile Number"),
+                              Text("Mobile Number".tr),
                               SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * .02,

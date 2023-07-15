@@ -47,7 +47,7 @@ class FacebookSignInButton extends StatelessWidget {
               width: MediaQuery.of(context).size.width * .05,
             ),
             Text(
-              "Sign with Facebook",
+              "Sign with Facebook".tr,
               style: TextStyle(
                 color: Colors.white,
               ),

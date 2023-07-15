@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 class EmailTF extends StatelessWidget {
   const EmailTF({
@@ -16,12 +17,12 @@ class EmailTF extends StatelessWidget {
       child: TextFormField(
         validator: (value) {
           if (value == "" || value == null) {
-            return "You can't leave email empty";
+            return "You can't leave email empty".tr;
           } else if (RegExp(
                       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                   .hasMatch(value) ==
               false) {
-            return "This is not an email !!";
+            return "This is not an email !!".tr;
           }
         },
         controller: emailController,
@@ -29,7 +30,7 @@ class EmailTF extends StatelessWidget {
             prefixIcon: Padding(
                 padding: EdgeInsets.all(16),
                 child: FaIcon(FontAwesomeIcons.user)),
-            hintText: "enter your email",
+            hintText: "enter your email".tr,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
             )),

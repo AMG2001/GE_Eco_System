@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
 import 'package:green_egypt/config/vectos_paths.dart';
@@ -30,7 +31,7 @@ class PageHeader extends StatelessWidget {
         Align(
           alignment: Alignment.center,
           child: Text(
-            "🍀 Regsiter now to be one of Green_Egypt Family 🍀",
+            "🍀 Regsiter now to be one of Green_Egypt Family 🍀".tr,
             style: TextStyle(fontSize: 15.sp,)
           ),
         ),
@@ -41,7 +42,7 @@ class PageHeader extends StatelessWidget {
           height: MediaQuery.of(context).size.height * .04,
         ),
         Text(
-          "Enter your Details : ",
+          "Enter your Details : ".tr,
           style: TextStyle(fontSize: 18.sp, color: DefaultColors.defaultGreen),
         ),
 

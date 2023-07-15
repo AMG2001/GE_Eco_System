@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/screens/login_screen/login_page_components/login_page_buttons/facebook_login_button.dart';
 import 'package:green_egypt/screens/login_screen/login_page_components/login_page_buttons/google_signin_button.dart';
@@ -51,7 +52,7 @@ class _MyWidgetState extends State<LoginScreen> {
                         height: Dimensions.height * .02,
                       ),
                       Text(
-                        "Login Now",
+                        "Login Now".tr,
                         style: TextStyle(
                             fontSize: Dimensions.width * .06,
                             fontWeight: FontWeight.w500),
@@ -62,7 +63,7 @@ class _MyWidgetState extends State<LoginScreen> {
                                  * Description Text
                                  */
                       Text(
-                        "Please enter the details below to continue.",
+                        "Please enter the details below to continue.".tr,
                         style: TextStyle(
                             fontSize: Dimensions.width * .035,
                             color: Colors.grey[400],
@@ -116,7 +117,7 @@ class _MyWidgetState extends State<LoginScreen> {
                                 SizedBox(
                                   width: 12,
                                 ),
-                                Text("or"),
+                                Text("or".tr),
                                 SizedBox(
                                   width: 12,
                                 ),
