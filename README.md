@@ -98,7 +98,7 @@
 
 ## 📅 5/07/2023 - “Edit Of App Localization” .
 
-- Eng / Hamdi added Localization :
+- Eng / Hamdi added Localization in :
 
 1. header of transaction page
 2. Get cash page.
@@ -110,6 +110,10 @@ Tried Google Ml Kit project : https://pub.dev/packages/google_mlkit_object_detec
 
 ## 📅 13/07/2023 "Bluetooth Controller implemented" by Salah Ayman and AMG :
 as we need to implement connection between all eco-system components , we implemented bluetooth cotroller that responsible for sending all Signals depending on detection result .
+
+## 📅 14/07/2023 "Camera detection and Sending Signals implmeneted ✅ :
+- Eng / Amgad implemented "Camera Detection and Bluetooth signals sending to Arduino".
+- this task implmeneted by adding google_ml_kit package to project and handling detection results .
 
 
 ## Future work 'Adding transactions cloud backup".
