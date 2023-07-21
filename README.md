@@ -117,5 +117,3 @@ as we need to implement connection between all eco-system components , we implem
 
 
 ## Future work 'Adding transactions cloud backup".
-
-## Future work 'will be implemented by shady - Alaa and AMG': need to create our custom tflite model "bottle detection or color detection".
