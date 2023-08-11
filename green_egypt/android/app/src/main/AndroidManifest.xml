@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tech.mavica.green_egypt">
+    package="tech.amg.green_egypt">
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
    <application
         android:label="Green Egypt"
@@ -48,5 +49,5 @@
              <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
    	     
     </application>
-         <uses-permission android:name="android.permission.INTERNET"/>
+  
 </manifest>

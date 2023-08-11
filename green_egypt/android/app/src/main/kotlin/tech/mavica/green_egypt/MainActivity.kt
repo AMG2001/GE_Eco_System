@@ -1,4 +1,4 @@
-package tech.mavica.green_egypt
+package tech.amg.green_egypt
 
 import io.flutter.embedding.android.FlutterActivity
 import androidx.annotation.NonNull

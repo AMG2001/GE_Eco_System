@@ -54,7 +54,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBuzui1J-zbTgMbiwoUAnNB5bG6RfEyENs',
-    appId: '1:448811679409:android:3c0985348c7ea715aeec90',
+    appId: '1:448811679409:android:73a631b4bd07bf19aeec90',
     messagingSenderId: '448811679409',
     projectId: 'green-egypt-f80b9',
     storageBucket: 'green-egypt-f80b9.appspot.com',
@@ -66,7 +66,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '448811679409',
     projectId: 'green-egypt-f80b9',
     storageBucket: 'green-egypt-f80b9.appspot.com',
-    androidClientId: '448811679409-op22jdur6are3b4hvdfc16dvet4mnfoo.apps.googleusercontent.com',
+    androidClientId: '448811679409-0pk2emmbqfpflu0nu8tai7110hnvpfsn.apps.googleusercontent.com',
     iosClientId: '448811679409-ge4p8hp974b5lilv4o9fiq1dh1t3t09u.apps.googleusercontent.com',
     iosBundleId: 'tech.mavica.greenEgypt',
   );
@@ -77,7 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '448811679409',
     projectId: 'green-egypt-f80b9',
     storageBucket: 'green-egypt-f80b9.appspot.com',
-    androidClientId: '448811679409-op22jdur6are3b4hvdfc16dvet4mnfoo.apps.googleusercontent.com',
+    androidClientId: '448811679409-0pk2emmbqfpflu0nu8tai7110hnvpfsn.apps.googleusercontent.com',
     iosClientId: '448811679409-ge4p8hp974b5lilv4o9fiq1dh1t3t09u.apps.googleusercontent.com',
     iosBundleId: 'tech.mavica.greenEgypt',
   );
