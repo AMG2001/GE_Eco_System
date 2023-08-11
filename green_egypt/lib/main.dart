@@ -9,7 +9,7 @@ import 'package:green_egypt/firebase_options.dart';
 import 'package:green_egypt/services/Shared_preferences/shared_preferences_class.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-
+import 'package:green_egypt/services/biometric_auth.dart';
 import 'config/localization/locale_controller.dart';
 
 void main() async {
@@ -19,6 +19,7 @@ void main() async {
   await Hive.initFlutter();
   await ApplicationThemeController.instance
       .initApplicationThemeController_ThemeAndBox();
+  await BiometricController.instance.initBiometricAuth();
   // to initiate all Application Shared Preferences in one line 🔥 .
   await SharedPreferencesClass.initAllSharedPreferences();
   /**f

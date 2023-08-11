@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/screens/home_page/more_page/get_cash_page/components/cash_qrcode.dart';
@@ -7,7 +6,6 @@ import 'package:green_egypt/screens/home_page/more_page/get_cash_page/components
 import 'package:green_egypt/screens/home_page/more_page/get_cash_page/components/scan_and_earn_row.dart';
 import 'package:green_egypt/screens/home_page/more_page/get_cash_page/controller/get_cash_page_controller.dart';
 import 'package:green_egypt/services/boxes/user_data_db.dart';
-import 'package:syncfusion_flutter_barcodes/barcodes.dart';
 
 class GetCashPage extends StatelessWidget {
   const GetCashPage({super.key});
