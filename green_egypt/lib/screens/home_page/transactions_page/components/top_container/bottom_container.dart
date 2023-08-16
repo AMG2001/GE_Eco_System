@@ -12,13 +12,13 @@ class BottomContainer extends StatelessWidget {
     return GetBuilder<TransactionsBox>(
       init: TransactionsBox.instance,
       builder: (transactionsBoxController) {
-        return Container(
+        return SizedBox(
           width: Dimensions.width,
           height: 0.4 * Dimensions.height,
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,13 +26,13 @@ class BottomContainer extends StatelessWidget {
                     Text(
                       'Transactions'.tr,
                       style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
+                          const TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
                     ),
                     TextButton(
                       onPressed: () {},
                       child: Text(
                         'View All'.tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Color(0XFFD9D9D9),
                             fontWeight: FontWeight.w600),
                       ),

@@ -16,7 +16,7 @@ class PasswordTF extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<RegisterPageController>(builder: (controller) {
-      return Container(
+      return SizedBox(
         width: MediaQuery.of(context).size.width,
         child: TextFormField(
           validator: (value) {
@@ -25,6 +25,7 @@ class PasswordTF extends StatelessWidget {
             } else if (value.length < 8) {
               return "Password must be 8 or more !!";
             }
+            return null;
           },
           controller: passwordController,
           obscureText: signUpPageController.securePassword,
@@ -35,8 +36,8 @@ class PasswordTF extends StatelessWidget {
                     signUpPageController
                         .changeShowPasswordValue();
                   }),
-              prefixIcon: Padding(
-                padding: const EdgeInsets.all(16.0),
+              prefixIcon: const Padding(
+                padding: EdgeInsets.all(16.0),
                 child: FaIcon(FontAwesomeIcons.shieldHalved),
               ),
               hintText: "enter your password",

@@ -9,7 +9,7 @@ class GreenEgyptMachinesOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       horizontalTitleGap: 0,
-      leading: Icon(
+      leading: const Icon(
         Icons.location_on_outlined,
         color: Colors.green,
       ),

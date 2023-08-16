@@ -1,10 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/pages_names.dart';
-import 'package:green_egypt/services/boxes/user_data_db.dart';
 import 'package:green_egypt/services/custom_toast.dart';
 import 'package:green_egypt/services/firebase_services/firebase_services.dart';
 import 'package:lottie/lottie.dart';
@@ -15,7 +12,7 @@ class SignInButton extends StatelessWidget {
   TextEditingController passwordController;
 
   SignInButton(
-      {required this.emailController,
+      {super.key, required this.emailController,
       required this.passwordController,
       required this.loginKey});
   @override
@@ -71,7 +68,7 @@ class SignInButton extends StatelessWidget {
                 showDialog(
                     context: context,
                     builder: (context) {
-                      Future.delayed(Duration(seconds: 3), () {
+                      Future.delayed(const Duration(seconds: 3), () {
                         /**
                         * Remove Success Animation
                         */
@@ -105,8 +102,8 @@ class SignInButton extends StatelessWidget {
           }
         }
       },
-      child: Padding(
-        padding: const EdgeInsets.all(18.0),
+      child: const Padding(
+        padding: EdgeInsets.all(18.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

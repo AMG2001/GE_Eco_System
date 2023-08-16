@@ -4,9 +4,7 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:green_egypt/services/firebase_services/firebase_services.dart';
 
 class FacebookCustomAuth {
-  /**
-   * Signing in with Facebook : 
-   */
+  /// Signing in with Facebook : 
 
   static Future<void> signInWithFacebook(
       {required BuildContext context}) async {

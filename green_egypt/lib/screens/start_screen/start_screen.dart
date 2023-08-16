@@ -11,7 +11,7 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: Dimensions.width,
         height: Dimensions.height,
         child: SafeArea(
@@ -22,18 +22,18 @@ class StartScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Lottie.asset('assets/animated_vectors/hello.json', width: 350),
-                SizedBox(
+                const SizedBox(
                   height: 24,
                 ),
-                Text(
+                const Text(
                   "We are happy to see you in Green Egypt",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 48,
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Don't have an Account !",
@@ -43,17 +43,17 @@ class StartScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 /**
                  * Regsiter button
                  */
-                StartScreenRegisterButton(),
-                SizedBox(
+                const StartScreenRegisterButton(),
+                const SizedBox(
                   height: 12,
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Already have an Account !",
@@ -62,13 +62,13 @@ class StartScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 /**
                  * Login button
                  */
-                StartScreenLoginButton()
+                const StartScreenLoginButton()
               ],
             ),
           ),

@@ -3,11 +3,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
-import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_animations_controller.dart';
 import 'package:green_egypt/screens/home_page/home_page_components/components/user_detail_column.dart';
 import 'package:green_egypt/services/boxes/user_data_db.dart';
 
 class CardOfEarnedSavedRecycled extends StatelessWidget {
+  const CardOfEarnedSavedRecycled({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,7 +19,7 @@ class CardOfEarnedSavedRecycled extends StatelessWidget {
           width: Dimensions.width,
           // height: Dimensions.height * .2,
           decoration: BoxDecoration(
-            image: DecorationImage(
+            image: const DecorationImage(
               image: AssetImage(
                   'assets/images/main_page_images/card_background.png'),
               fit: BoxFit.cover,
@@ -93,7 +94,7 @@ class CardOfEarnedSavedRecycled extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 24,
         ),
       ],

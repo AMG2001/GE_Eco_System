@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Page3 extends StatelessWidget {
   String heroTag = "tag";
 
-  Color pageColor = Color(0xFF5599E2);
+  Color pageColor = const Color(0xFF5599E2);
   late AssetImage image;
   late PageController controller;
-  Page3({required this.image, required this.controller});
+  Page3({super.key, required this.image, required this.controller});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: Dimensions.width,
       height: Dimensions.height,
       child: Stack(
@@ -26,7 +25,7 @@ class Page3 extends StatelessWidget {
               width: Dimensions.width),
           Column(
             children: [
-              Spacer(),
+              const Spacer(),
               Row(
                 children: [
                   SizedBox(
@@ -46,7 +45,7 @@ class Page3 extends StatelessWidget {
                   ElevatedButton(
                     style: ButtonStyle(
                         padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                            EdgeInsets.all(16)),
+                            const EdgeInsets.all(16)),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
@@ -55,10 +54,10 @@ class Page3 extends StatelessWidget {
                             MaterialStateProperty.all<Color>(pageColor)),
                     onPressed: () {
                       controller.nextPage(
-                          duration: Duration(milliseconds: 750),
+                          duration: const Duration(milliseconds: 750),
                           curve: Curves.easeInOut);
                     },
-                    child: Row(
+                    child: const Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [Icon(Icons.navigate_next_outlined)],
                     ),

@@ -6,7 +6,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:green_egypt/screens/home_page/home_page_components/widgets/friendly_tips_item.dart';
 
 class EcoFriendlyFullTips extends StatelessWidget {
-  EcoFriendlyFullTips({super.key});
+  const EcoFriendlyFullTips({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,10 @@ class EcoFriendlyFullTips extends StatelessWidget {
     return Scaffold(
       backgroundColor: ApplicationThemeController.instance.isDark
           ? Colors.black
-          : Color(0xfffefefc),
+          : const Color(0xfffefefc),
       body: Column(
         children: [
-          Row(
+          const Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [],
@@ -28,13 +28,13 @@ class EcoFriendlyFullTips extends StatelessWidget {
             width: Dimensions.width,
             height: Dimensions.height,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(32),
                 topRight: Radius.circular(32),
               ),
               color: ApplicationThemeController.instance.isDark
                   ? Colors.black
-                  : Color(0xfff7f5f5),
+                  : const Color(0xfff7f5f5),
             ),
             child: ListView(
               scrollDirection: Axis.vertical,

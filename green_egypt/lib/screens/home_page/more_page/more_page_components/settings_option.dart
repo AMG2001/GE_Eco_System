@@ -10,9 +10,9 @@ class SettingsOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       horizontalTitleGap: 0,
-      onTap: () => Get.to(SettingsPage(), transition: Transition.rightToLeft),
-      leading: Icon(Icons.settings),
-      title: Text("settings"),
+      onTap: () => Get.to(const SettingsPage(), transition: Transition.rightToLeft),
+      leading: const Icon(Icons.settings),
+      title: const Text("settings"),
       trailing: Icon(
         Icons.arrow_forward_ios,
         size: 18.sp,

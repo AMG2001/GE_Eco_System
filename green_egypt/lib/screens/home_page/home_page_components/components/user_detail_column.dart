@@ -10,7 +10,7 @@ class UserDetailColumn extends StatelessWidget {
   int animationMilliSeconds;
   String valueMark;
   UserDetailColumn(
-      {required this.icon,
+      {super.key, required this.icon,
       required this.detailValue,
       required this.valueMark,
       required this.detailTitle,
@@ -26,14 +26,14 @@ class UserDetailColumn extends StatelessWidget {
           controller.removeHidden();
           return Expanded(
             child: AnimatedOpacity(
-              duration: Duration(milliseconds: 750),
+              duration: const Duration(milliseconds: 750),
               opacity: controller.itemOpacity,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   AnimatedContainer(
                       curve: Curves.easeInOutCubic,
-                      duration: Duration(milliseconds: 750),
+                      duration: const Duration(milliseconds: 750),
                       height: controller.animatedContainerHeight),
                   icon,
                   const SizedBox(
@@ -50,7 +50,7 @@ class UserDetailColumn extends StatelessWidget {
                             fontWeight: FontWeight.w500),
                       ),
                       Text(
-                        " " + valueMark,
+                        " $valueMark",
                         style: TextStyle(
                             fontSize: 18,
                             color: Colors.yellow[50]!.withOpacity(.9),
@@ -63,7 +63,7 @@ class UserDetailColumn extends StatelessWidget {
                   ),
                   Text(
                     detailTitle,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 16,
                         color: Colors.white,
                         fontWeight: FontWeight.w500),

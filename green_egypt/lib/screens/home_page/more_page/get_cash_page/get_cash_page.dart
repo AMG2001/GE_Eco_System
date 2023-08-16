@@ -16,49 +16,85 @@ class GetCashPage extends StatelessWidget {
         child: GetBuilder<GetCashPageController>(
             init: GetCashPageController(),
             builder: (controller) {
-              return Container(
-                color: Colors.black.withOpacity(.5),
-                child: Center(
-                  child: Container(
-                    child: AnimatedOpacity(
-                      duration: Duration(milliseconds: 750),
-                      opacity: controller.opacity,
-                      curve: Curves.easeInOutCubic,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          GreyContainer(),
-                          Text(
-                              "Thanks for Suppoting Recycling \n\n ${UserDataBox.instance.get_userName()}",
-                              textAlign: TextAlign.center),
-                          ScanAndEarnRow(),
-                          CashQrcode(),
-                          ElevatedButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            child: Text("I'm Done"),
-                          ),
-                        ],
-                      ),
-                    ),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(16)),
-                    width: Dimensions.width * .8,
-                    height: Dimensions.height * .6,
-                  ),
-                ),
-                width: Dimensions.width,
-                height: Dimensions.height,
-              );
+              return controller.userAuthorized
+                  ? showAuzorizedView(controller: controller)
+                  : showUnAuthrizedView();
             }),
       ),
     );
   }
 }
 
+Widget showAuzorizedView({required GetCashPageController controller}) {
+  return Container(
+    decoration: BoxDecoration(
+      color: Colors.black.withOpacity(.5),
+    ),
+    width: Dimensions.width,
+    height: Dimensions.height,
+    child: Center(
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(16)),
+        width: Dimensions.width * .8,
+        height: Dimensions.height * .6,
+        child: AnimatedOpacity(
+          duration: const Duration(milliseconds: 750),
+          opacity: controller.opacity,
+          curve: Curves.easeInOutCubic,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const GreyContainer(),
+              Text(
+                  "Thanks for Suppoting Recycling \n\n ${UserDataBox.instance.get_userName()}",
+                  textAlign: TextAlign.center),
+              const ScanAndEarnRow(),
+              const CashQrcode(),
+              ElevatedButton(
+                onPressed: () {
+                  Get.back();
+                },
+                child: const Text("I'm Done"),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+Widget showUnAuthrizedView() {
+  return Container(
+    color: Colors.black.withOpacity(.5),
+    width: Dimensions.width,
+    height: Dimensions.height,
+    child: Center(
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(16)),
+        width: Dimensions.width * .8,
+        height: Dimensions.height * .3,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(
+              Icons.lock_outline_rounded,
+              size: Dimensions.width * .15,
+            ),
+            Text(
+              "Verify with Biometric \nauthintication first",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+            )
+          ],
+        ),
+      ),
+    ),
+  );
+}
 
 /**
  * *************** Draw Ticket shape with code

@@ -7,12 +7,10 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 class WasteCategoryView extends StatelessWidget {
   String imagePath;
   String heroTag;
-  WasteCategoryView({required this.imagePath, required this.heroTag});
-  /**
-   * Salah will implement this page 
-   * AMG : 04/02/2023 12:54 AM
-   * Salah Finish : 
-   */
+  WasteCategoryView({super.key, required this.imagePath, required this.heroTag});
+  /// Salah will implement this page 
+  /// AMG : 04/02/2023 12:54 AM
+  /// Salah Finish : 
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
@@ -24,9 +22,9 @@ class WasteCategoryView extends StatelessWidget {
           width: Dimensions.width,
           // height: Dimensions.height * 0.55,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(32), topRight: Radius.circular(32)),
-            color: themeController.isDark ? Colors.black : Color(0xfff7f5f5),
+            color: themeController.isDark ? Colors.black : const Color(0xfff7f5f5),
           ),
           child: Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
@@ -56,7 +54,7 @@ class WasteCategoryView extends StatelessWidget {
                       width: Dimensions.width * 0.04,
                     ),
                     Text(
-                      'How to recycle'.tr + " " + heroTag,
+                      "${'How to recycle'.tr} $heroTag",
                       style: TextStyle(
                         fontWeight: FontWeight.w100,
                         fontSize: 22.sp,
@@ -81,7 +79,7 @@ class WasteCategoryView extends StatelessWidget {
                   leading: Text(
                     "1.",
                     style: TextStyle(
-                        color: Color(0xffa0cc00),
+                        color: const Color(0xffa0cc00),
                         fontWeight: FontWeight.bold,
                         fontSize: 18.sp),
                   ),
@@ -89,7 +87,7 @@ class WasteCategoryView extends StatelessWidget {
                     '1.plastic'.tr, // textAlign: TextAlign.left,
                     style: TextStyle(
                       fontSize: 17.sp,
-                      color: Color.fromARGB(255, 122, 116, 116),
+                      color: const Color.fromARGB(255, 122, 116, 116),
                     ),
                   ),
                 ),
@@ -110,7 +108,7 @@ class WasteCategoryView extends StatelessWidget {
                   leading: Text(
                     "2.",
                     style: TextStyle(
-                        color: Color(0xffa0cc00),
+                        color: const Color(0xffa0cc00),
                         fontWeight: FontWeight.bold,
                         fontSize: 18.sp),
                   ),
@@ -118,7 +116,7 @@ class WasteCategoryView extends StatelessWidget {
                     '2.plastic'.tr, // textAlign: TextAlign.left,
                     style: TextStyle(
                       fontSize: 17.sp,
-                      color: Color.fromARGB(255, 122, 116, 116),
+                      color: const Color.fromARGB(255, 122, 116, 116),
                     ),
                   ),
                 ),
@@ -139,7 +137,7 @@ class WasteCategoryView extends StatelessWidget {
                   leading: Text(
                     "3.",
                     style: TextStyle(
-                        color: Color(0xffa0cc00),
+                        color: const Color(0xffa0cc00),
                         fontWeight: FontWeight.bold,
                         fontSize: 18.sp),
                   ),
@@ -147,7 +145,7 @@ class WasteCategoryView extends StatelessWidget {
                     '3.plastic'.tr, // textAlign: TextAlign.left,
                     style: TextStyle(
                       fontSize: 17.sp,
-                      color: Color.fromARGB(255, 122, 116, 116),
+                      color: const Color.fromARGB(255, 122, 116, 116),
                     ),
                   ),
                 ),
@@ -167,7 +165,7 @@ class WasteCategoryView extends StatelessWidget {
                   leading: Text(
                     "4.",
                     style: TextStyle(
-                        color: Color(0xffa0cc00),
+                        color: const Color(0xffa0cc00),
                         fontWeight: FontWeight.bold,
                         fontSize: 18.sp),
                   ),
@@ -175,7 +173,7 @@ class WasteCategoryView extends StatelessWidget {
                     '4.plastic'.tr, // textAlign: TextAlign.left,
                     style: TextStyle(
                       fontSize: 17.sp,
-                      color: Color.fromARGB(255, 122, 116, 116),
+                      color: const Color.fromARGB(255, 122, 116, 116),
                     ),
                   ),
                 ),
@@ -188,7 +186,7 @@ class WasteCategoryView extends StatelessWidget {
     return GetBuilder<ApplicationThemeController>(builder: (themeController) {
       return Scaffold(
           backgroundColor:
-              themeController.isDark ? Colors.grey[850] : Color(0xfff7f5f5),
+              themeController.isDark ? Colors.grey[850] : const Color(0xfff7f5f5),
           body: SafeArea(
             child: NestedScrollView(
                 headerSliverBuilder: (context, innerBoxIsScrolled) {
@@ -202,7 +200,7 @@ class WasteCategoryView extends StatelessWidget {
                       expandedHeight: Dimensions.height * 0.45,
                       backgroundColor: themeController.isDark
                           ? Colors.grey[850]
-                          : Color(0xfff7f5f5),
+                          : const Color(0xfff7f5f5),
                       flexibleSpace: Container(
                         child: FlexibleSpaceBar(
                           background: Stack(
@@ -215,7 +213,7 @@ class WasteCategoryView extends StatelessWidget {
                                     Get.back();
                                   },
                                   child: Container(
-                                    padding: EdgeInsets.all(8),
+                                    padding: const EdgeInsets.all(8),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: Colors.grey[350]!.withOpacity(.8),

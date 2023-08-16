@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         title: Text('home'.tr),
                         textAlign: TextAlign.center,
-                        activeColor: Color(0xFF90AD19),
+                        activeColor: const Color(0xFF90AD19),
                         inactiveColor:
                             ApplicationThemeController.instance.isDark
                                 ? Colors.white
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         title: Text("qr code".tr),
                         textAlign: TextAlign.center,
-                        activeColor: Color(0xFF90AD19),
+                        activeColor: const Color(0xFF90AD19),
                         inactiveColor:
                             ApplicationThemeController.instance.isDark
                                 ? Colors.white
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         title: Text("Transactions".tr),
                         textAlign: TextAlign.center,
-                        activeColor: Color(0xFF90AD19),
+                        activeColor: const Color(0xFF90AD19),
                         inactiveColor:
                             ApplicationThemeController.instance.isDark
                                 ? Colors.white
@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         title: Text("more".tr),
                         textAlign: TextAlign.center,
-                        activeColor: Color(0xFF90AD19),
+                        activeColor: const Color(0xFF90AD19),
                         inactiveColor:
                             ApplicationThemeController.instance.isDark
                                 ? Colors.white
@@ -105,11 +105,11 @@ class _HomePageState extends State<HomePage> {
               body: controller.pageIndex == 0
                   ? homePageBody
                   : controller.pageIndex == 1
-                      ? QrCodePageBody()
+                      ? const QrCodePageBody()
                       : controller.pageIndex == 2
-                          ? TransactionPageBody()
+                          ? const TransactionPageBody()
                           : controller.pageIndex == 3
-                              ? MorePageBody()
+                              ? const MorePageBody()
                               : const SizedBox());
         });
   }

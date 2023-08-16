@@ -1,9 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FirstLaunch {
-  /**
-   * Shared preferences Object
-   */
+  /// Shared preferences Object
   static late SharedPreferences firstLaunchBoolSharedPref;
   static const String firstLaunchTag = 'firstLaunchDone';
   static late bool firstLaunchDoneBool;

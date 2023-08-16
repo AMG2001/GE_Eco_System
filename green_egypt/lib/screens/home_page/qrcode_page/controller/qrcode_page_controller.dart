@@ -23,9 +23,9 @@ class QrcodePageController {
 
   late int lastOperationNumber;
 
-  String _boxKey_lastOperationBox = 'last_operation_box_key';
+  final String _boxKey_lastOperationBox = 'last_operation_box_key';
 
-  String _key_last_operation = 'last_operation_key';
+  final String _key_last_operation = 'last_operation_key';
 
   Future<void> init_lastOperationBox() async {
     lastOperationBox = await Hive.openBox(_boxKey_lastOperationBox);
@@ -93,7 +93,7 @@ class QrcodePageController {
     showModalBottomSheet(
         isDismissible: false,
         enableDrag: false,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -101,7 +101,7 @@ class QrcodePageController {
         ),
         context: context,
         builder: (BuildContext) {
-          return Container(
+          return SizedBox(
             width: Dimensions.width,
             height: Dimensions.height * 0.45,
             child: Column(
@@ -123,7 +123,7 @@ class QrcodePageController {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Items :",
                       style:
                           TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
@@ -131,17 +131,17 @@ class QrcodePageController {
                     Text(
                       "$plasticNumber Plastic ,",
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
                     ),
                     Text(
                       " $cansNumber Cans ,",
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
                     ),
                     Text(
                       " $totalPointsNumber Points",
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
@@ -150,8 +150,7 @@ class QrcodePageController {
                   children: [
                     ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(150, 45),
-                        primary: Color(0xffdc9c41),
+                        minimumSize: const Size(150, 45), backgroundColor: const Color(0xffdc9c41),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                       ),
@@ -166,19 +165,18 @@ class QrcodePageController {
                          */
                         await cameraController.resumeCamera();
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.qr_code,
                         color: Colors.white,
                       ),
-                      label: Text(
+                      label: const Text(
                         "Rescan",
                         style: TextStyle(fontSize: 14),
                       ),
                     ),
                     ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(150, 45),
-                        primary: Color(0xff4cd18c),
+                        minimumSize: const Size(150, 45), backgroundColor: const Color(0xff4cd18c),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                       ),
@@ -223,11 +221,11 @@ class QrcodePageController {
                          */
                         Get.back();
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.check,
                         color: Colors.white,
                       ),
-                      label: Text(
+                      label: const Text(
                         "I'm done",
                         style: TextStyle(fontSize: 14),
                       ),
@@ -244,7 +242,7 @@ class QrcodePageController {
     showModalBottomSheet(
       isDismissible: false,
       enableDrag: false,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(36),
           topRight: Radius.circular(36),
@@ -252,14 +250,14 @@ class QrcodePageController {
       ),
       context: context,
       builder: (context) {
-        return Container(
+        return SizedBox(
           height: Dimensions.height * .4,
           width: Dimensions.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Container(
@@ -269,26 +267,26 @@ class QrcodePageController {
                     borderRadius: BorderRadius.circular(16),
                     color: Colors.grey.withOpacity(.8)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
-              Text(
+              const Text(
                 "Warning",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Lottie.asset('assets/animated_vectors/warning.json',
                   width: Dimensions.width * .25),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
-              Text(
+              const Text(
                 "This Qrcode Scanned before !!",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               OutlinedButton(
@@ -298,7 +296,10 @@ class QrcodePageController {
                      */
                   Get.back();
                 },
-                child: Row(
+                style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16))),
+                child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     SizedBox(
@@ -314,9 +315,6 @@ class QrcodePageController {
                     ),
                   ],
                 ),
-                style: OutlinedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16))),
               )
             ],
           ),

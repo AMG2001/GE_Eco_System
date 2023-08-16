@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:green_egypt/config/dimensions.dart';
 
 class BarModel extends StatefulWidget {
-  BarModel({required this.barText, required this.barHeight});
+  BarModel({super.key, required this.barText, required this.barHeight});
   late String barText;
   late double barHeight;
   double currentBarHeight = 50;
@@ -15,7 +15,7 @@ class BarModel extends StatefulWidget {
 class _BarModelState extends State<BarModel> {
   @override
   void initState() {
-    Timer(Duration(milliseconds: 500), () {
+    Timer(const Duration(milliseconds: 500), () {
       setState(() {
         widget.currentBarHeight = widget.barHeight;
       });
@@ -30,7 +30,7 @@ class _BarModelState extends State<BarModel> {
       children: [
         AnimatedContainer(
           curve: Curves.easeInOutCubic,
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             color: Colors.white70,
@@ -38,12 +38,12 @@ class _BarModelState extends State<BarModel> {
           width: Dimensions.width * .06,
           height: widget.currentBarHeight,
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text(
           widget.barText,
-          style: TextStyle(fontWeight: FontWeight.w600),
+          style: const TextStyle(fontWeight: FontWeight.w600),
         )
       ],
     );

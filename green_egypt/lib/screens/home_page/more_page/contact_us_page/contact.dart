@@ -9,24 +9,26 @@ import 'package:green_egypt/screens/home_page/more_page/contact_us_page/contact_
 import 'package:green_egypt/screens/home_page/more_page/contact_us_page/contact_us_page_components/send_message_button.dart';
 
 class ContactPage extends StatelessWidget {
+  const ContactPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           height: Dimensions.height, // تمليء الشاشه بالكامل
           child: SingleChildScrollView(
             child: Column(
               children: [
-                ContactUsPageHeader(),
+                const ContactUsPageHeader(),
                 const SizedBox(
                   height: 10,
                 ),
                 Container(
                   alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: 10),
-                  child: Row(
+                  margin: const EdgeInsets.only(top: 10),
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [CallUsOption(), EmailUsOption(), ChatOption()],
                   ),
@@ -34,15 +36,15 @@ class ContactPage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                OrDividerLine(),
+                const OrDividerLine(),
                 Container(
                   alignment: Alignment.center,
                   height: 350,
                   width: Dimensions.width,
-                  decoration: BoxDecoration(),
-                  child: Column(
+                  decoration: const BoxDecoration(),
+                  child: const Column(
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         height: 20,
                       ),
                       MessageTextField(),

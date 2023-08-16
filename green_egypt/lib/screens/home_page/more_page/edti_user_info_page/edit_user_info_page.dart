@@ -8,9 +8,9 @@ import 'package:lottie/lottie.dart';
 
 class EditUserInfoPage extends StatelessWidget {
   EditUserInfoPage({super.key});
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  TextEditingController _tf_userName = TextEditingController();
-  TextEditingController _tf_phoneNumber = TextEditingController();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final TextEditingController _tf_userName = TextEditingController();
+  final TextEditingController _tf_phoneNumber = TextEditingController();
   String initialeUserName = UserDataBox.instance.get_userName();
   String initialPhoneNumber = UserDataBox.instance.get_phoneNumber();
   @override
@@ -24,7 +24,7 @@ class EditUserInfoPage extends StatelessWidget {
       body: Form(
         child: Form(
           key: _formKey,
-          child: Container(
+          child: SizedBox(
             width: Dimensions.width,
             height: Dimensions.height,
             child: SingleChildScrollView(
@@ -34,12 +34,12 @@ class EditUserInfoPage extends StatelessWidget {
                   children: [
                     Lottie.asset("assets/animated_vectors/edit_animation.json"),
                     Padding(
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('User Name :'.tr),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           TextFormField(
@@ -52,11 +52,11 @@ class EditUserInfoPage extends StatelessWidget {
                               hintText: 'user name'.tr,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           Text('Phone Number :'.tr),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           TextFormField(
@@ -69,7 +69,7 @@ class EditUserInfoPage extends StatelessWidget {
                               hintText: 'phone number'.tr,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 16,
                           ),
                           Align(
@@ -98,7 +98,7 @@ class EditUserInfoPage extends StatelessWidget {
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Text('Apply Changes'.tr),
-                                    Icon(Icons.done_all)
+                                    const Icon(Icons.done_all)
                                   ],
                                 )),
                           )

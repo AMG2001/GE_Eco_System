@@ -23,14 +23,14 @@ class MorePageHeader extends StatelessWidget {
           height: Dimensions.height * .02,
         ),
         Text(
-          "${UserDataBox.instance.get_userName()}",
+          UserDataBox.instance.get_userName(),
           style: TextStyle(fontSize: 16.sp),
         ),
         SizedBox(
           height: Dimensions.height * .02,
         ),
         Text(
-          'user account'.tr + " :  " + UserDataBox.instance.get_email(),
+          "${'user account'.tr} :  ${UserDataBox.instance.get_email()}",
           style: TextStyle(color: Colors.grey, fontSize: 14.sp),
         ),
         const SizedBox(
@@ -49,12 +49,12 @@ class MorePageHeader extends StatelessWidget {
                 children: [
                   Text(
                     'Edit Profile'.tr,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
-                  Icon(
+                  const Icon(
                     Icons.arrow_forward_ios_outlined,
                     size: 16,
                     color: Colors.white,

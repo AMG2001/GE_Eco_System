@@ -2,17 +2,15 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
-import 'package:green_egypt/config/images_paths.dart';
 import 'package:green_egypt/screens/home_page/home_page.dart';
 import 'package:green_egypt/screens/introduction_screen/intro_screen_2.dart';
 import 'package:green_egypt/screens/start_screen/start_screen.dart';
 import 'package:green_egypt/services/Shared_preferences/first_launch.dart';
 import 'package:green_egypt/services/boxes/user_data_db.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SplachScreenCustom extends StatelessWidget {
-  SplachScreenCustom({super.key});
+  const SplachScreenCustom({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +23,7 @@ class SplachScreenCustom extends StatelessWidget {
       /**
        * Fade Animation Duration
        */
-      animationDuration: Duration(seconds: 1),
+      animationDuration: const Duration(seconds: 1),
       /**
        * Centeralize image
        */
@@ -40,7 +38,7 @@ class SplachScreenCustom extends StatelessWidget {
          * make image take the height of the screen
          */
         height: Get.height,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/splach_screen_images/splach Screen design.png'),
             fit: BoxFit.cover,
@@ -64,8 +62,8 @@ class SplachScreenCustom extends StatelessWidget {
           FirstLaunch.getFirstLaunchDoneBool()
               ? (UserDataBox.instance.get_loggedInBool()
                   ? HomePage()
-                  : StartScreen())
-              : IntroductionScreen(),
+                  : const StartScreen())
+              : const IntroductionScreen(),
       splashTransition: SplashTransition.fadeTransition,
       pageTransitionType: PageTransitionType.fade,
     );

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:green_egypt/config/pages_names.dart';
 import 'package:green_egypt/screens/register_page/register_page_controller.dart';
 import 'package:green_egypt/services/custom_toast.dart';
-import 'package:lottie/lottie.dart';
 
 class SignUpButton extends StatelessWidget {
   final registerPageController = Get.put(RegisterPageController());
@@ -34,7 +32,7 @@ class SignUpButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all<Color>(Colors.green)),
-        child: Row(
+        child: const Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text("Register now"),

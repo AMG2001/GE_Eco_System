@@ -3,7 +3,6 @@ import 'package:green_egypt/screens/home_page/more_page/feed_back_page/feed_back
 import 'package:green_egypt/screens/home_page/home_page.dart';
 import 'package:green_egypt/screens/introduction_screen/intro_screen_2.dart';
 import 'package:green_egypt/screens/login_screen/login_screen.dart';
-import 'package:green_egypt/screens/home_page/more_page/more_page.dart';
 import 'package:green_egypt/screens/register_page/register_page.dart';
 import 'package:green_egypt/screens/splach_screen/splach_screen.dart';
 import 'package:green_egypt/screens/start_screen/start_screen.dart';
@@ -22,21 +21,21 @@ class PagesNames {
   static List<GetPage> listOfPages = [
     GetPage(
         name: PagesNames.splachScreen,
-        page: () => SplachScreenCustom(),
+        page: () => const SplachScreenCustom(),
         transition: Transition.fade),
     GetPage(
         name: PagesNames.introductionScreen,
-        page: () => IntroductionScreen(),
+        page: () => const IntroductionScreen(),
         transition: Transition.fade),
     GetPage(
         name: PagesNames.loginScreen,
-        page: () => LoginScreen(),
+        page: () => const LoginScreen(),
         transition: Transition.fade),
     GetPage(
         name: homePage, page: () => HomePage(), transition: Transition.fade),
     GetPage(
         name: startScreen,
-        page: () => StartScreen(),
+        page: () => const StartScreen(),
         transition: Transition.fade),
     GetPage(
         name: registerPage,
@@ -44,7 +43,7 @@ class PagesNames {
         transition: Transition.fade),
     GetPage(
         name: feedBackPage,
-        page: () => FeedbackPage(),
+        page: () => const FeedbackPage(),
         transition: Transition.rightToLeft),
     // GetPage(
     //     name: morePage, page: () => MorePage(), transition: Transition.fade),

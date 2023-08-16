@@ -16,13 +16,6 @@ class ContactUsPageHeader extends StatelessWidget {
           Row(
             children: [
               Container(
-                child: IconButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  icon: Icon(Icons.arrow_back),
-                  color: Colors.green,
-                ),
                 height: 40,
                 width: 50,
                 decoration: BoxDecoration(
@@ -36,9 +29,16 @@ class ContactUsPageHeader extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.1), //color of shadow
                       spreadRadius: 5, //spread radius
                       blurRadius: 7, // blur radius
-                      offset: Offset(0, 2), // changes position of shadow
+                      offset: const Offset(0, 2), // changes position of shadow
                     ),
                   ],
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  icon: const Icon(Icons.arrow_back),
+                  color: Colors.green,
                 ),
               ),
             ],
@@ -51,7 +51,7 @@ class ContactUsPageHeader extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             child: Text('Contact Us'.tr,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 26,
                     color: Colors.black,
                     fontWeight: FontWeight.bold)),

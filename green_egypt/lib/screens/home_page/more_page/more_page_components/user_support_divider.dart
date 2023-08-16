@@ -4,7 +4,7 @@ import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
 class UserSupportDivider extends StatelessWidget {
   late ApplicationThemeController applicationThemeController;
-  UserSupportDivider({required this.applicationThemeController});
+  UserSupportDivider({super.key, required this.applicationThemeController});
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,10 @@ class UserSupportDivider extends StatelessWidget {
                       ? Colors.grey[100]
                       : Colors.grey[700]),
             ),
-            SizedBox(
+            const SizedBox(
               width: 8,
             ),
-            Icon(Icons.account_box_outlined)
+            const Icon(Icons.account_box_outlined)
           ],
         ),
       ),

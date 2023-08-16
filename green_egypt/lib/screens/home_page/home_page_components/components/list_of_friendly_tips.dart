@@ -4,10 +4,10 @@ import 'package:green_egypt/screens/home_page/home_page_components/widgets/frien
 import 'package:green_egypt/screens/home_page/home_page_components/controller/home_page_animations_controller.dart';
 
 class ListOfFriendlyTips extends StatelessWidget {
-  ListOfFriendlyTips({super.key});
+  const ListOfFriendlyTips({super.key});
 
   Widget animatedContainer(double h) {
-    return AnimatedContainer(duration: Duration(milliseconds: 750), height: h);
+    return AnimatedContainer(duration: const Duration(milliseconds: 750), height: h);
   }
 
   @override
@@ -66,7 +66,7 @@ class ListOfFriendlyTips extends StatelessWidget {
               )
             ];
             return AnimatedOpacity(
-              duration: Duration(milliseconds: 750),
+              duration: const Duration(milliseconds: 750),
               opacity: controller.itemOpacity,
               child: ListView(children: miniEcoFriendlyTipsList),
             );

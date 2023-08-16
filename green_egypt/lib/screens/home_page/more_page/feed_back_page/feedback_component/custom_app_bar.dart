@@ -5,22 +5,24 @@ import 'package:green_egypt/config/theme/default_colors.dart';
 import 'package:green_egypt/screens/home_page/more_page/feed_back_page/feedback_component/rounded_button.dart';
 
 class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         RoundedButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           iconColor: DefaultColors.kPrimaryColor,
           bgColor: Colors.white,
           tap: () {
             Get.back();
           },
         ),
-        SizedBox(width: Constants.kDefaultPadding),
+        const SizedBox(width: Constants.kDefaultPadding),
         Text(
           'Feedback!'.tr,
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: const TextStyle(color: Colors.white, fontSize: 24),
         )
       ],
     );

@@ -4,9 +4,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:green_egypt/config/theme/application_theme.dart';
 
 class ApplicationThemeController extends GetxController {
-  /**
-   * Create singleton for class 
-   */
+  /// Create singleton for class 
 
   ApplicationThemeController._privateConstructor();
 
@@ -14,12 +12,10 @@ class ApplicationThemeController extends GetxController {
       ApplicationThemeController._privateConstructor();
 
   static ApplicationThemeController get instance => _instance;
-  /**
-   * Class Variables : 
-   */
+  /// Class Variables : 
 
-  String _key_applicatioThemeBox = "application_theme_box";
-  String _key_isDarkBool = 'is_dark';
+  final String _key_applicatioThemeBox = "application_theme_box";
+  final String _key_isDarkBool = 'is_dark';
 
   late Box applicationThemeBox;
 
@@ -36,16 +32,15 @@ class ApplicationThemeController extends GetxController {
 
     isDark = applicationThemeBox.get(_key_isDarkBool, defaultValue: false);
 
-    if (isDark == false)
+    if (isDark == false) {
       currentTheme = ApplicationTheme.applicationLightTheme;
-    else
+    } else {
       currentTheme = ApplicationTheme.applicationDarkTheme;
+    }
     update();
   }
 
-/**
- * change the theme of the application
- */
+/// change the theme of the application
   Future<void> changeApplicationTheme({required bool newValue}) async {
     /**
      * change value of currentTheme that stored in SharedPref .
@@ -53,10 +48,11 @@ class ApplicationThemeController extends GetxController {
 
     await applicationThemeBox.put(_key_isDarkBool, newValue);
     isDark = newValue;
-    if (newValue == true)
+    if (newValue == true) {
       currentTheme = ApplicationTheme.applicationDarkTheme;
-    else
+    } else {
       currentTheme = ApplicationTheme.applicationLightTheme;
+    }
     update();
   }
 }

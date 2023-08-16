@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:green_egypt/config/dimensions.dart';
-import 'package:green_egypt/screens/login_screen/login_page_components/login_page_buttons/facebook_login_button.dart';
 import 'package:green_egypt/screens/login_screen/login_page_components/login_page_buttons/google_signin_button.dart';
 import 'package:green_egypt/screens/login_screen/login_page_components/login_page_buttons/register_and_forget_password_row.dart';
 import 'package:green_egypt/screens/login_screen/login_page_components/login_page_buttons/sign_in_button.dart';
@@ -23,7 +22,7 @@ class _MyWidgetState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
+        child: SizedBox(
           width: Dimensions.width,
           height: Dimensions.height,
           child: SingleChildScrollView(
@@ -35,7 +34,7 @@ class _MyWidgetState extends State<LoginScreen> {
                 SizedBox(
                   height: Dimensions.height * .02,
                 ),
-                LoginPageHeaderImage(),
+                const LoginPageHeaderImage(),
 
                 /**
                    * Contaienr that hold 2TF and login button
@@ -56,8 +55,7 @@ class _MyWidgetState extends State<LoginScreen> {
                             fontSize: Dimensions.width * .06,
                             fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(
-                          height: Dimensions.height * .02),
+                      SizedBox(height: Dimensions.height * .02),
                       /**
                                  * Description Text
                                  */
@@ -89,8 +87,8 @@ class _MyWidgetState extends State<LoginScreen> {
                       PasswordTextField(
                           passwordTextEditingController:
                               passwordTextEditingController),
-                      RegisterAndForgetPasswordRow(),
-                      Container(
+                      const RegisterAndForgetPasswordRow(),
+                      SizedBox(
                         width: Dimensions.width * .8,
                         child: Column(
                           children: [
@@ -113,11 +111,11 @@ class _MyWidgetState extends State<LoginScreen> {
                                     width: Dimensions.width * .3,
                                     color: Colors.grey[300],
                                     height: 2),
-                                SizedBox(
+                                const SizedBox(
                                   width: 12,
                                 ),
-                                Text("or"),
-                                SizedBox(
+                                const Text("or"),
+                                const SizedBox(
                                   width: 12,
                                 ),
                                 Container(
@@ -132,14 +130,15 @@ class _MyWidgetState extends State<LoginScreen> {
                             /**
                                * Signin with Google button
                                */
-                            GoogleSignInButton(),
+                            const GoogleSignInButton(),
                             SizedBox(
                               height: Dimensions.width * .03,
                             ),
                             /**
                                * Signin with Facebook
                                */
-                            FacebookSignInButton(),
+                            // TODO add dacebook auth button .
+                            // FacebookSignInButton(),
                           ],
                         ),
                       )

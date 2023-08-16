@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:green_egypt/config/pages_names.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
 
-import 'package:page_transition/page_transition.dart';
 
 class RegisterAndForgetPasswordRow extends StatelessWidget {
   const RegisterAndForgetPasswordRow({
@@ -43,7 +42,7 @@ class RegisterAndForgetPasswordRow extends StatelessWidget {
               children: [
                 Text(
                   "Register    ",
-                  style: Theme.of(context).textTheme.button,
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
                 FaIcon(
                   FontAwesomeIcons.arrowRight,

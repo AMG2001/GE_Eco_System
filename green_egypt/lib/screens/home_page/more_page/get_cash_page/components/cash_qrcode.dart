@@ -9,17 +9,17 @@ class CashQrcode extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Container(
+        SizedBox(
           height: 200,
           child: SfBarcodeGenerator(
             value: '35 Points : 4.5 le',
             symbology: QRCode(),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
-        Text(
+        const Text(
           "35 point : 12 le",
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         )

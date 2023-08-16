@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
 import 'package:green_egypt/config/theme/default_fonts.dart';
 import 'package:green_egypt/services/boxes/user_data_db.dart';
+import 'package:green_egypt/services/time_controller.dart';
 
 class HomePageTitle extends StatelessWidget {
   const HomePageTitle({super.key});
@@ -25,14 +26,14 @@ class HomePageTitle extends StatelessWidget {
                 image: DecorationImage(image: NetworkImage(imageUrl)),
                 borderRadius: BorderRadius.circular(8)),
           ),
-          SizedBox(
+          const SizedBox(
             width: 8,
           ),
           /**
            * hello message with the name of the user text .
            */
           Text(
-            'Hello'.tr + ", " + userName,
+            "${TimeController.instance.getDayTimeMessage.tr}, $userName",
             style: TextStyle(
                 color: themeController.isDark ? Colors.white : Colors.black,
                 fontSize: 16,

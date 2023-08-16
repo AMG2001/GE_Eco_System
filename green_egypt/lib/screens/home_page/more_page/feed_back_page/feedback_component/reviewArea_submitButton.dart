@@ -10,7 +10,7 @@ import 'package:green_egypt/screens/home_page/more_page/feed_back_page/feedback_
 class ReviewArea_SubmitButton extends StatelessWidget {
   late FeedbackPageController controller;
   GlobalKey<FormState> reviewFormKey = GlobalKey<FormState>();
-  ReviewArea_SubmitButton({required this.controller});
+  ReviewArea_SubmitButton({super.key, required this.controller});
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -18,7 +18,7 @@ class ReviewArea_SubmitButton extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(Constants.kDefaultPadding),
+            padding: const EdgeInsets.all(Constants.kDefaultPadding),
             decoration: BoxDecoration(
                 color: ApplicationThemeController.instance.isDark
                     ? Colors.grey[100]!.withOpacity(.2)
@@ -37,6 +37,7 @@ class ReviewArea_SubmitButton extends StatelessWidget {
                 } else if (value.length <= 3) {
                   return 'this is not enough !!'.tr;
                 }
+                return null;
               },
               onChanged: (value) => controller.setReview = value,
               textInputAction: TextInputAction.newline,
@@ -51,7 +52,7 @@ class ReviewArea_SubmitButton extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: Constants.kDefaultPadding),
+          const SizedBox(height: Constants.kDefaultPadding),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -62,9 +63,9 @@ class ReviewArea_SubmitButton extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 18),
               ),
-              SizedBox(width: Constants.kDefaultPadding),
+              const SizedBox(width: Constants.kDefaultPadding),
               RoundedButton(
-                  icon: Icon(Icons.arrow_forward),
+                  icon: const Icon(Icons.arrow_forward),
                   iconColor: Colors.white,
                   bgColor: DefaultColors.kPrimaryColor,
                   tap: () {

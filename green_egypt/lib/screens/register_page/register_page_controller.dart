@@ -1,11 +1,9 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/pages_names.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
-import 'package:green_egypt/services/custom_toast.dart';
 import 'package:green_egypt/services/firebase_services/firebase_services.dart';
 import 'package:lottie/lottie.dart';
 
@@ -13,7 +11,7 @@ class RegisterPageController extends GetxController {
   var validationMode = AutovalidateMode.disabled;
   bool securePassword = true;
   String userCredintial = "normal_user";
-  FaIcon eyeIcon = FaIcon(FontAwesomeIcons.eyeSlash);
+  FaIcon eyeIcon = const FaIcon(FontAwesomeIcons.eyeSlash);
   Color eyeIconColor = Colors.grey;
 
   SignUpPageController() {
@@ -97,7 +95,7 @@ class RegisterPageController extends GetxController {
         showDialog(
             context: context,
             builder: (context) {
-              Future.delayed(Duration(seconds: 3), () {
+              Future.delayed(const Duration(seconds: 3), () {
                 /**
                         * Remove Success Animation
                         */
@@ -115,7 +113,7 @@ class RegisterPageController extends GetxController {
               );
             });
       });
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException {
       
     }
   }

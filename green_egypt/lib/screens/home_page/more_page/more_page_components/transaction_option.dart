@@ -10,9 +10,9 @@ class GetCash extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        Get.to(() => GetCashPage(),
+        Get.to(() => const GetCashPage(),
             transition: Transition.rightToLeft,
-            duration: Duration(milliseconds: 750),
+            duration: const Duration(milliseconds: 750),
             curve: Curves.easeInOutCubic);
       },
       horizontalTitleGap: 0,

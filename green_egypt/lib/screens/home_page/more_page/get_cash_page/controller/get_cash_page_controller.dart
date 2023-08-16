@@ -1,28 +1,37 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:green_egypt/services/biometric_auth.dart';
 
 class GetCashPageController extends GetxController {
+  late bool userAuthorized;
   late double opacity;
 
   @override
-  void onInit() {
+  void onInit() async {
     opacity = 0;
-    update();
+    userAuthorized = false;
+    await showBiometricAuth();
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    Timer(
-      Duration(milliseconds: 500),
-      () {
-        opacity = 1;
-        update();
-      },
-    );
+  Future<void> showBiometricAuth() async {
+    await BiometricController.instance
+        .authinticateWithFingerprint(
+            messageToUser: 'we need to verify that it is you first !!')
+        .then((isAuthorized) {
+      if (isAuthorized) {
+        showUserQrcode();
+      } else {}
+    });
+  }
 
-    super.onReady();
+  void showUserQrcode() {
+    userAuthorized = true;
+    update();
+    Timer(Duration(milliseconds: 250), () {
+      opacity = 1;
+      update();
+    });
   }
 }

@@ -3,7 +3,7 @@ import 'package:green_egypt/config/dimensions.dart';
 
 class TransactionInfoModel extends StatelessWidget {
   TransactionInfoModel(
-      {required this.date, required this.garbage, required this.points});
+      {super.key, required this.date, required this.garbage, required this.points});
   late String date;
   late String garbage;
   late String points;
@@ -14,11 +14,11 @@ class TransactionInfoModel extends StatelessWidget {
       children: [
         ListTile(
           leading: Container(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                color: Color(0XFFEDECEC)),
-            child: Icon(
+                color: const Color(0XFFEDECEC)),
+            child: const Icon(
               Icons.recycling_sharp,
               size: 30,
               color: Colors.black,
@@ -28,21 +28,21 @@ class TransactionInfoModel extends StatelessWidget {
             children: [
               Text(
                 date,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               )
             ],
           ),
           subtitle: Text(
             garbage,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Color(0XFFD9D9D9), fontWeight: FontWeight.w500),
           ),
           trailing: Text(
-            "${points} point",
-            style: TextStyle(
+            "$points point",
+            style: const TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 16,
             ),
@@ -53,7 +53,7 @@ class TransactionInfoModel extends StatelessWidget {
                                    * first list tile
                      */
         Divider(
-          color: Color(0XFFD9D9D9),
+          color: const Color(0XFFD9D9D9),
           thickness: 1,
           indent: 20,
           endIndent: 20,

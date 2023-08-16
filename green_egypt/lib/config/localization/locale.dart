@@ -5,9 +5,7 @@ class ApplicationLocal implements Translations {
 
   // keys mean keys of languages which simply consist of :
 
-  /**
-   * 
-   */
+  /// 
   Map<String, Map<String, String>> get keys => {
         'ar': {
           'Arabic': 'عربيه',

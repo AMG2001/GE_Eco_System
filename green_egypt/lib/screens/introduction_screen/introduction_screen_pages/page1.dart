@@ -6,17 +6,17 @@ class Page1 extends StatelessWidget {
   double width = Dimensions.width;
   double height = Dimensions.height;
   int pageIndex = 1;
-  Color pageColor = Color(0xFF5AE4A7);
+  Color pageColor = const Color(0xFF5AE4A7);
   late AssetImage image;
   late PageController controller;
-  Page1({required this.image, required this.controller});
+  Page1({super.key, required this.image, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     /**
      * Outer container that conisder main block
      */
-    return Container(
+    return SizedBox(
       width: Dimensions.width,
       height: Dimensions.height,
       child: Stack(
@@ -28,7 +28,7 @@ class Page1 extends StatelessWidget {
               width: Dimensions.width),
           Column(
             children: [
-              Spacer(),
+              const Spacer(),
               Row(
                 children: [
                   SizedBox(
@@ -48,7 +48,7 @@ class Page1 extends StatelessWidget {
                   ElevatedButton(
                     style: ButtonStyle(
                         padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                            EdgeInsets.all(16)),
+                            const EdgeInsets.all(16)),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
@@ -57,10 +57,10 @@ class Page1 extends StatelessWidget {
                             MaterialStateProperty.all<Color>(pageColor)),
                     onPressed: () {
                       controller.nextPage(
-                          duration: Duration(milliseconds: 750),
+                          duration: const Duration(milliseconds: 750),
                           curve: Curves.easeInOut);
                     },
-                    child: Row(
+                    child: const Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [Icon(Icons.navigate_next_outlined)],
                     ),

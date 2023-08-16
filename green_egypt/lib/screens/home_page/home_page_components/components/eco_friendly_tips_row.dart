@@ -15,14 +15,14 @@ class EcoFriendlyTipsRow extends StatelessWidget {
         init: HomePageAnimationsController(),
         builder: (controller) {
           return AnimatedOpacity(
-            duration: Duration(seconds: 1),
+            duration: const Duration(seconds: 1),
             opacity: controller.itemOpacity,
-            child: Container(
+            child: SizedBox(
               width: Dimensions.width,
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,10 +35,10 @@ class EcoFriendlyTipsRow extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () {
-                            Get.to(EcoFriendlyFullTips(),
+                            Get.to(const EcoFriendlyFullTips(),
                                 transition: Transition.downToUp,
                                 curve: Curves.easeInCubic,
-                                duration: Duration(seconds: 1));
+                                duration: const Duration(seconds: 1));
                           },
                           child: Text(
                             'View All'.tr,

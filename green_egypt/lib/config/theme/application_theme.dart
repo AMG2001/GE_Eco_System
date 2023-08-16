@@ -7,39 +7,39 @@ class ApplicationTheme {
    */
   static ThemeData applicationDarkTheme = ThemeData.dark().copyWith(
       textTheme: TextTheme(
-        button: TextStyle(
+        labelLarge: TextStyle(
             color: Colors.white,
             fontSize: 18,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline1: TextStyle(
+        displayLarge: TextStyle(
             color: Colors.white,
             fontSize: 72,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline2: TextStyle(
+        displayMedium: TextStyle(
             color: Colors.white,
             fontSize: 56,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline3: TextStyle(
+        displaySmall: TextStyle(
             color: Colors.white,
             fontSize: 48,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline4: TextStyle(
+        headlineMedium: TextStyle(
             color: Colors.white,
             fontSize: 32,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline5: TextStyle(
+        headlineSmall: TextStyle(
             color: Colors.white,
             fontSize: 24,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline6: TextStyle(
+        titleLarge: TextStyle(
             color: Colors.white,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        bodyText2: TextStyle(
+        bodyMedium: TextStyle(
             color: Colors.white,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        subtitle1: TextStyle(
+        titleMedium: TextStyle(
             color: Colors.white,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
@@ -52,50 +52,50 @@ class ApplicationTheme {
 /**
  * -------------------------- Primary Color --------------------------
  */
-      primaryColor: Color(0xFF90AD19),
+      primaryColor: const Color(0xFF90AD19),
       /**
   * -------------------------- AppBar Theme --------------------------
   */
-      appBarTheme: AppBarTheme(backgroundColor: Colors.black),
+      appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
       /***
      * -------------------------- Prrmary Text Theme --------------------------
      */
       primaryTextTheme: TextTheme(
-        button: TextStyle(
+        labelLarge: TextStyle(
             color: Colors.white,
             fontSize: 16,
             fontWeight: FontWeight.w500,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline1: TextStyle(
+        displayLarge: TextStyle(
             color: Colors.white,
             fontSize: 72,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline2: TextStyle(
+        displayMedium: TextStyle(
             color: Colors.white,
             fontSize: 56,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline3: TextStyle(
+        displaySmall: TextStyle(
             color: Colors.white,
             fontSize: 48,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline4: TextStyle(
+        headlineMedium: TextStyle(
             color: Colors.white,
             fontSize: 32,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline5: TextStyle(
+        headlineSmall: TextStyle(
             color: Colors.white,
             fontSize: 24,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline6: TextStyle(
+        titleLarge: TextStyle(
             color: Colors.white,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        bodyText2: TextStyle(
+        bodyMedium: TextStyle(
             color: Colors.white,
             fontSize: 16,
             fontWeight: FontWeight.w500,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        subtitle1: TextStyle(
+        titleMedium: TextStyle(
             color: Colors.white,
             fontSize: 16,
             fontWeight: FontWeight.w500,
@@ -104,11 +104,11 @@ class ApplicationTheme {
       /**
      * ----------------------------- Drawer Theme -------------------------
      */
-      drawerTheme: DrawerThemeData(backgroundColor: Colors.black),
+      drawerTheme: const DrawerThemeData(backgroundColor: Colors.black),
       /**
      * -------------------------- Button Theme --------------------------
      */
-      buttonTheme: ButtonThemeData(
+      buttonTheme: const ButtonThemeData(
         buttonColor: Colors.white,
         textTheme: ButtonTextTheme.primary,
       ),
@@ -122,9 +122,8 @@ class ApplicationTheme {
      */
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          textStyle: TextStyle(color: Colors.white),
-          primary: Color(0xFF90AD19),
-          side: BorderSide(color: Color(0xFF90AD19), width: 2),
+          foregroundColor: const Color(0xFF90AD19), textStyle: const TextStyle(color: Colors.white),
+          side: const BorderSide(color: Color(0xFF90AD19), width: 2),
         ),
       ),
       /**
@@ -132,8 +131,7 @@ class ApplicationTheme {
      */
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          textStyle: TextStyle(color: Colors.white),
-          primary: Color(0xFF90AD19),
+          textStyle: const TextStyle(color: Colors.white), backgroundColor: const Color(0xFF90AD19),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
@@ -144,8 +142,7 @@ class ApplicationTheme {
    */
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          textStyle: TextStyle(color: Colors.white),
-          primary: Color(0xFF90AD19),
+          foregroundColor: const Color(0xFF90AD19), textStyle: const TextStyle(color: Colors.white),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
@@ -154,7 +151,7 @@ class ApplicationTheme {
 /**
  * 4- Floating action button
  */
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: Color(0xFF90AD19),
         foregroundColor: Colors.white,
         iconSize: 18,
@@ -165,28 +162,26 @@ class ApplicationTheme {
      *************************************************************************
      * */
       inputDecorationTheme: InputDecorationTheme(
-        prefixIconColor: Color(0xFF90AD19),
+        prefixIconColor: const Color(0xFF90AD19),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(color: Color(0xFF90AD19))),
+            borderSide: const BorderSide(color: Color(0xFF90AD19))),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: Color(0xFF90AD19)),
+          borderSide: const BorderSide(color: Color(0xFF90AD19)),
         ),
       ),
       /**
                * *************************** Cursor Color **********************************
                */
       textSelectionTheme:
-          TextSelectionThemeData(cursorColor: Color(0xFF90AD19)),
+          const TextSelectionThemeData(cursorColor: Color(0xFF90AD19)),
       /**
            * ************************* TF prefix - postfix themeing **********************
            */
-      iconTheme: IconThemeData(color: Color(0xFF90AD19)));
+      iconTheme: const IconThemeData(color: Color(0xFF90AD19)));
 
-  /**
-   * ############################# Application light theme property ###########################
-   */
+  /// ############################# Application light theme property ###########################
 
   static ThemeData applicationLightTheme = ThemeData.light().copyWith(
       /**
@@ -196,11 +191,11 @@ class ApplicationTheme {
 /**
  * -------------------------- Primary Color --------------------------
  */
-      primaryColor: Color(0xFF90AD19),
+      primaryColor: const Color(0xFF90AD19),
       /**
   * -------------------------- AppBar Theme --------------------------
   */
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
         titleTextStyle: TextStyle(color: Colors.black),
@@ -210,82 +205,82 @@ class ApplicationTheme {
      */
 
       textTheme: TextTheme(
-        button: TextStyle(
+        labelLarge: TextStyle(
             color: Colors.black,
             fontSize: 16,
             fontWeight: FontWeight.w500,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline1: TextStyle(
+        displayLarge: TextStyle(
             color: Colors.black,
             fontSize: 72,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline2: TextStyle(
+        displayMedium: TextStyle(
             color: Colors.black,
             fontSize: 56,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline3: TextStyle(
+        displaySmall: TextStyle(
             color: Colors.black,
             fontSize: 48,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline4: TextStyle(
+        headlineMedium: TextStyle(
             color: Colors.black,
             fontSize: 32,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline5: TextStyle(
+        headlineSmall: TextStyle(
             color: Colors.black,
             fontSize: 24,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline6: TextStyle(
+        titleLarge: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w500,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        bodyText2: TextStyle(
+        bodyMedium: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w500,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        subtitle1: TextStyle(
+        titleMedium: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w500,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
       ),
       primaryTextTheme: TextTheme(
-        button: TextStyle(
+        labelLarge: TextStyle(
             color: Colors.black,
             fontSize: 18,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline1: TextStyle(
+        displayLarge: TextStyle(
             color: Colors.black,
             fontSize: 72,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline2: TextStyle(
+        displayMedium: TextStyle(
             color: Colors.black,
             fontSize: 56,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline3: TextStyle(
+        displaySmall: TextStyle(
             color: Colors.black,
             fontSize: 48,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline4: TextStyle(
+        headlineMedium: TextStyle(
             color: Colors.black,
             fontSize: 32,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline5: TextStyle(
+        headlineSmall: TextStyle(
             color: Colors.black,
             fontSize: 24,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        headline6: TextStyle(
+        titleLarge: TextStyle(
             color: Colors.black,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        bodyText2: TextStyle(
+        bodyMedium: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w500,
             fontSize: 16,
             fontFamily: DefaultFonts.defaultLondrinaSolidThin),
-        subtitle1: TextStyle(
+        titleMedium: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w500,
             fontSize: 16,
@@ -294,11 +289,11 @@ class ApplicationTheme {
       /**
      * ----------------------------- Drawer Theme -------------------------
      */
-      drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
+      drawerTheme: const DrawerThemeData(backgroundColor: Colors.white),
       /**
      * -------------------------- Button Theme --------------------------
      */
-      buttonTheme: ButtonThemeData(
+      buttonTheme: const ButtonThemeData(
         buttonColor: Colors.black,
         textTheme: ButtonTextTheme.primary,
       ),
@@ -312,9 +307,8 @@ class ApplicationTheme {
      */
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          textStyle: TextStyle(color: Colors.black),
-          primary: Color(0xFF90AD19),
-          side: BorderSide(color: Color(0xFF90AD19), width: 2),
+          foregroundColor: const Color(0xFF90AD19), textStyle: const TextStyle(color: Colors.black),
+          side: const BorderSide(color: Color(0xFF90AD19), width: 2),
         ),
       ),
       /**
@@ -322,8 +316,7 @@ class ApplicationTheme {
      */
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          textStyle: TextStyle(color: Colors.black),
-          primary: Color(0xFF90AD19),
+          textStyle: const TextStyle(color: Colors.black), backgroundColor: const Color(0xFF90AD19),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
@@ -334,8 +327,7 @@ class ApplicationTheme {
    */
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          textStyle: TextStyle(color: Colors.black),
-          primary: Color(0xFF90AD19),
+          foregroundColor: const Color(0xFF90AD19), textStyle: const TextStyle(color: Colors.black),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
@@ -344,7 +336,7 @@ class ApplicationTheme {
 /**
  * 4- Floating action button
  */
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: Color(0xFF90AD19),
         foregroundColor: Colors.black,
         iconSize: 18,
@@ -355,22 +347,22 @@ class ApplicationTheme {
      *************************************************************************
      * */
       inputDecorationTheme: InputDecorationTheme(
-        prefixIconColor: Color(0xFF90AD19),
+        prefixIconColor: const Color(0xFF90AD19),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(color: Color(0xFF90AD19))),
+            borderSide: const BorderSide(color: Color(0xFF90AD19))),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: Color(0xFF90AD19)),
+          borderSide: const BorderSide(color: Color(0xFF90AD19)),
         ),
       ),
       /**
                * *************************** Cursor Color **********************************
                */
       textSelectionTheme:
-          TextSelectionThemeData(cursorColor: Color(0xFF90AD19)),
+          const TextSelectionThemeData(cursorColor: Color(0xFF90AD19)),
       /**
            * ************************* TF prefix - postfix themeing **********************
            */
-      iconTheme: IconThemeData(color: Color(0xFF90AD19)));
+      iconTheme: const IconThemeData(color: Color(0xFF90AD19)));
 }

@@ -2,30 +2,26 @@ import 'package:green_egypt/services/console_message.dart';
 import 'package:hive/hive.dart';
 
 class UserDataBox {
-  /**
-   * Accessable keys through level of Class .
-   */
-  String _key_userName = 'username';
-  String _key_userImageUrl = 'userImageUrl';
-  String _key_userEmail = 'userEmail';
-  String _key_userPhoneNumber = 'phoneNumber';
-  String _key_userLoggedIn = 'loggedIn';
-  String _key_userCredintial = 'userCredintial';
-  String _key_userId = 'userId';
-  String _key_apply_review_before = "apply_review_before";
-  String _key_userTotalPoints = "user_total_points";
-  String _key_userSavedCo2 = "user_saved_co2";
-  String _key_userTotalRecycledItems = "user_total_recycled_items";
-  String _key_recycledPlasticItemsNumber = 'recycled_plastic_number';
-  String _key_recycledCansItemsNumber = 'recycled_cans_number';
+  /// Accessable keys through level of Class .
+  final String _key_userName = 'username';
+  final String _key_userImageUrl = 'userImageUrl';
+  final String _key_userEmail = 'userEmail';
+  final String _key_userPhoneNumber = 'phoneNumber';
+  final String _key_userLoggedIn = 'loggedIn';
+  final String _key_userCredintial = 'userCredintial';
+  final String _key_userId = 'userId';
+  final String _key_apply_review_before = "apply_review_before";
+  final String _key_userTotalPoints = "user_total_points";
+  final String _key_userSavedCo2 = "user_saved_co2";
+  final String _key_userTotalRecycledItems = "user_total_recycled_items";
+  final String _key_recycledPlasticItemsNumber = 'recycled_plastic_number';
+  final String _key_recycledCansItemsNumber = 'recycled_cans_number';
 
   late int _number_of_total_plastic_items;
   late int _number_of_total_cans_items;
   late int _number_of_total_points;
 
-  /**
-   * Singleton Class .
-   */
+  /// Singleton Class .
   UserDataBox._privateConstructor();
 
   static final UserDataBox _instance = UserDataBox._privateConstructor();
@@ -35,9 +31,8 @@ class UserDataBox {
   // object that used in each and write operation in user  box .
   late Box _userDataBox;
 
-  /***
-   * *************************** initialize User Data Box *********************************
-   */
+  /// *
+  /// *************************** initialize User Data Box *********************************
   void initiateUserBox() async {
     _userDataBox = await Hive.openBox('userBox');
     _number_of_total_plastic_items = get_recycledPlasticItemsNumber();
@@ -46,9 +41,8 @@ class UserDataBox {
     ConsoleMessage.successMessage('User box opened');
   }
 
-  /***
-   * *************************** User Name Operations *********************************
-   */
+  /// *
+  /// *************************** User Name Operations *********************************
   void put_userName({required String userName}) async {
     await _userDataBox.put(_key_userName, userName);
   }
@@ -57,9 +51,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userName, defaultValue: "");
   }
 
-  /**
-   * ************************** User image url operations *******************************
-   */
+  /// ************************** User image url operations *******************************
   void put_userImageUrl({required String userImageUrl}) async {
     await _userDataBox.put(_key_userImageUrl, userImageUrl);
   }
@@ -68,9 +60,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userImageUrl, defaultValue: "");
   }
 
-  /**
-   * ******************************* user email operations *********************************
-   */
+  /// ******************************* user email operations *********************************
   void put_userEmail({required String email}) async {
     await _userDataBox.put(_key_userEmail, email);
   }
@@ -79,9 +69,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userEmail, defaultValue: "");
   }
 
-  /**
-   * **************************** user phone number operations **********************************
-   */
+  /// **************************** user phone number operations **********************************
   void put_userPhoneNumber({required String phoneNumber}) async {
     await _userDataBox.put(_key_userPhoneNumber, phoneNumber);
   }
@@ -90,9 +78,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userPhoneNumber, defaultValue: "");
   }
 
-  /**
-   * ************************** logged in bool operations ***************************************
-   */
+  /// ************************** logged in bool operations ***************************************
   void put_loggedInBool({required bool loggedIn}) async {
     await _userDataBox.put(_key_userLoggedIn, loggedIn);
   }
@@ -101,9 +87,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userLoggedIn, defaultValue: false);
   }
 
-  /**
-   * ***************************** user credintial operations ********************************
-   */
+  /// ***************************** user credintial operations ********************************
   void put_userCredintial({required String credintail}) async {
     await _userDataBox.put(_key_userCredintial, credintail);
   }
@@ -112,9 +96,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userCredintial, defaultValue: "");
   }
 
-  /**
-   *  **************************** user id operations ***********************************
-   */
+  ///  **************************** user id operations ***********************************
   void put_userId({required String id}) async {
     await _userDataBox.put(_key_userId, id);
   }
@@ -123,9 +105,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userId, defaultValue: "");
   }
 
-  /**
-   *  **************************** Apply review before Boolean operations ***********************************
-   */
+  ///  **************************** Apply review before Boolean operations ***********************************
   void put_applyReviewBefore({required bool apply}) async {
     await _userDataBox.put(_key_apply_review_before, apply);
   }
@@ -134,9 +114,7 @@ class UserDataBox {
     return _userDataBox.get(_key_apply_review_before, defaultValue: false);
   }
 
-  /**
-   *  **************************** Earned cash operations ***********************************
-   */
+  ///  **************************** Earned cash operations ***********************************
   void put_newPoints({required int points}) async {
     await _userDataBox.put(_key_userTotalPoints, points + get_totalPoints());
   }
@@ -145,9 +123,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userTotalPoints, defaultValue: 0);
   }
 
-  /**
-   *  **************************** total Recycled items operations ***********************************
-   */
+  ///  **************************** total Recycled items operations ***********************************
   void put_totalrecycledItems({required int newTotalNumber}) async {
     await _userDataBox.put(_key_userTotalRecycledItems, newTotalNumber);
   }
@@ -156,9 +132,7 @@ class UserDataBox {
     return _userDataBox.get(_key_userTotalRecycledItems, defaultValue: 0);
   }
 
-  /**
-   *  **************************** recycled plastic items operations ***********************************
-   */
+  ///  **************************** recycled plastic items operations ***********************************
   void put_increamentRecycledPasticItemsNumber(
       {required int plasticItemsNumber}) async {
     await _userDataBox.put(_key_recycledPlasticItemsNumber,
@@ -169,9 +143,7 @@ class UserDataBox {
     return _userDataBox.get(_key_recycledPlasticItemsNumber, defaultValue: 0);
   }
 
-  /**
-   *  **************************** recycled cans items number operations ***********************************
-   */
+  ///  **************************** recycled cans items number operations ***********************************
   void put_increamentRecycledCansItemsNumber(
       {required int cansItemsNumber}) async {
     await _userDataBox.put(_key_recycledCansItemsNumber,

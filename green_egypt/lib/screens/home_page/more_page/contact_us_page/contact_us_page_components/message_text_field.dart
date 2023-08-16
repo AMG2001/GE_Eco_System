@@ -8,10 +8,10 @@ class MessageTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         // color: Colors.white,
-        borderRadius: new BorderRadius.circular(8.0),
+        borderRadius: BorderRadius.circular(8.0),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.2),
@@ -29,21 +29,21 @@ class MessageTextField extends StatelessWidget {
               ? Colors.grey.withOpacity(.2)
               : Colors.white,
           hintText: 'Your Message'.tr,
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
             fontSize: 18,
             color: Color.fromARGB(255, 89, 87, 87),
             fontStyle: FontStyle.italic,
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.white,
               width: 2.0,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.green,
               width: 2.0,
             ),

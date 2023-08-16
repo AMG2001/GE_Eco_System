@@ -11,7 +11,7 @@ class EmailTF extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: TextFormField(
         validator: (value) {
@@ -23,10 +23,11 @@ class EmailTF extends StatelessWidget {
               false) {
             return "This is not an email !!";
           }
+          return null;
         },
         controller: emailController,
         decoration: InputDecoration(
-            prefixIcon: Padding(
+            prefixIcon: const Padding(
                 padding: EdgeInsets.all(16),
                 child: FaIcon(FontAwesomeIcons.user)),
             hintText: "enter your email",

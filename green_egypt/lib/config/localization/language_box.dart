@@ -4,9 +4,7 @@ import "package:hive/hive.dart";
 import 'package:hive_flutter/hive_flutter.dart';
 
 class LanguageBox {
-  /**
-   * Create class as Singleton :
-   */
+  /// Create class as Singleton :
 
   LanguageBox._privateConstructor();
 
@@ -14,18 +12,14 @@ class LanguageBox {
 
   static LanguageBox get instance => _instance;
 
-  /**
-   * class Variables 
-   */
+  /// class Variables 
 
   late Box language_box;
   final _key_boxName = 'language_box';
   final _key_lang = 'app_lang';
   late String applicationLanguageCode;
   late Locale applicationLanguageLocal;
-  /**
-   * init language box with device default language : 
-   */
+  /// init language box with device default language : 
 
   Future<void> initLanguageBox() async {
     language_box = await Hive.openBox(_key_boxName);

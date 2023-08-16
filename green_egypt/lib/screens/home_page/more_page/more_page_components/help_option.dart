@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:green_egypt/screens/home_page/more_page/contact_us_page/contact.dart';
-import 'package:green_egypt/services/custom_toast.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:get/get.dart';
 
@@ -13,10 +12,10 @@ class HelpOption extends StatelessWidget {
       horizontalTitleGap: 0,
       onTap: () {
         Get.to(
-          () => ContactPage(),
+          () => const ContactPage(),
           transition: Transition.rightToLeft,
           curve: Curves.easeInOutCubic,
-          duration: Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 500),
         );
       },
       leading: Icon(

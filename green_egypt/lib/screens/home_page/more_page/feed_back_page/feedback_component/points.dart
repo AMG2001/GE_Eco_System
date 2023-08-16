@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_egypt/config/theme/default_colors.dart';
 import 'package:green_egypt/services/boxes/user_data_db.dart';
 
 class PointStats extends StatelessWidget {
+  const PointStats({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -16,7 +17,7 @@ class PointStats extends StatelessWidget {
         ),
         PointInfo(
           title: 'Earned:'.tr,
-          value: UserDataBox.instance.get_totalPoints().toString() + " \$",
+          value: "${UserDataBox.instance.get_totalPoints()} \$",
         ),
       ],
     );
@@ -24,7 +25,7 @@ class PointStats extends StatelessWidget {
 }
 
 class PointInfo extends StatelessWidget {
-  const PointInfo({
+  const PointInfo({super.key, 
     required this.title,
     required this.value,
   });
@@ -34,8 +35,8 @@ class PointInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-      Text(title + '\n', style: TextStyle(fontSize: 14)),
-      Text(value, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+      Text('$title\n', style: const TextStyle(fontSize: 14)),
+      Text(value, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
     ]);
   }
 }

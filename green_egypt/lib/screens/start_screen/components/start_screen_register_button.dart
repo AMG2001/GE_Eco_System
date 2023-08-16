@@ -28,11 +28,11 @@ class StartScreenRegisterButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "Register",
             style: TextStyle(color: Colors.black),
           ),
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           Icon(

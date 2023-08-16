@@ -9,7 +9,7 @@ class TransactionsPageTitleRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 18),
+      padding: const EdgeInsets.only(top: 18),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -19,9 +19,9 @@ class TransactionsPageTitleRow extends StatelessWidget {
           ),
           Text(
             'Transactions'.tr,
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           ),
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           Icon(

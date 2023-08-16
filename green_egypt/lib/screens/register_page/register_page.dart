@@ -30,7 +30,7 @@ class RegisterPage extends StatelessWidget {
 
   TextEditingController userNumberController = TextEditingController();
 
-  int _groupValue = 0;
+  final int _groupValue = 0;
 
   String userCategory = "";
 
@@ -38,7 +38,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
+        child: SizedBox(
           width: Dimensions.width,
           height: Dimensions.height,
           child: ListView(
@@ -54,7 +54,7 @@ class RegisterPage extends StatelessWidget {
                       return Form(
                         autovalidateMode: controller.validationMode,
                         key: sigUpFormState,
-                        child: Container(
+                        child: SizedBox(
                           width: Dimensions.width,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -81,7 +81,7 @@ class RegisterPage extends StatelessWidget {
                               /**
                          * Page Header Widget
                          */
-                              PageHeader(),
+                              const PageHeader(),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -102,7 +102,7 @@ class RegisterPage extends StatelessWidget {
                                 height:
                                     MediaQuery.of(context).size.height * .02,
                               ),
-                              Text("Email"),
+                              const Text("Email"),
                               SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * .01,
@@ -119,7 +119,7 @@ class RegisterPage extends StatelessWidget {
                                  * Password TF
                                  */
 
-                              Text("Password"),
+                              const Text("Password"),
                               SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * .01,
@@ -131,7 +131,7 @@ class RegisterPage extends StatelessWidget {
                                 height:
                                     MediaQuery.of(context).size.height * .02,
                               ),
-                              Text("Mobile Number"),
+                              const Text("Mobile Number"),
                               SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * .02,

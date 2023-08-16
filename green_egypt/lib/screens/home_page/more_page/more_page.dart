@@ -14,12 +14,14 @@ import 'package:green_egypt/screens/home_page/more_page/more_page_components/tra
 import 'package:green_egypt/screens/home_page/more_page/more_page_components/user_support_divider.dart';
 
 class MorePageBody extends StatelessWidget {
+  const MorePageBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ApplicationThemeController>(builder: (themeController) {
       return Scaffold(
           body: SafeArea(
-        child: Container(
+        child: SizedBox(
           width: Dimensions.width,
           height: Dimensions.height,
           child: ListView(
@@ -31,7 +33,7 @@ class MorePageBody extends StatelessWidget {
               /**
                        * ************************************ More page Header *******************************
                        */
-              MorePageHeader(),
+              const MorePageHeader(),
               SizedBox(
                 height: Dimensions.height * .03,
               ),
@@ -44,15 +46,15 @@ class MorePageBody extends StatelessWidget {
               /**
                            * ************************************* Transactions History option **********************************
                            */
-              GetCash(),
+              const GetCash(),
               /**
                            * *************************************** Green Egypt Machines Locations option *************************
                            */
-              GreenEgyptMachinesOption(),
+              const GreenEgyptMachinesOption(),
               /**
                        * **************************** Help Option ***************************
                        */
-              HelpOption(),
+              const HelpOption(),
               /**
                        * ************************** User Support divider *****************************
                        */
@@ -70,7 +72,7 @@ class MorePageBody extends StatelessWidget {
               /**
                            * ****************************** Send Feedback Option *************************
                            */
-              SendFeedbackOption(),
+              const SendFeedbackOption(),
               /**
                        * ********************************** Logout option *************************
                        */

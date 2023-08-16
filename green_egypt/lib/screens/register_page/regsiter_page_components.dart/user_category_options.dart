@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/screens/register_page/register_page_controller.dart';
@@ -8,7 +7,7 @@ import 'package:green_egypt/services/custom_toast.dart';
 class UserCategoryOptions extends StatelessWidget {
   int groupValue;
   final registerPageController = Get.put(RegisterPageController());
-  UserCategoryOptions({required this.groupValue});
+  UserCategoryOptions({super.key, required this.groupValue});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +15,7 @@ class UserCategoryOptions extends StatelessWidget {
       builder: ((context, setState) {
         return Row(
           children: [
-            Text("Regsiter as :  "),
+            const Text("Regsiter as :  "),
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -37,7 +36,7 @@ class UserCategoryOptions extends StatelessWidget {
                     });
                   }),
                 ),
-                Text("Default User")
+                const Text("Default User")
               ],
             ),
             SizedBox(
@@ -62,7 +61,7 @@ class UserCategoryOptions extends StatelessWidget {
                     });
                   }),
                 ),
-                Text("Staff")
+                const Text("Staff")
               ],
             ),
           ],

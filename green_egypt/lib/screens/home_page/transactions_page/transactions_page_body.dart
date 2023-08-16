@@ -6,7 +6,7 @@ import 'package:green_egypt/screens/home_page/transactions_page/components/top_c
 import 'package:green_egypt/screens/home_page/transactions_page/components/top_container/top_container.dart';
 
 class TransactionPageBody extends StatelessWidget {
-  TransactionPageBody({super.key});
+  const TransactionPageBody({super.key});
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ApplicationThemeController>(builder: (themeController) {
@@ -23,12 +23,12 @@ class TransactionPageBody extends StatelessWidget {
                   expandedHeight: Dimensions.height * 0.42,
                   backgroundColor: themeController.isDark
                       ? Colors.grey[850]
-                      : Color(0xfff7f5f5),
-                  flexibleSpace: FlexibleSpaceBar(background: TopContainer()),
+                      : const Color(0xfff7f5f5),
+                  flexibleSpace: const FlexibleSpaceBar(background: TopContainer()),
                 ),
               ];
             },
-            body: BottomContainer()),
+            body: const BottomContainer()),
       );
     });
   }

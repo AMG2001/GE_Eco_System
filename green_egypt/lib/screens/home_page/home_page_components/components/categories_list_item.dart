@@ -12,7 +12,7 @@ class CategoriesListItem extends StatelessWidget {
   String heroTag;
   Widget itemShowPage;
   CategoriesListItem(
-      {required this.itemImagePath,
+      {super.key, required this.itemImagePath,
       required this.itemType,
       required this.heroTag,
       required this.itemShowPage,
@@ -24,14 +24,14 @@ class CategoriesListItem extends StatelessWidget {
         init: HomePageAnimationsController(),
         builder: (controller) {
           return AnimatedOpacity(
-            duration: Duration(seconds: 1),
+            duration: const Duration(seconds: 1),
             opacity: controller.itemOpacity,
             child: GestureDetector(
               onTap: () {
                 Get.to(itemShowPage);
               },
               child: Container(
-                margin: EdgeInsets.only(right: 16),
+                margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                     color: applicationThemeController.isDark
                         ? Colors.grey[900]

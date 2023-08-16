@@ -16,11 +16,11 @@ class FeedbackPageController extends GetxController {
   late String review;
   late int rating;
   late BuildContext context;
-  get getReview => this.review;
+  get getReview => review;
 
   set setReview(String review) => this.review = review;
 
-  get getRating => this.rating;
+  get getRating => rating;
 
   set setRating(int rating) => this.rating = rating;
 
@@ -39,7 +39,7 @@ class FeedbackPageController extends GetxController {
     showDialog(
         context: context,
         builder: (context) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(color: Colors.white),
           );
         });
@@ -48,27 +48,21 @@ class FeedbackPageController extends GetxController {
     });
   }
 
-  /**
-   * then start upload all data to fire store
-   */
+  /// then start upload all data to fire store
   Future<void> uploadReveiwToFirestore() async {
-    String currentDateAndTime = DateFormat.yMd().format(DateTime.now()) +
-        " at " +
-        DateFormat.jm().format(DateTime.now());
+    String currentDateAndTime = "${DateFormat.yMd().format(DateTime.now())} at ${DateFormat.jm().format(DateTime.now())}";
     FirebaseFirestore.instance.collection('users_reviews').add({
       'user_email': userEmail,
       'user_id': userId,
       'user_name': userName,
       'user_phone_number': userPhoneNumber,
       'user_review': review,
-      'rating': '${rating} / 5',
+      'rating': '$rating / 5',
       'review_date_and_time': currentDateAndTime
     });
   }
 
-  /**
-   * 3. show success animation .
-   */
+  /// 3. show success animation .
   void showSuccessAnimation() {
     Get.back();
     QuickAlert.show(

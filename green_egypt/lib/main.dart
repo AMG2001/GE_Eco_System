@@ -6,10 +6,9 @@ import 'package:green_egypt/config/localization/locale.dart';
 import 'package:green_egypt/config/pages_names.dart';
 import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
 import 'package:green_egypt/firebase_options.dart';
-import 'package:green_egypt/services/Shared_preferences/shared_preferences_class.dart';
+import 'package:green_egypt/services/application_services.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:green_egypt/services/biometric_auth.dart';
 import 'config/localization/locale_controller.dart';
 
 void main() async {
@@ -17,23 +16,20 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // initaite Hive Boxes instead of SharedPreferences .
   await Hive.initFlutter();
-  await ApplicationThemeController.instance
-      .initApplicationThemeController_ThemeAndBox();
-  await BiometricController.instance.initBiometricAuth();
   // to initiate all Application Shared Preferences in one line 🔥 .
-  await SharedPreferencesClass.initAllSharedPreferences();
-  /**f
+  await ApplicationServices.initAllApplicationServices();
+  /**
    * Initializing Firebase on Application Level .
    */
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
   // run Flutter 🤍
-  runApp(GreenEgypt());
+  runApp(const GreenEgypt());
 }
 
 class GreenEgypt extends StatelessWidget {
-  GreenEgypt({Key? key}) : super(key: key);
+  const GreenEgypt({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -24,7 +24,7 @@ class TopContainer extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: ApplicationThemeController.instance.isDark
-                        ? [Color.fromARGB(120, 158, 158, 158), Colors.black]
+                        ? [const Color.fromARGB(120, 158, 158, 158), Colors.black]
                         : [Colors.black, Colors.white])),
             width: Dimensions.width,
             child: Column(
@@ -35,15 +35,15 @@ class TopContainer extends StatelessWidget {
                     /**
                      * title row contain transactions word with history logo .
                      */
-                    TransactionsPageTitleRow(),
-                    SizedBox(
+                    const TransactionsPageTitleRow(),
+                    const SizedBox(
                       height: 12,
                     ),
                     /**
                      * Views Options contain 7days , 4weeks , 12 month Buttons row .
                      */
-                    ViewsOptions(),
-                    SizedBox(
+                    const ViewsOptions(),
+                    const SizedBox(
                       height: 12,
                     ),
                     Row(
@@ -64,7 +64,7 @@ class TopContainer extends StatelessWidget {
                 SizedBox(
                   height: 5.h,
                 ),
-                BarsGraph(),
+                const BarsGraph(),
                 SizedBox(
                   height: 1.h,
                 ),

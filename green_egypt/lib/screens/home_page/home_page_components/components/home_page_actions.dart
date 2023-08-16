@@ -20,6 +20,9 @@ class HomePageActions extends StatelessWidget {
           },
           child: Center(
             child: badges.Badge(
+              position: badges.BadgePosition.custom(top: 0),
+              badgeStyle:
+                  badges.BadgeStyle(badgeColor: DefaultColors.defaultGreen),
               child: Icon(
                 Icons.notifications,
                 color: themeController.isDark
@@ -27,9 +30,6 @@ class HomePageActions extends StatelessWidget {
                     : DefaultColors.defaultBlack,
                 size: 28,
               ),
-              position: badges.BadgePosition.custom(top: 0),
-              badgeStyle:
-                  badges.BadgeStyle(badgeColor: DefaultColors.defaultGreen),
             ),
           ),
         ),

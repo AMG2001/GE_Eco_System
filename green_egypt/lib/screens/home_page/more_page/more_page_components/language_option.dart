@@ -10,7 +10,7 @@ import '../../../../config/localization/locale_controller.dart';
 
 class LanguageOption extends StatelessWidget {
   late ApplicationThemeController applicationThemeController;
-  LanguageOption({required this.applicationThemeController});
+  LanguageOption({super.key, required this.applicationThemeController});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class LanguageOption extends StatelessWidget {
       horizontalTitleGap: 0,
       onTap: () {
         showModalBottomSheet(
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(32),
               topRight: Radius.circular(32),
@@ -32,7 +32,7 @@ class LanguageOption extends StatelessWidget {
                 color: applicationThemeController.isDark
                     ? Colors.black
                     : Colors.white,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(32),
                   topLeft: Radius.circular(32),
                 ),
@@ -80,7 +80,7 @@ class LanguageOption extends StatelessWidget {
                                     Icons.check_circle_outline,
                                     color: DefaultColors.defaultGreen,
                                   )
-                                : SizedBox(),
+                                : const SizedBox(),
                       ),
                     ),
                     SizedBox(
@@ -107,7 +107,7 @@ class LanguageOption extends StatelessWidget {
                                     Icons.check_circle_outline,
                                     color: DefaultColors.defaultGreen,
                                   )
-                                : SizedBox(),
+                                : const SizedBox(),
                       ),
                     ),
                     SizedBox(
@@ -134,7 +134,7 @@ class LanguageOption extends StatelessWidget {
                 : "Arabic".tr,
             style: TextStyle(color: Colors.grey[500]),
           ),
-          SizedBox(
+          const SizedBox(
             width: 8,
           ),
           Icon(

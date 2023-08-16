@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
-import 'package:green_egypt/config/vectos_paths.dart';
 import 'package:lottie/lottie.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class PageHeader extends StatelessWidget {
   const PageHeader({Key? key}) : super(key: key);
@@ -21,7 +18,7 @@ class PageHeader extends StatelessWidget {
           child: Lottie.asset('assets/animated_vectors/register_animation.json',
               frameRate: FrameRate.max),
         ),
-        SizedBox(
+        const SizedBox(
           height: 18,
         ),
         /**

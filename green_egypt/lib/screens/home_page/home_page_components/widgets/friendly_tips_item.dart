@@ -6,7 +6,7 @@ class FriendlyTipsItem extends StatelessWidget {
   String tipTitle;
   String tipSubtitle;
   FriendlyTipsItem(
-      {required this.tipTitle,
+      {super.key, required this.tipTitle,
       required this.tipSubtitle,
       required this.tipImagePath});
 
@@ -15,7 +15,7 @@ class FriendlyTipsItem extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         ListTile(

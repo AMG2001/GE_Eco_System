@@ -13,13 +13,12 @@ class TransactionsBox extends GetxController {
   // object that used in each and write operation in user  box .
   late Box _transactiobsBox;
 
-  String _key_transactionsBoxName = 'transactions_box_name';
+  final String _key_transactionsBoxName = 'transactions_box_name';
 
   List<Map<dynamic, dynamic>> allStoredTransactions = [];
 
-  /***
-   * *************************** initialize User Data Box *********************************
-   */
+  /// *
+  /// *************************** initialize User Data Box *********************************
   Future<void> init_TransactionsBox() async {
     _transactiobsBox = await Hive.openBox('_key_transactionsBoxName');
     loadAllStoredTransactions();

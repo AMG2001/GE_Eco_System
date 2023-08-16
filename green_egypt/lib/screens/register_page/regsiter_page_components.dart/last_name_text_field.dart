@@ -16,18 +16,19 @@ class LastNameTF extends StatelessWidget {
       children: [
         Text(
           "Last Name",
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * .01,
         ),
-        Container(
+        SizedBox(
           width: MediaQuery.of(context).size.width * .425,
           child: TextFormField(
             validator: (value) {
               if (value == "" || value == null) {
                 return "You can't leave it empty";
               }
+              return null;
             },
             controller: lastNameController,
             decoration: InputDecoration(

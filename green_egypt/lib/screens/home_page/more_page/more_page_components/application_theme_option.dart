@@ -7,7 +7,7 @@ class ApplicationThemeOption extends StatefulWidget {
   late bool darkThemeBool;
   late ApplicationThemeController applicationThemeController;
   ApplicationThemeOption(
-      {required this.darkThemeBool, required this.applicationThemeController});
+      {super.key, required this.darkThemeBool, required this.applicationThemeController});
 
   @override
   State<ApplicationThemeOption> createState() => _ApplicationThemeOptionState();
@@ -26,7 +26,7 @@ class _ApplicationThemeOptionState extends State<ApplicationThemeOption> {
             widget.darkThemeBool = !ApplicationThemeController.instance.isDark;
           });
         },
-        leading: Icon(
+        leading: const Icon(
           Icons.nightlight_outlined,
           color: Colors.blueAccent,
         ),

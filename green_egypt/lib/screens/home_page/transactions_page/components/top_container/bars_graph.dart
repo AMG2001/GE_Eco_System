@@ -12,9 +12,9 @@ class BarsGraph extends StatelessWidget {
       return Expanded(
         child: PageView.builder(
           onPageChanged: (value) {
-            if (value == 0)
+            if (value == 0) {
               controller.show7DaysView();
-            else if (value == 1)
+            } else if (value == 1)
               controller.show4WeeksView();
             else if (value == 2) controller.show12MonthView();
           },

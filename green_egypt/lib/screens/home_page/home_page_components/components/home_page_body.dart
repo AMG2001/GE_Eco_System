@@ -9,13 +9,13 @@ import 'package:green_egypt/screens/home_page/home_page_components/components/li
 
 final homePageBody = SafeArea(
   child: Padding(
-    padding: EdgeInsets.only(left: 16, right: 16, top: 16),
-    child: Container(
+    padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+    child: SizedBox(
       width: Dimensions.width,
       height: Dimensions.height,
       child: Column(
         children: [
-          CardOfEarnedSavedRecycled(),
+          const CardOfEarnedSavedRecycled(),
           Row(
             children: [
               Text(
@@ -34,11 +34,11 @@ final homePageBody = SafeArea(
           /**
                        * Eco friendly tips row with view all option
                        */
-          EcoFriendlyTipsRow(),
+          const EcoFriendlyTipsRow(),
           /**
                        * Vertical list of friendly tips
                        */
-          ListOfFriendlyTips()
+          const ListOfFriendlyTips()
         ],
       ),
     ),

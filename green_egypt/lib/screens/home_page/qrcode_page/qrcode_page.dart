@@ -14,7 +14,7 @@ class QrCodePageBody extends StatefulWidget {
 }
 
 class _QrCodePageState extends State<QrCodePageBody> {
-  int _pageIndex = 1;
+  final int _pageIndex = 1;
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   Barcode? result;
   QRViewController? controller;
@@ -53,7 +53,7 @@ class _QrCodePageState extends State<QrCodePageBody> {
             child: Center(
               child: (result != null)
                   ? Text(
-                      'Barcode Type: ${describeEnum(result!.format)}  \nData: ${result!.code} \n qrcode scanning status : ${qrcodeScanningStatus}')
+                      'Barcode Type: ${describeEnum(result!.format)}  \nData: ${result!.code} \n qrcode scanning status : $qrcodeScanningStatus')
                   : Text('Scan a code'.tr),
             ),
           )

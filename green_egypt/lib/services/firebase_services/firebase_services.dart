@@ -10,9 +10,7 @@ import 'package:lottie/lottie.dart';
 import '../boxes/user_data_db.dart';
 
 class FirebaseCustomServices {
-  /**
-   * Make class as Singleton .
-   */
+  /// Make class as Singleton .
   FirebaseCustomServices._privateConstructor();
 
   static final FirebaseCustomServices _instance =
@@ -34,10 +32,8 @@ class FirebaseCustomServices {
   final String _key_userReviewBefore = "review_before";
   final String _key_userCredintial = "user_credintial";
 
-  /**
-   * After logging with facebook or google , this method get user credintial data 
-   * and upload it to firestore .
-   */
+  /// After logging with facebook or google , this method get user credintial data
+  /// and upload it to firestore .
   Future<void> uploadUserDataToFirestore_thenStoreDataLocally(
       {required String userName,
       required String userEmail,
@@ -46,11 +42,11 @@ class FirebaseCustomServices {
       int earnedCash = 0,
       int savedCo2 = 0,
       int totalRecycledItems = 0,
-      int plasticItemsNumber=0,
-      int cansItemsNumber=0,
+      int plasticItemsNumber = 0,
+      int cansItemsNumber = 0,
       bool reviewBefore = false,
       String credintial = "normal_user"}) async {
-    var user_id;
+    late String userId;
     try {
       await FirebaseFirestore.instance
           .collection(_key_collection_user_logs)
@@ -63,11 +59,11 @@ class FirebaseCustomServices {
         _key_userSavedCo2: savedCo2,
         _key_totalRecycledItems: totalRecycledItems,
         _key_recycledPlasticItems: plasticItemsNumber,
-        _key_recycledCansItems:cansItemsNumber,
+        _key_recycledCansItems: cansItemsNumber,
         _key_userReviewBefore: reviewBefore,
         _key_userCredintial: credintial
       }).then((document) async {
-        user_id = document.id;
+        userId = document.id;
         /**
              * update user data on firestore by adding id .
              */
@@ -81,7 +77,7 @@ class FirebaseCustomServices {
                    * add user data into UserDataModel
                    */
       UserDataBox.instance.put_allUserData(
-          id: user_id,
+          id: userId,
           name: userName,
           email: userEmail,
           imageUrl: userImageUrl,
@@ -99,9 +95,7 @@ class FirebaseCustomServices {
     }
   }
 
-  /**
-   * When user try to login with user name and password
-   */
+  /// When user try to login with user name and password
   Future<void> signInUser_withEmailAndPassword_thenStoreDataLocally(
       {required TextEditingController emailController,
       required TextEditingController passwordController}) async {
@@ -149,9 +143,7 @@ class FirebaseCustomServices {
     }
   }
 
-  /**
-           * Register new User into firebase Auth
-           */
+  /// Register new User into firebase Auth
   Future<void> registerNewUser({
     required String email,
     required String password,
@@ -164,7 +156,7 @@ class FirebaseCustomServices {
       await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password)
           .then((userCredintial) async {
-        String userName = "${firstName} ${lastName}";
+        String userName = "$firstName $lastName";
         /**
                        * Store user data in fireStore , but without id : 
                        */
@@ -178,7 +170,7 @@ class FirebaseCustomServices {
               "https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg",
         );
       });
-    } on FirebaseException catch (e) {
+    } on FirebaseException {
       CustomToast.showRedToast(
           messsage: 'account already exist , just login !!');
       Get.back();
@@ -191,23 +183,19 @@ class FirebaseCustomServices {
     showDialog(
       context: context,
       builder: (context) {
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(color: Colors.white),
         );
       },
     );
   }
 
-  /**
-   * this method is used to remove loading indicator .
-   */
+  /// this method is used to remove loading indicator .
   void removeLoadingIndicator() {
     Get.back();
   }
 
-  /**
-   * to show success animation after any success proccess .
-   */
+  /// to show success animation after any success proccess .
   void showSuccessAnimation_thenNavigateToHomePage(
       {required BuildContext context}) {
     /**
@@ -216,7 +204,7 @@ class FirebaseCustomServices {
     showDialog(
         context: context,
         builder: (context) {
-          Future.delayed(Duration(seconds: 3), () {
+          Future.delayed(const Duration(seconds: 3), () {
             /**
                         * Remove Success Animation
                         */
@@ -234,17 +222,13 @@ class FirebaseCustomServices {
         });
   }
 
-
-
   /**
    * **************************** Google Auth methods section *******************************
    */
-  /**
-   * this method is used to access user with google account data if the user is logged before .
-   * 
-   * if the user logging for first time , this method will call access_withGoogle_firstTime() .
-   * which is the below method 👇👇.
-   */
+  /// this method is used to access user with google account data if the user is logged before .
+  ///
+  /// if the user logging for first time , this method will call access_withGoogle_firstTime() .
+  /// which is the below method 👇👇.
   Future<void> access_withGoogle_thenStoreDataLocally(
       {required UserCredential userCredential,
       required BuildContext context}) async {
@@ -294,9 +278,8 @@ class FirebaseCustomServices {
           userCredintial: userCredential, context: context);
     }
   }
-  /**
-   * this method is used to sign in user with google first first time with default data .
-   */
+
+  /// this method is used to sign in user with google first first time with default data .
   Future<void> access_withGoogle_firstTime_thenStoreDataLocally(
       {required UserCredential userCredintial,
       required BuildContext context}) async {
@@ -317,19 +300,16 @@ class FirebaseCustomServices {
     });
   }
 
-
   /**
    * ***************************** Facebook auth methods section ******************************
    */
 
-  /**
-   * this method is used to access user with google account data if the user is logged before .
-   * 
-   * if the user logging for first time , this method will call access_withGoogle_firstTime() .
-   * which is the below method 👇👇.
-   */
+  /// this method is used to access user with google account data if the user is logged before .
+  ///
+  /// if the user logging for first time , this method will call access_withGoogle_firstTime() .
+  /// which is the below method 👇👇.
   Future<void> access_withFacebook_thenStoreDataLocally(
-      {required Map<String,dynamic> userCredential,
+      {required Map<String, dynamic> userCredential,
       required BuildContext context}) async {
     try {
       showLoadingIndicator(context: context);
@@ -377,11 +357,10 @@ class FirebaseCustomServices {
           userCredintial: userCredential, context: context);
     }
   }
-  /**
-   * this method is used to sign in user with google first first time with default data .
-   */
+
+  /// this method is used to sign in user with google first first time with default data .
   Future<void> access_withFacebook_firstTime_thenStoreDataLocally(
-      {required Map<String,dynamic> userCredintial,
+      {required Map<String, dynamic> userCredintial,
       required BuildContext context}) async {
     showLoadingIndicator(context: context);
     ConsoleMessage.successMessage(
@@ -400,14 +379,11 @@ class FirebaseCustomServices {
     });
   }
 
-
   /**
    * ****************************** Edit user firestore data section ******************************
    */
 
-  /**
-   * method used in edit user data info page to update his/her user name in firststore .
-   */
+  /// method used in edit user data info page to update his/her user name in firststore .
   Future<void> updateUserName(
       {required BuildContext context, required String newName}) async {
     UserDataBox.instance.put_userName(userName: newName);
@@ -429,9 +405,8 @@ class FirebaseCustomServices {
     }
     Get.back();
   }
-  /**
-   * method used in edit user data info page to update his/her phone number in firststore .
-   */
+
+  /// method used in edit user data info page to update his/her phone number in firststore .
   Future<void> updatePhoneNumber(
       {required BuildContext context, required String phoneNumber}) async {
     UserDataBox.instance.put_userPhoneNumber(phoneNumber: phoneNumber);
@@ -449,6 +424,4 @@ class FirebaseCustomServices {
         .update({_key_userPhoneNumber: phoneNumber});
     Get.back();
   }
-
-
 }

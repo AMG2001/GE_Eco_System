@@ -8,12 +8,12 @@ class SendMessageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Color(0xff2cda86)),
+            backgroundColor: MaterialStateProperty.all(const Color(0xff2cda86)),
             minimumSize: MaterialStateProperty.all(const Size(130, 40)),
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(
@@ -24,9 +24,9 @@ class SendMessageButton extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('Send'.tr, style: TextStyle(fontSize: 18)),
-              SizedBox(width: 5),
-              Icon(
+              Text('Send'.tr, style: const TextStyle(fontSize: 18)),
+              const SizedBox(width: 5),
+              const Icon(
                 Icons.arrow_forward,
                 size: 22.0,
                 color: Colors.white,

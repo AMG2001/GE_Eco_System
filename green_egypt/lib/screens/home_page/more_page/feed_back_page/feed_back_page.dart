@@ -11,6 +11,8 @@ import 'package:green_egypt/services/boxes/user_data_db.dart';
 import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
 
 class FeedbackPage extends StatelessWidget {
+  const FeedbackPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,7 @@ class FeedbackPage extends StatelessWidget {
             return SingleChildScrollView(
               child: Stack(
                 children: [
-                  AppHeader(),
+                  const AppHeader(),
                   Positioned(
                       top: -380,
                       left: -187,
@@ -29,11 +31,11 @@ class FeedbackPage extends StatelessWidget {
                           child: Image.asset('assets/images/bg.png'))),
                   SafeArea(
                       child: Padding(
-                    padding: EdgeInsets.all(Constants.kDefaultPadding),
+                    padding: const EdgeInsets.all(Constants.kDefaultPadding),
                     child: Column(
                       children: [
-                        CustomAppBar(),
-                        SizedBox(height: Constants.kDefaultPadding * 4),
+                        const CustomAppBar(),
+                        const SizedBox(height: Constants.kDefaultPadding * 4),
                         /**
                          * Circle avatar that show user image .
                          */
@@ -42,31 +44,31 @@ class FeedbackPage extends StatelessWidget {
                               NetworkImage(controller.userImageUrl),
                           radius: 70,
                         ),
-                        SizedBox(height: Constants.kDefaultPadding),
+                        const SizedBox(height: Constants.kDefaultPadding),
                         Divider(
                           color: DefaultColors.kTextLightColor,
                         ),
-                        SizedBox(height: Constants.kDefaultPadding),
-                        PointStats(),
-                        SizedBox(height: Constants.kDefaultPadding),
+                        const SizedBox(height: Constants.kDefaultPadding),
+                        const PointStats(),
+                        const SizedBox(height: Constants.kDefaultPadding),
                         Divider(
                           color: DefaultColors.kTextLightColor,
                         ),
-                        SizedBox(height: Constants.kDefaultPadding),
+                        const SizedBox(height: Constants.kDefaultPadding),
                         Text(
-                          'Hi ,'.tr +" "+ UserDataBox.instance.get_userName(),
-                          style: TextStyle(
+                          "${'Hi ,'.tr} ${UserDataBox.instance.get_userName()}",
+                          style: const TextStyle(
                             fontSize: 18,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Text(
                           'How Would You Rate Our App?'.tr,
-                          style: TextStyle(fontSize: 18),
+                          style: const TextStyle(fontSize: 18),
                         ),
-                        SizedBox(height: Constants.kDefaultPadding),
+                        const SizedBox(height: Constants.kDefaultPadding),
                         StatefulBuilder(builder: (context, setState) {
                           return SmoothStarRating(
                             borderColor: DefaultColors.kTextLightColor,
@@ -83,7 +85,7 @@ class FeedbackPage extends StatelessWidget {
                             size: 45.0,
                           );
                         }),
-                        SizedBox(height: Constants.kDefaultPadding),
+                        const SizedBox(height: Constants.kDefaultPadding),
                         ReviewArea_SubmitButton(controller: controller)
                       ],
                     ),

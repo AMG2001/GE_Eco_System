@@ -32,8 +32,9 @@ class PasswordTextField extends StatelessWidget {
             } else if (value.length < 8) {
               return "Password must be 8 or more !!";
             }
+            return null;
           },
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
           controller: passwordTextEditingController,
           onEditingComplete: () {
             print("onEditingComplete Called");
@@ -47,7 +48,7 @@ class PasswordTextField extends StatelessWidget {
           cursorColor: Colors.green,
           decoration: InputDecoration(
             prefixIcon: Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: FaIcon(FontAwesomeIcons.shieldHalved,
                   color: controller.pLabelColor),
             ),
@@ -56,7 +57,7 @@ class PasswordTextField extends StatelessWidget {
             focusColor: Colors.green,
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Colors.green),
+              borderSide: const BorderSide(color: Colors.green),
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),

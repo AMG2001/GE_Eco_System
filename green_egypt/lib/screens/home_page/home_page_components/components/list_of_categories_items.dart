@@ -24,7 +24,7 @@ class ListOfCategoriesItems extends StatelessWidget {
           init: HomePageAnimationsController(),
           builder: (controller) {
             controller.decreaseWasteCategoriesListAnimatedContainerWidth();
-            return Container(
+            return SizedBox(
               height: Dimensions.height * .2,
               width: Dimensions.width,
               child: ListView(
@@ -32,7 +32,7 @@ class ListOfCategoriesItems extends StatelessWidget {
                 scrollDirection: Axis.horizontal, children: [
                 AnimatedContainer(
                   curve: Curves.easeInOutCubic,
-                  duration: Duration(milliseconds: 750),
+                  duration: const Duration(milliseconds: 750),
                   width: controller.wasteCategoriesListAnimatedContainerWidth,
                 ),
                 CategoriesListItem(
@@ -72,6 +72,5 @@ class ListOfCategoriesItems extends StatelessWidget {
             );
           }),
     );
-    ;
   }
 }

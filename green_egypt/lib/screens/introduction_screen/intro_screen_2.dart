@@ -12,18 +12,14 @@ class IntroductionScreen extends StatefulWidget {
 }
 
 class _IntroductionScreenState extends State<IntroductionScreen> {
-  /**
-   * Page Controller Object that used with both PageView Widget and smoothIndicator package
-   */
+  /// Page Controller Object that used with both PageView Widget and smoothIndicator package
   final pageController = PageController();
 
   late AssetImage image1;
   late AssetImage image2;
   late AssetImage image3;
   late AssetImage image4;
-  /**
-   * Object that will carry all intro Screen Pages . 
-   */
+  /// Object that will carry all intro Screen Pages . 
   List<Widget> introPages = [];
   @override
   void initState() {
@@ -47,9 +43,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
   }
 
   @override
-  /**
-   * To make images preloaded while splach animation working , to increase the perfromance of the application
-   */
+  /// To make images preloaded while splach animation working , to increase the perfromance of the application
   void didChangeDependencies() {
     /**
      * load image to memory to avoid loading glitch .

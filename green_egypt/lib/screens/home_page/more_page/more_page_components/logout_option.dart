@@ -9,7 +9,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 class LogoutOption extends StatelessWidget {
   late ApplicationThemeController applicationThemeController;
-  LogoutOption({required this.applicationThemeController});
+  LogoutOption({super.key, required this.applicationThemeController});
 
   @override
   Widget build(BuildContext context) {

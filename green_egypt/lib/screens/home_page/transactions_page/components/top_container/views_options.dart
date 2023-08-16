@@ -10,7 +10,7 @@ class ViewsOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<TransactionsPageUpperContainerController>(
         builder: (controller) {
-      return Container(
+      return SizedBox(
         height: Dimensions.height * .06,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),

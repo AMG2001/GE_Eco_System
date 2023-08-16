@@ -6,6 +6,6 @@ final homePageAppBar = AppBar(
     /**
                * Bill Icon that in Appbar .
                */
-    actions: [HomePageActions()],
+    actions: const [HomePageActions()],
     elevation: 0,
-    title: HomePageTitle());
+    title: const HomePageTitle());

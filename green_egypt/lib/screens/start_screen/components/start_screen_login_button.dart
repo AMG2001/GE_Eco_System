@@ -21,7 +21,7 @@ class StartScreenLoginButton extends StatelessWidget {
       onPressed: () {
         Get.toNamed(PagesNames.loginScreen);
       },
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(

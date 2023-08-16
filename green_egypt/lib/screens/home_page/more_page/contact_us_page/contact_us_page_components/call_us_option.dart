@@ -23,27 +23,10 @@ class CallUsOption extends StatelessWidget {
       },
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                  child: Image.asset(
-                    'assets/images/call.png',
-                    height: 36,
-                  ),
-                ),
-                Text('Call Us'.tr,
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Color(0xfffec569),
-                    )),
-              ],
-            ),
             height: 90,
             width: 100,
             decoration: BoxDecoration(
@@ -53,12 +36,29 @@ class CallUsOption extends StatelessWidget {
               borderRadius: BorderRadius.circular(10), //border corner radius
               boxShadow: [
                 BoxShadow(
-                  color: Color.fromARGB(255, 235, 225, 225)
+                  color: const Color.fromARGB(255, 235, 225, 225)
                       .withOpacity(0.1), //color of shadow
                   spreadRadius: 5, //spread radius
                   blurRadius: 7, // blur radius
-                  offset: Offset(0, 2), // changes position of shadow
+                  offset: const Offset(0, 2), // changes position of shadow
                 ),
+              ],
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Image.asset(
+                    'assets/images/call.png',
+                    height: 36,
+                  ),
+                ),
+                Text('Call Us'.tr,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Color(0xfffec569),
+                    )),
               ],
             ),
           ),

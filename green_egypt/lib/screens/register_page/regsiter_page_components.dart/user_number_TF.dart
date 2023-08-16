@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
 import 'package:green_egypt/screens/register_page/register_page_controller.dart';
 
 class UserNumberTF extends StatelessWidget {
@@ -16,7 +14,7 @@ class UserNumberTF extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO change user number validation
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: TextFormField(
         keyboardType: TextInputType.number,
@@ -26,11 +24,12 @@ class UserNumberTF extends StatelessWidget {
           } else if (value.length < 11) {
             return "this is not correct phone number !!";
           }
+          return null;
         },
         controller: userNumberController,
         decoration: InputDecoration(
-            prefixIcon: Padding(
-              padding: const EdgeInsets.all(16.0),
+            prefixIcon: const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Icon(Icons.call),
             ),
             hintText: "enter your mobile number",
