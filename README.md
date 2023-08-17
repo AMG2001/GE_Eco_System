@@ -27,7 +27,7 @@
 
 1. Mariam Ahmad Elsheikh “Team Leader” .
 2. Mohamad amgad elsaid ”Technical leader & Repository Admin ”.
-3. Hamdy Mostafa mahmoud “Flutter developer & Documentation Admin” .
+3. Hamdy Mostafa mahmoud “Documentation writer” .
 4. Salah ayman Eteam “Flutter developer” .
 5. Alaa mohamad Hammad “Flutter Developer” .
 6. mahmoud Shady "Flutter Developer".
