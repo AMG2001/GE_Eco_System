@@ -108,12 +108,59 @@
 Tried "GPT4" solution : TFLite & Tflite_flutter_helper but not worked and cause many errors .
 Tried Google Ml Kit project : https://pub.dev/packages/google_mlkit_object_detection and with copying number of blocks of code from it ,it gives us satisfying results .
 
-## 📅 13/07/2023 "Bluetooth Controller implemented" by Salah Ayman and AMG :
-as we need to implement connection between all eco-system components , we implemented bluetooth cotroller that responsible for sending all Signals depending on detection result .
-
-## 📅 14/07/2023 "Camera detection and Sending Signals implmeneted ✅ :
-- Eng / Amgad implemented "Camera Detection and Bluetooth signals sending to Arduino".
-- this task implmeneted by adding google_ml_kit package to project and handling detection results .
-
-
 ## Future work 'Adding transactions cloud backup".
+
+
+<table>
+  <thead>
+    <tr>
+        <th>📅 13/07/2023<br>Bluetooth Controller implemented" by Salah Ayman and AMG ✅</th>
+        <th>📅 14/07/2023<br>Camera detection and Sending Signals implmeneted ✅</th>
+        <th>📅 17/08/2023<br>Biometric Auth and Time Controller Added ✅</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+          <td>
+     <h3>implemented by AMG 🔰</h3>
+      </td>
+          <td>
+     <h3>implemented by AMG 🔰</h3>
+      </td>
+      <td>
+     <h3>implemented by AMG 🔰</h3>
+      </td>
+    </tr>
+       <tr>
+      <td>
+     <h3>Description :</h3>
+    - as we need to implement connection between all eco-system components , we implemented bluetooth cotroller that responsible for sending all Signals         depending on detection result .<br>
+     </p>
+      </td>
+     <td>
+     <h3>Description :</h3>
+     - Eng / Amgad implemented "Camera Detection and Bluetooth signals sending to Arduino".<br><br>
+     - this task implmeneted by adding google_ml_kit package to project and handling detection results .<br>
+     </p>
+      </td>
+       <td>
+     <h3>Description :</h3>
+     1. Adding welcome message depending on time that user enter the app "good morning at morning , good night at night - etc".<br><br>
+     2. Adding new Security Feature "Biometric Auth" - user unable to show qrcode to take points until he/she is verified using biometric auth.<br>
+     </p>
+      </td>  
+       </tr>
+    <tr>
+      <td>
+         <img src=""/>
+      </td>
+         <td>
+         <img src=""/>
+      </td>
+         <td>
+         <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzN3bDd5MW82ZWJwZ3ppaTcyNWx0azJtcTl1cXh2ejBmczVod20zNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NqjukGLCcMkXt7ote4/giphy.gif"/>
+      </td>
+    </tr>
+  </tbody> 
+</table>
+<hr>
