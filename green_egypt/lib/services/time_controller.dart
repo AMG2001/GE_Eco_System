@@ -13,13 +13,13 @@ class TimeController {
     DateTime now = DateTime.now();
     int currentHour = now.hour;
     if (currentHour >= 5 && currentHour < 12) {
-      message = "Good morning!";
+      message = "Good Morning";
     } else if (currentHour >= 12 && currentHour < 18) {
-      message = "Good afternoon!";
+      message = "Good Afternoon";
     } else if (currentHour >= 18 && currentHour < 22) {
-      message = "Good evening!";
+      message = "Good Evening";
     } else {
-      message = "Good night!";
+      message = "Good Night";
     }
     print('timing message : $message');
   }

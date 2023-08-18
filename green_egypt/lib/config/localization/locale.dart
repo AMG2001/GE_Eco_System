@@ -5,7 +5,7 @@ class ApplicationLocal implements Translations {
 
   // keys mean keys of languages which simply consist of :
 
-  /// 
+  ///
   Map<String, Map<String, String>> get keys => {
         'ar': {
           'Arabic': 'عربيه',
@@ -37,7 +37,7 @@ class ApplicationLocal implements Translations {
           'Waste Categories': 'تصنيفات النفايات',
           '\$': 'نقطه',
           'g': 'جرام',
-          'more page': 'المزيد من الصفحات',
+          'more page': 'المزيد',
           'user account ': 'حساب المستخدم',
           'Edit Profile': 'تعديل الملف الشخصي',
           'GREEN EGYPT SUPPORT': 'الدعم من جرين ايجيبت',
@@ -107,9 +107,14 @@ class ApplicationLocal implements Translations {
           '3.plastic':
               'فرز الورق. تختلف أنواع الورق المختلفة في طول الألياف وبالتالي في الجودة المختلفة. ولذلك فمن المهم فرزها حسب النوع. يذهب الكرتون إلى الكرتون، ويذهب الورق المكتبي إلى الورق المكتبي، وهكذا.',
           '4.plastic': '"أحضر ورقك المفرز إلى أقرب مركز لإعادة التدوير."',
-          '': '',
-          '': '',
-          '': '',
+          'There is not Transaction implemented !!': '!! لم تقم بأي عمليه بعد',
+          'Good Morning': 'صباح الخير',
+          'Good Afternoon': 'مساء الخير',
+          'Good Evening': 'مساء الخير',
+          'Good Night': 'مساء الخير',
+          'Cans': 'كانز',
+          'Points': 'نقاط',
+          'Get Cash': 'احصل علي الكاش',
           '': '',
         },
         'en': {
@@ -212,6 +217,8 @@ class ApplicationLocal implements Translations {
               'Sort the paper . Different types of paper have a different fiber length, and thus a different quality. That\'s why it\'s important to have them sorted by type. Cardboard goes to cardboard, office paper goes to office paper, etc.',
           '4.plastic':
               'Bring your sorted paper to the closest recycling centre.',
+          'There is not Transaction implemented !!':
+              "There is not Transaction implemented !!"
         }
       };
 }

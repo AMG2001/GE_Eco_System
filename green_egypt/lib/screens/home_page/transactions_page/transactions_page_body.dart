@@ -24,11 +24,12 @@ class TransactionPageBody extends StatelessWidget {
                   backgroundColor: themeController.isDark
                       ? Colors.grey[850]
                       : const Color(0xfff7f5f5),
-                  flexibleSpace: const FlexibleSpaceBar(background: TopContainer()),
+                  flexibleSpace:
+                      const FlexibleSpaceBar(background: TopContainer()),
                 ),
               ];
             },
-            body: const BottomContainer()),
+            body: BottomContainer()),
       );
     });
   }

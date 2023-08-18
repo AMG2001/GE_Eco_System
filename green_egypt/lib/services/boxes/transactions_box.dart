@@ -17,6 +17,8 @@ class TransactionsBox extends GetxController {
 
   List<Map<dynamic, dynamic>> allStoredTransactions = [];
 
+  late int numberOfStoredTransaction;
+
   /// *
   /// *************************** initialize User Data Box *********************************
   Future<void> init_TransactionsBox() async {
@@ -25,6 +27,7 @@ class TransactionsBox extends GetxController {
   }
 
   void loadAllStoredTransactions() {
+    numberOfStoredTransaction = _transactiobsBox.keys.length;
     allStoredTransactions = _transactiobsBox.keys.map((key) {
       Map<dynamic, dynamic> item = _transactiobsBox.get(key);
       return item;

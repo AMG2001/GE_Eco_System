@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:green_egypt/config/custom_scrollable_sheet.dart';
 import 'package:green_egypt/config/dimensions.dart';
+import 'package:green_egypt/config/theme/application_theme_controller_box.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
 import 'package:green_egypt/config/theme/default_fonts.dart';
 import 'package:green_egypt/screens/home_page/home_page_components/components/eco_friendly_full_tips.dart';
@@ -35,10 +37,18 @@ class EcoFriendlyTipsRow extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () {
-                            Get.to(const EcoFriendlyFullTips(),
-                                transition: Transition.downToUp,
-                                curve: Curves.easeInCubic,
-                                duration: const Duration(seconds: 1));
+                            CustomDraggableScrollableSheet()
+                                .showCustomDraggableScrollableSheet(
+                                    initialSize: .45,
+                                    minSize: .45,
+                                    maxSize: .72,
+                                    sheetBackgroundColor:
+                                        ApplicationThemeController
+                                                .instance.isDark
+                                            ? Colors.black
+                                            : const Color(0xfffefefc),
+                                    context: context,
+                                    child: EcoFriendlyFullTips());
                           },
                           child: Text(
                             'View All'.tr,

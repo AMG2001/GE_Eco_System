@@ -51,7 +51,7 @@ Widget showAuzorizedView({required GetCashPageController controller}) {
                   "Thanks for Suppoting Recycling \n\n ${UserDataBox.instance.get_userName()}",
                   textAlign: TextAlign.center),
               const ScanAndEarnRow(),
-              const CashQrcode(),
+              CashQrcode(),
               ElevatedButton(
                 onPressed: () {
                   Get.back();
