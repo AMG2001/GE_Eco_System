@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_egypt/config/dimensions.dart';
 import 'package:green_egypt/config/theme/default_colors.dart';
-import 'package:green_egypt/screens/register_page/register_page_controller.dart';
-import 'package:green_egypt/screens/register_page/regsiter_page_components.dart/email_text_field.dart';
-import 'package:green_egypt/screens/register_page/regsiter_page_components.dart/first_name_text_field.dart';
-import 'package:green_egypt/screens/register_page/regsiter_page_components.dart/last_name_text_field.dart';
-import 'package:green_egypt/screens/register_page/regsiter_page_components.dart/page_header.dart';
-import 'package:green_egypt/screens/register_page/regsiter_page_components.dart/password_text_field.dart';
-import 'package:green_egypt/screens/register_page/regsiter_page_components.dart/sign_up_button.dart';
-import 'package:green_egypt/screens/register_page/regsiter_page_components.dart/user_category_options.dart';
-import 'package:green_egypt/screens/register_page/regsiter_page_components.dart/user_number_TF.dart';
+import 'package:green_egypt/screens/register_page/controller/register_page_controller.dart';
+import 'package:green_egypt/screens/register_page/components/email_text_field.dart';
+import 'package:green_egypt/screens/register_page/components/first_name_text_field.dart';
+import 'package:green_egypt/screens/register_page/components/last_name_text_field.dart';
+import 'package:green_egypt/screens/register_page/components/page_header.dart';
+import 'package:green_egypt/screens/register_page/components/password_text_field.dart';
+import 'package:green_egypt/screens/register_page/components/sign_up_button.dart';
+import 'package:green_egypt/screens/register_page/components/user_category_options.dart';
+import 'package:green_egypt/screens/register_page/components/user_number_TF.dart';
 
 class RegisterPage extends StatelessWidget {
   RegisterPage({super.key});

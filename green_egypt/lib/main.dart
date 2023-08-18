@@ -10,6 +10,7 @@ import 'package:green_egypt/services/application_services.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'config/localization/locale_controller.dart';
+import 'package:green_egypt/services/email_otp_verification.dart';
 
 void main() async {
   // this line because i made main method Async 👀
@@ -24,6 +25,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   // run Flutter 🤍
   runApp(const GreenEgypt());
 }
