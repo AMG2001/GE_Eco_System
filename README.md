@@ -162,5 +162,54 @@ Tried Google Ml Kit project : https://pub.dev/packages/google_mlkit_object_detec
       </td>
     </tr>
   </tbody> 
+     <thead>
+    <tr>
+        <th>📅 18/08/2023<br>Transactions Page Modified ✅</th>
+        <th>📅 19/08/2023<br>Registeration OTP Feature Added ✅</th>
+        <th>📅 17/08/2023<br>Biometric Auth and Time Controller Added ✅</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+          <td>
+     <h3>implemented by AMG 🔰</h3>
+      </td>
+          <td>
+     <h3>implemented by AMG 🔰</h3>
+      </td>
+      <td>
+     <h3>implemented by AMG 🔰</h3>
+      </td>
+    </tr>
+       <tr>
+      <td>
+     <h3>Description :</h3>
+    - in old design the transactions page was in white empty container if there is no transactions , so i modified it to show simple fancy animation<br>
+     </p>
+      </td>
+     <td>
+     <h3>Description :</h3>
+     - Adding Email OTP Verification to make the registeration process more secured .<br>
+     </p>
+      </td>
+       <td>
+     <h3>Description :</h3>
+     1. Adding welcome message depending on time that user enter the app "good morning at morning , good night at night - etc".<br><br>
+     2. Adding new Security Feature "Biometric Auth" - user unable to show qrcode to take points until he/she is verified using biometric auth.<br>
+     </p>
+      </td>  
+       </tr>
+    <tr>
+      <td>
+         <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGl2ajFweDV1am83OG81d2dibG9iYW5iOXl3Y3JlYnRmZGd5b3cwcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hTDPEE77DNFIWDZrA3/giphy.gif"/>
+      </td>
+         <td>
+         <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2l2Y3lrbjVocW8yaDhveW42dGg4dzk4bjdrM2JyOWVuNnlxenR4cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WLI0Woy7o3frPGwZTV/giphy.gif"/>
+      </td>
+         <td>
+         <img src=""/>
+      </td>
+    </tr>
+  </tbody> 
 </table>
 <hr>
