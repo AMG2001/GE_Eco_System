@@ -1,4 +1,4 @@
-# Green Egypt Repository
++# Green Egypt Repository
 
 - Object Detection repo :
 [https://github.com/MavicaSoftwareDev/ge_item_detection](https://github.com/MavicaSoftwareDev/GE_Object_Detection.git)
@@ -23,7 +23,7 @@
 - Recycling , the idea that we build our project depending on ,
  Green Egypt support recycling idea by Giving users cash back 💵 with each item they recycle .
 
-### ** Members of Team :
+### ** Team members :
 
 1. Mariam Ahmad Elsheikh “Team Leader” .
 2. Mohamad amgad elsaid ”Technical leader & Repository Admin ”.
